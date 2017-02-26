@@ -1,0 +1,44 @@
+D:\C#\app project\sellingWooden\sellingWooden\bin\Debug\sellingWooden.exe.config
+D:\C#\app project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.csprojResolveAssemblyReference.cache
+D:\C#\app project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.mainForm.resources
+D:\C#\app project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Properties.Resources.resources
+D:\C#\app project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.csproj.GenerateResource.Cache
+D:\C#\app project\sellingWooden\sellingWooden\bin\Debug\sellingWooden.exe
+D:\C#\app project\sellingWooden\sellingWooden\bin\Debug\sellingWooden.pdb
+D:\C#\app project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.exe
+D:\C#\app project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.pdb
+E:\clone\project\sellingWooden\sellingWooden\bin\Debug\sellingWooden.exe.config
+E:\clone\project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.exe
+E:\clone\project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.pdb
+E:\clone\project\sellingWooden\sellingWooden\bin\Debug\sellingWooden.exe
+E:\clone\project\sellingWooden\sellingWooden\bin\Debug\sellingWooden.pdb
+E:\clone\project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.csprojResolveAssemblyReference.cache
+E:\clone\project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Customer.resources
+E:\clone\project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Employee.resources
+E:\clone\project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.mainForm.resources
+E:\clone\project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Properties.Resources.resources
+E:\clone\project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.csproj.GenerateResource.Cache
+D:\C#\cloning\project\sellingWooden\sellingWooden\bin\Debug\sellingWooden.exe.config
+D:\C#\cloning\project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.exe
+D:\C#\cloning\project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.pdb
+D:\C#\cloning\project1\sellingWooden\sellingWooden\bin\Debug\sellingWooden.exe.config
+D:\C#\cloning\project1\sellingWooden\sellingWooden\obj\Debug\sellingWooden.exe
+D:\C#\cloning\project1\sellingWooden\sellingWooden\obj\Debug\sellingWooden.pdb
+D:\C#\cloning\project1\sellingWooden\sellingWooden\obj\Debug\sellingWooden.csprojResolveAssemblyReference.cache
+D:\C#\cloning\project1\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Bill.resources
+D:\C#\cloning\project1\sellingWooden\sellingWooden\obj\Debug\sellingWooden.BillDetail.resources
+D:\C#\cloning\project1\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Customer.resources
+D:\C#\cloning\project1\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Employee.resources
+D:\C#\cloning\project1\sellingWooden\sellingWooden\obj\Debug\sellingWooden.mainForm.resources
+D:\C#\cloning\project1\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Product.resources
+D:\C#\cloning\project1\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Properties.Resources.resources
+D:\C#\cloning\project1\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Type.resources
+D:\C#\cloning\project1\sellingWooden\sellingWooden\obj\Debug\sellingWooden.csproj.GenerateResource.Cache
+D:\C#\cloning\project1\sellingWooden\sellingWooden\bin\Debug\sellingWooden.exe
+D:\C#\cloning\project1\sellingWooden\sellingWooden\bin\Debug\sellingWooden.pdb
+D:\C#\app project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Bill.resources
+D:\C#\app project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.BillDetail.resources
+D:\C#\app project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Customer.resources
+D:\C#\app project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Employee.resources
+D:\C#\app project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Product.resources
+D:\C#\app project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Type.resources
