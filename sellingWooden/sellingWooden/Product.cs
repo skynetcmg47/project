@@ -18,10 +18,13 @@ namespace sellingWooden
         public Product()
         {
             InitializeComponent();
+            //khoi tao dâtgridview
             InitProductDtgv();
+            //khoi tao combobox
             initTypeCbb();
 
         }
+        //ham nay dung de khoi tao combobox type
         private void initTypeCbb()
         {
             //khoi tao combobox
@@ -36,23 +39,57 @@ namespace sellingWooden
             help.fillInDTGV(dgv_Product_InformatinProductDetail, "Product");
         }
 
+
+        //khoi tao dien data de luu gia tri cac bien can luu
+        // cac bien kieu text thi de trong dau nhay don 'some thing'
+        //cac bien kieu so thi khong de trong dau nhay don
+        //cac bien cach nhau boi dau phay ","
+        //bien co dang combobox phai dung SelectedValue de lay gia tri
         private void but_Product_Add_Click(object sender, EventArgs e)
         {
-            //khoi tao dien data de luu gia tri cac bien can luu
-            // cac bien kieu text thi de trong dau nhay don 'some thing'
-            //cac bien kieu so thi khong de trong dau nhay don
-            //cac bien cach nhau boi dau phay ","
-            //bien co dang combobox phai dung SelectedValue de lay gia tri
-            string Data = "'" + txt_Product_ProductID.Text + "'," +
-                          "'" + txt_Product_TypeID.SelectedValue + "'," +
-                          "'" + txt_Product_NOP.Text + "'," +
-                          "'" + txt_Product_Status.Text + "'," +
-                          "" + txt_Product_Quanty.Text + "," +
-                          "" + txt_Product_Price.Text + "," +
-                          "'" + txt_Product_Size.Text + "'," +
-                          "'" + txt_Product_Note.Text + "'";
-            help.addData("Product", Data);
-            InitProductDtgv();
+            if(txt_Product_ProductID.Text!=""
+                && txt_Product_NOP.Text != ""
+                && txt_Product_TypeID.Text != ""
+                && txt_Product_Quanty.Text != ""
+                && txt_Product_Price.Text != "")
+            if (help.checkID("Product", txt_Product_ProductID.Text))
+            {
+                string Data = "'" + txt_Product_ProductID.Text + "'," +
+                              "'" + txt_Product_TypeID.SelectedValue + "'," +
+                              "'" + txt_Product_NOP.Text + "'," +
+                              "'" + txt_Product_Status.Text + " '," +
+                              "" + txt_Product_Quanty.Text + "," +
+                              "" + txt_Product_Price.Text + "," +
+                              "'" + txt_Product_Size.Text + " '," +
+                              "'" + txt_Product_Note.Text + " '";
+                help.addData("Product", Data);
+                InitProductDtgv();
+                goto OPP;
+            }
+            else
+            {
+                MessageBox.Show("Mã Sản Phẩm đã tồn tại");
+                goto OPP;
+            }
+            MessageBox.Show("Hãy nhập đầy đủ thông tin sản phẩm");
+             OPP:;
+
+        }
+
+        private void but_Product_Delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int idnum = dgv_Product_InformatinProductDetail.SelectedRows[0].Index;
+                string sid = dgv_Product_InformatinProductDetail.Rows[idnum].Cells[0].Value.ToString();
+                help.deleteData("Product", "ProductID", sid);
+                this.InitProductDtgv();
+            }
+            catch(Exception  ex)
+            {
+                //bat loi khong chon dong can xoa
+                MessageBox.Show("Bạn chưa chọn dòng cần xóa");
+            }
         }
 
     }

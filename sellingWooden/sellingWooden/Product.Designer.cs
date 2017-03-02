@@ -296,6 +296,7 @@
             this.but_Product_Delete.TabIndex = 7;
             this.but_Product_Delete.Text = "Xóa";
             this.but_Product_Delete.UseVisualStyleBackColor = false;
+            this.but_Product_Delete.Click += new System.EventHandler(this.but_Product_Delete_Click);
             // 
             // label10
             // 

@@ -126,5 +126,19 @@ namespace sellingWooden
         {
             return getDataTable("SELECT  * FROM dbo." + table);
         }
+
+        public bool checkID(string table,string id)
+        {
+            //ham nay tra ve gia tri true false
+            //tra ve true neu id khong co trong table
+            //tra ve false neu id da ton tai trong table
+            DataTable dt = getDataTable("SELECT " + "*" + " FROM dbo." + table);
+           for(int i=0;i<dt.Rows.Count;i++)
+            {
+                if (dt.Rows[i][0].ToString() == id) return false;
+            }
+            return true;
+            
+        }
     }
 }
