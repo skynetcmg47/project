@@ -160,10 +160,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Ravie", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(15, 9);
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(194, -1);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(430, 50);
+            this.label9.Size = new System.Drawing.Size(519, 73);
             this.label9.TabIndex = 1;
             this.label9.Text = "Hóa Đơn Chi Tiết";
             // 
@@ -174,9 +174,9 @@
             this.groupBox2.Controls.Add(this.but_BillDetail_Add);
             this.groupBox2.Controls.Add(this.but_BillDetail_Refresh);
             this.groupBox2.Controls.Add(this.but_BillDetail_Delete);
-            this.groupBox2.Location = new System.Drawing.Point(13, 232);
+            this.groupBox2.Location = new System.Drawing.Point(610, 86);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(577, 65);
+            this.groupBox2.Size = new System.Drawing.Size(230, 154);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Điều khiển";
@@ -187,7 +187,7 @@
             this.but_BillDetail_Edit.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.but_BillDetail_Edit.Location = new System.Drawing.Point(128, 21);
             this.but_BillDetail_Edit.Name = "but_BillDetail_Edit";
-            this.but_BillDetail_Edit.Size = new System.Drawing.Size(80, 30);
+            this.but_BillDetail_Edit.Size = new System.Drawing.Size(92, 30);
             this.but_BillDetail_Edit.TabIndex = 9;
             this.but_BillDetail_Edit.Text = "Sửa";
             this.but_BillDetail_Edit.UseVisualStyleBackColor = false;
@@ -195,9 +195,9 @@
             // but_BillDetail_Print
             // 
             this.but_BillDetail_Print.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.but_BillDetail_Print.Location = new System.Drawing.Point(488, 21);
+            this.but_BillDetail_Print.Location = new System.Drawing.Point(11, 107);
             this.but_BillDetail_Print.Name = "but_BillDetail_Print";
-            this.but_BillDetail_Print.Size = new System.Drawing.Size(80, 30);
+            this.but_BillDetail_Print.Size = new System.Drawing.Size(209, 30);
             this.but_BillDetail_Print.TabIndex = 8;
             this.but_BillDetail_Print.Text = "In hóa đơn";
             this.but_BillDetail_Print.UseVisualStyleBackColor = false;
@@ -205,9 +205,9 @@
             // but_BillDetail_Add
             // 
             this.but_BillDetail_Add.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.but_BillDetail_Add.Location = new System.Drawing.Point(8, 21);
+            this.but_BillDetail_Add.Location = new System.Drawing.Point(11, 21);
             this.but_BillDetail_Add.Name = "but_BillDetail_Add";
-            this.but_BillDetail_Add.Size = new System.Drawing.Size(80, 30);
+            this.but_BillDetail_Add.Size = new System.Drawing.Size(92, 30);
             this.but_BillDetail_Add.TabIndex = 5;
             this.but_BillDetail_Add.Text = "Thêm";
             this.but_BillDetail_Add.UseVisualStyleBackColor = false;
@@ -215,9 +215,9 @@
             // but_BillDetail_Refresh
             // 
             this.but_BillDetail_Refresh.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.but_BillDetail_Refresh.Location = new System.Drawing.Point(248, 21);
+            this.but_BillDetail_Refresh.Location = new System.Drawing.Point(11, 67);
             this.but_BillDetail_Refresh.Name = "but_BillDetail_Refresh";
-            this.but_BillDetail_Refresh.Size = new System.Drawing.Size(80, 30);
+            this.but_BillDetail_Refresh.Size = new System.Drawing.Size(92, 30);
             this.but_BillDetail_Refresh.TabIndex = 6;
             this.but_BillDetail_Refresh.Text = "Làm Mới";
             this.but_BillDetail_Refresh.UseVisualStyleBackColor = false;
@@ -225,17 +225,18 @@
             // but_BillDetail_Delete
             // 
             this.but_BillDetail_Delete.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.but_BillDetail_Delete.Location = new System.Drawing.Point(368, 21);
+            this.but_BillDetail_Delete.Location = new System.Drawing.Point(128, 67);
             this.but_BillDetail_Delete.Name = "but_BillDetail_Delete";
-            this.but_BillDetail_Delete.Size = new System.Drawing.Size(80, 30);
+            this.but_BillDetail_Delete.Size = new System.Drawing.Size(92, 30);
             this.but_BillDetail_Delete.TabIndex = 7;
             this.but_BillDetail_Delete.Text = "Xóa";
             this.but_BillDetail_Delete.UseVisualStyleBackColor = false;
+            this.but_BillDetail_Delete.Click += new System.EventHandler(this.but_BillDetail_Delete_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 304);
+            this.label10.Location = new System.Drawing.Point(10, 234);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(129, 13);
             this.label10.TabIndex = 3;
@@ -244,10 +245,12 @@
             // 
             // dgv_BillDetail_BillDetailDetail
             // 
+            this.dgv_BillDetail_BillDetailDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_BillDetail_BillDetailDetail.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_BillDetail_BillDetailDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_BillDetail_BillDetailDetail.Location = new System.Drawing.Point(13, 321);
+            this.dgv_BillDetail_BillDetailDetail.Location = new System.Drawing.Point(10, 251);
             this.dgv_BillDetail_BillDetailDetail.Name = "dgv_BillDetail_BillDetailDetail";
-            this.dgv_BillDetail_BillDetailDetail.Size = new System.Drawing.Size(577, 197);
+            this.dgv_BillDetail_BillDetailDetail.Size = new System.Drawing.Size(830, 197);
             this.dgv_BillDetail_BillDetailDetail.TabIndex = 4;
             this.dgv_BillDetail_BillDetailDetail.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -255,7 +258,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 530);
+            this.ClientSize = new System.Drawing.Size(862, 531);
             this.Controls.Add(this.dgv_BillDetail_BillDetailDetail);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox2);

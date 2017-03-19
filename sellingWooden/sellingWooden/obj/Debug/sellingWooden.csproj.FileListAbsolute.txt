@@ -57,3 +57,18 @@ D:\C#\git project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Product.re
 D:\C#\git project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Properties.Resources.resources
 D:\C#\git project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Type.resources
 D:\C#\git project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.csproj.GenerateResource.Cache
+C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\bin\Debug\sellingWooden.exe.config
+C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\obj\Debug\sellingWooden.exe
+C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\obj\Debug\sellingWooden.pdb
+C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\bin\Debug\sellingWooden.exe
+C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\bin\Debug\sellingWooden.pdb
+C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\obj\Debug\sellingWooden.csprojResolveAssemblyReference.cache
+C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Bill.resources
+C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\obj\Debug\sellingWooden.BillDetail.resources
+C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Customer.resources
+C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Employee.resources
+C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\obj\Debug\sellingWooden.mainForm.resources
+C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Product.resources
+C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Properties.Resources.resources
+C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Type.resources
+C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\obj\Debug\sellingWooden.csproj.GenerateResource.Cache

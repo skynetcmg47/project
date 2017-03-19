@@ -12,9 +12,11 @@ namespace sellingWooden
 {
     public partial class BillDetail : Form
     {
+        SQLHelp help = new SQLHelp();
         public BillDetail()
         {
             InitializeComponent();
+            InitBillDetailDtgv();
         }
 
         private void label8_Click(object sender, EventArgs e)
@@ -40,6 +42,25 @@ namespace sellingWooden
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
+        }
+        private void InitBillDetailDtgv()
+        {
+            help.fillInDTGV(dgv_BillDetail_BillDetailDetail, "BillDetail");
+        }
+        private void but_BillDetail_Delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int idnum = dgv_BillDetail_BillDetailDetail.SelectedRows[0].Index;
+                string sid = dgv_BillDetail_BillDetailDetail.Rows[idnum].Cells[0].Value.ToString();
+                help.deleteData("BillDetail", "BillID", sid);
+                this.InitBillDetailDtgv();
+            }
+            catch (Exception ex)
+            {
+                //bat loi khong chon dong can xoa
+                MessageBox.Show("Bạn chưa chọn dòng cần xóa");
+            }
         }
     }
 }

@@ -91,10 +91,14 @@
             // cbo_Customer_Sex
             // 
             this.cbo_Customer_Sex.FormattingEnabled = true;
+            this.cbo_Customer_Sex.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
             this.cbo_Customer_Sex.Location = new System.Drawing.Point(373, 23);
             this.cbo_Customer_Sex.Name = "cbo_Customer_Sex";
             this.cbo_Customer_Sex.Size = new System.Drawing.Size(86, 21);
             this.cbo_Customer_Sex.TabIndex = 14;
+            this.cbo_Customer_Sex.SelectedIndexChanged += new System.EventHandler(this.cbo_Customer_Sex_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -267,14 +271,15 @@
             this.but_Customer_Delete.TabIndex = 2;
             this.but_Customer_Delete.Text = "Xóa";
             this.but_Customer_Delete.UseVisualStyleBackColor = false;
+            this.but_Customer_Delete.Click += new System.EventHandler(this.but_Customer_Delete_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Ravie", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1, 7);
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(171, -3);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(397, 63);
+            this.label8.Size = new System.Drawing.Size(380, 73);
             this.label8.TabIndex = 17;
             this.label8.Text = "Khách Hàng";
             // 

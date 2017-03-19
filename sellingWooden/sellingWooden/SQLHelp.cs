@@ -25,14 +25,14 @@ namespace sellingWooden
         {
             //open datable
 
-            string connectionDTB = @"Data Source=NAM\SQLEXPRESS;Initial Catalog=SellingWooden;Integrated Security=True";
+            string connectionDTB = @"Data Source=NAM;Initial Catalog=SellingWooden;Integrated Security=True";
             connection = new SqlConnection(connectionDTB);
             return connection;
         }
 
         public void openConnection()
         {
-            string connectionDTB = @"Data Source=NAM\SQLEXPRESS;Initial Catalog=SellingWooden;Integrated Security=True";
+            string connectionDTB = @"Data Source=NAM;Initial Catalog=SellingWooden;Integrated Security=True";
             try
             {
                 connection = new SqlConnection(connectionDTB);

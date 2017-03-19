@@ -28,11 +28,11 @@ namespace sellingWooden
         private void initTypeCbb()
         {
             //khoi tao combobox
-            txt_Product_TypeID.DataSource = help.getDataCbb("Type");
+            cbb_Product_TypeID.DataSource = help.getDataCbb("Type");
             //hien thi ten loai len dtgv
-            txt_Product_TypeID.DisplayMember = "TypeName";
+            cbb_Product_TypeID.DisplayMember = "TypeName";
             //gia tri cua cbb la type id
-            txt_Product_TypeID.ValueMember = "TypeID";
+            cbb_Product_TypeID.ValueMember = "TypeID";
         }
         private void InitProductDtgv()
         {
@@ -49,15 +49,15 @@ namespace sellingWooden
         {
             if(txt_Product_ProductID.Text!=""
                 && txt_Product_NOP.Text != ""
-                && txt_Product_TypeID.Text != ""
+                && cbb_Product_TypeID.Text != ""
                 && txt_Product_Quanty.Text != ""
                 && txt_Product_Price.Text != "")
             if (help.checkID("Product", txt_Product_ProductID.Text))
             {
                 string Data = "'" + txt_Product_ProductID.Text + "'," +
-                              "'" + txt_Product_TypeID.SelectedValue + "'," +
+                              "'" + cbb_Product_TypeID.SelectedValue + "'," +
                               "'" + txt_Product_NOP.Text + "'," +
-                              "'" + txt_Product_Status.Text + " '," +
+                              "'" + cbb_Product_Status.Text + " '," +
                               "" + txt_Product_Quanty.Text + "," +
                               "" + txt_Product_Price.Text + "," +
                               "'" + txt_Product_Size.Text + " '," +

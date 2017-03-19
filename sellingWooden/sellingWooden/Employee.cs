@@ -12,9 +12,11 @@ namespace sellingWooden
 {
     public partial class Employee : Form
     {
+        SQLHelp help = new SQLHelp();
         public Employee()
         {
             InitializeComponent();
+            InitEmployeetDtgv();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -111,10 +113,27 @@ namespace sellingWooden
         {
 
         }
-
+        /// <summary>
+        /// delete
+        /// </summary>
+        private void InitEmployeetDtgv()
+        {
+            help.fillInDTGV(dgv_Employee_InformationEmployeeDetail, "Employee");
+        }
         private void button3_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                int idnum = dgv_Employee_InformationEmployeeDetail.SelectedRows[0].Index;
+                string sid = dgv_Employee_InformationEmployeeDetail.Rows[idnum].Cells[0].Value.ToString();
+                help.deleteData("Employee", "EmployeeID", sid);
+                this.InitEmployeetDtgv();
+            }
+            catch (Exception ex)
+            {
+                //bat loi khong chon dong can xoa
+                MessageBox.Show("Bạn chưa chọn dòng cần xóa");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

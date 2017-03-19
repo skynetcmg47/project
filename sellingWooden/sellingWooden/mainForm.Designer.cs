@@ -66,7 +66,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(891, 581);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "SẢN PHẨM";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -74,9 +74,9 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(864, 459);
+            this.tabPage2.Size = new System.Drawing.Size(891, 581);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "KHÁCH HÀNG";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
@@ -84,9 +84,9 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(864, 459);
+            this.tabPage3.Size = new System.Drawing.Size(891, 581);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "LOẠI SẢN PHẨM";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
@@ -94,9 +94,9 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(864, 459);
+            this.tabPage4.Size = new System.Drawing.Size(891, 581);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.Text = "HÓA ĐƠN";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // tabPage5
@@ -104,19 +104,20 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(864, 459);
+            this.tabPage5.Size = new System.Drawing.Size(891, 581);
             this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.Text = " CHI TIẾT HÓA ĐƠN";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // tabPage6
             // 
+            this.tabPage6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(864, 459);
+            this.tabPage6.Size = new System.Drawing.Size(891, 581);
             this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "tabPage6";
+            this.tabPage6.Text = "NHÂN VIÊN";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // mainForm
