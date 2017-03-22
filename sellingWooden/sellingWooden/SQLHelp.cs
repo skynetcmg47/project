@@ -95,7 +95,7 @@ namespace sellingWooden
             sData += arrData[arrData.Length - 1] + "')";
             MessageBox.Show(sData);
             */
-          //  MessageBox.Show(Data);
+            //  MessageBox.Show(Data);
             Excute("INSERT INTO dbo." + table + " VALUES (" + Data + ")");
 
         }
@@ -119,6 +119,7 @@ namespace sellingWooden
                  DELETE FROM tableName
                 WHERE column = value
             */
+           // Excute("Delete from Product where ProductID = 'SP001'");
 
             Excute("DELETE FROM dbo." + sTableName + " WHERE " + sColumnName + " = '" + sValue + "'");
         }
@@ -127,18 +128,31 @@ namespace sellingWooden
             return getDataTable("SELECT  * FROM dbo." + table);
         }
 
-        public bool checkID(string table,string id)
+        public bool checkID(string table, string id)
         {
             //ham nay tra ve gia tri true false
             //tra ve true neu id khong co trong table
             //tra ve false neu id da ton tai trong table
             DataTable dt = getDataTable("SELECT " + "*" + " FROM dbo." + table);
-           for(int i=0;i<dt.Rows.Count;i++)
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
                 if (dt.Rows[i][0].ToString() == id) return false;
             }
             return true;
-            
+
+        }
+        public void Excute_query(string sql)
+        {
+            Excute(sql);
+        }
+        public bool checkIDBillDetail(string BillID,string ProductID)
+        {
+            DataTable dt = getDataTable("SELECT BillID,ProductID FROM BillDetail");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                if (dt.Rows[i][0].ToString().Equals(BillID) && dt.Rows[i][1].ToString().Equals(ProductID)) return false;
+            }
+            return true;
         }
     }
 }

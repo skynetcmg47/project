@@ -119,7 +119,6 @@
             this.label8.Size = new System.Drawing.Size(50, 13);
             this.label8.TabIndex = 7;
             this.label8.Text = "Ghi chú :";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label6
             // 
@@ -180,7 +179,6 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Điều khiển";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // but_BillDetail_Edit
             // 
@@ -211,6 +209,7 @@
             this.but_BillDetail_Add.TabIndex = 5;
             this.but_BillDetail_Add.Text = "Thêm";
             this.but_BillDetail_Add.UseVisualStyleBackColor = false;
+            this.but_BillDetail_Add.Click += new System.EventHandler(this.but_BillDetail_Add_Click);
             // 
             // but_BillDetail_Refresh
             // 
@@ -241,7 +240,6 @@
             this.label10.Size = new System.Drawing.Size(129, 13);
             this.label10.TabIndex = 3;
             this.label10.Text = "Thông tin hóa đơn chi tiết";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // dgv_BillDetail_BillDetailDetail
             // 
@@ -252,12 +250,12 @@
             this.dgv_BillDetail_BillDetailDetail.Name = "dgv_BillDetail_BillDetailDetail";
             this.dgv_BillDetail_BillDetailDetail.Size = new System.Drawing.Size(830, 197);
             this.dgv_BillDetail_BillDetailDetail.TabIndex = 4;
-            this.dgv_BillDetail_BillDetailDetail.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // BillDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(862, 531);
             this.Controls.Add(this.dgv_BillDetail_BillDetailDetail);
             this.Controls.Add(this.label10);

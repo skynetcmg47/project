@@ -18,101 +18,6 @@ namespace sellingWooden
             InitializeComponent();
             InitEmployeetDtgv();
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
         /// <summary>
         /// delete
         /// </summary>
@@ -136,29 +41,46 @@ namespace sellingWooden
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void but_Employee_Add_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            try
+            {
+                if (txt_Employee_EmployeeID.Text != ""
+                    && txt_Employee_NOE.Text != ""
+                    && dtm_Employee_DOB.Text != ""
+                    && cbo_Employee_Sex.Text != ""
+                    && txt_Employee_Position.Text != ""
+                    && txt_Employee_TEL.Text != ""
+                    && txt_Employee_Address.Text != "")
+                    if (help.checkID("Employee", txt_Employee_EmployeeID.Text))
+                    {
+                        string day = dtm_Employee_DOB.Value.Day.ToString();
+                        string month = dtm_Employee_DOB.Value.Month.ToString();
+                        string year = dtm_Employee_DOB.Value.Year.ToString();
+                        string dob = year + "/" + month + "/" + day;
+                        string Data = "'" + txt_Employee_EmployeeID.Text + "'," +
+                                      "N" + "'" + txt_Employee_NOE.Text + "'," +
+                                      "'" + dob + "'," +
+                                      "N" + "'" + cbo_Employee_Sex.Text + "'," +
+                                      "N" + "'" + txt_Employee_Position.Text + "'," +
+                                      "N" + "'" + txt_Employee_Address.Text + "'," +
+                                      "'" + txt_Employee_TEL.Text + "'," +
+                                      "N" + "'" + txt_Employee_Note.Text + "'";
+                        help.addData("Employee", Data);
+                        InitEmployeetDtgv();
+                        goto OPP;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mã nhân viên đã tồn tại");
+                        goto OPP;
+                    }
+                MessageBox.Show("Hãy nhập đầy đủ thông tin nhân viên");
+            OPP:;
+            }catch(Exception ex)
+            {
+                MessageBox.Show("lỗi hệ thống, xin vui lòng khởi động lại chương trình");
+            }
         }
     }
 }

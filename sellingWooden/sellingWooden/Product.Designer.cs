@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbb_Product_Status = new System.Windows.Forms.ComboBox();
             this.cbb_Product_TypeID = new System.Windows.Forms.ComboBox();
             this.txt_Product_Note = new System.Windows.Forms.TextBox();
             this.txt_Product_Size = new System.Windows.Forms.TextBox();
@@ -53,7 +54,6 @@
             this.but_Product_Refresh = new System.Windows.Forms.Button();
             this.but_Product_Delete = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.cbb_Product_Status = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Product_InformatinProductDetail)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -83,6 +83,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sản phẩm";
+            // 
+            // cbb_Product_Status
+            // 
+            this.cbb_Product_Status.FormattingEnabled = true;
+            this.cbb_Product_Status.Location = new System.Drawing.Point(127, 143);
+            this.cbb_Product_Status.Name = "cbb_Product_Status";
+            this.cbb_Product_Status.Size = new System.Drawing.Size(121, 21);
+            this.cbb_Product_Status.TabIndex = 17;
             // 
             // cbb_Product_TypeID
             // 
@@ -226,6 +234,7 @@
             this.dgv_Product_InformatinProductDetail.Name = "dgv_Product_InformatinProductDetail";
             this.dgv_Product_InformatinProductDetail.Size = new System.Drawing.Size(843, 150);
             this.dgv_Product_InformatinProductDetail.TabIndex = 2;
+            this.dgv_Product_InformatinProductDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Product_InformatinProductDetail_CellClick);
             // 
             // groupBox2
             // 
@@ -302,18 +311,11 @@
             this.label10.TabIndex = 4;
             this.label10.Text = "Thông tin sản phẩm chi tiết";
             // 
-            // cbb_Product_Status
-            // 
-            this.cbb_Product_Status.FormattingEnabled = true;
-            this.cbb_Product_Status.Location = new System.Drawing.Point(127, 143);
-            this.cbb_Product_Status.Name = "cbb_Product_Status";
-            this.cbb_Product_Status.Size = new System.Drawing.Size(121, 21);
-            this.cbb_Product_Status.TabIndex = 17;
-            // 
             // Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(865, 534);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox2);

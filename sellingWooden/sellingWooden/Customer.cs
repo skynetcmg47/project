@@ -19,25 +19,7 @@ namespace sellingWooden
             InitCustomerDtgv();
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
         private void InitCustomerDtgv()
         {
             help.fillInDTGV(dgv_Customer_InformationCustomerDetail, "Customer");
@@ -48,6 +30,7 @@ namespace sellingWooden
             {
                 int idnum = dgv_Customer_InformationCustomerDetail.SelectedRows[0].Index;
                 string sid = dgv_Customer_InformationCustomerDetail.Rows[idnum].Cells[0].Value.ToString();
+                help.deleteData("Bill", "BillID", sid);
                 help.deleteData("Customer", "CustomerID", sid);
                 this.InitCustomerDtgv();
             }
@@ -58,9 +41,42 @@ namespace sellingWooden
             }
         }
 
-        private void cbo_Customer_Sex_SelectedIndexChanged(object sender, EventArgs e)
+        private void but_Customer_Add_Click(object sender, EventArgs e)
         {
-
-        }
+            try {
+                if (txt_Customer_CustomerID.Text != ""
+                    && txt_Customer_NOC.Text != ""
+                    && cbo_Customer_Sex.Text != ""
+                    && txt_Customer_TEL.Text != ""
+                    && txt_Customer_Address.Text != "")
+                    if (help.checkID("Customer", txt_Customer_CustomerID.Text))
+                    {
+                        string day = dtm_Customer_DOB.Value.Day.ToString();
+                        string month = dtm_Customer_DOB.Value.Month.ToString();
+                        string year = dtm_Customer_DOB.Value.Year.ToString();
+                        string dob = year + "/" + month + "/" + day;
+                        string Data = "'" + txt_Customer_CustomerID.Text + "'," +
+                                      "N" + "'" + txt_Customer_NOC.Text + "'," +
+                                      "'" + dob + "'," +
+                                      "N" + "'" + cbo_Customer_Sex.Text + "'," +
+                                      "N" + "'" + txt_Customer_Address.Text + "'," +
+                                      "'" + txt_Customer_TEL.Text + "'," +
+                                      "N" + "'" + txt_Customer_Note.Text + "'";
+                        help.addData("Customer", Data);
+                        InitCustomerDtgv();
+                        goto OPP;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Mã Khách Hàng đã tồn tại");
+                        goto OPP;
+                    }
+                MessageBox.Show("Hãy nhập đầy đủ thông tin Khách Hàng");
+            OPP:;
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Lỗi hệ thống, xin vui lòng khởi động lại chương trình");
+            }
+          }
     }
 }

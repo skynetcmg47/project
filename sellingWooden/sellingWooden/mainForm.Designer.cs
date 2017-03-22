@@ -28,123 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.userNameAndPassBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mainForm_tabControl = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            ((System.ComponentModel.ISupportInitialize)(this.userNameAndPassBindingSource)).BeginInit();
-            this.mainForm_tabControl.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
+            this.btn_home = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_main_Statistics = new System.Windows.Forms.Button();
+            this.btn_main_Manage = new System.Windows.Forms.Button();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // userNameAndPassBindingSource
+            // btn_home
             // 
-            this.userNameAndPassBindingSource.DataMember = "UserNameAndPass";
+            this.btn_home.BackColor = System.Drawing.Color.White;
+            this.btn_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_home.Image = ((System.Drawing.Image)(resources.GetObject("btn_home.Image")));
+            this.btn_home.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_home.Location = new System.Drawing.Point(4, 11);
+            this.btn_home.Name = "btn_home";
+            this.btn_home.Size = new System.Drawing.Size(128, 128);
+            this.btn_home.TabIndex = 0;
+            this.btn_home.UseVisualStyleBackColor = false;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
-            // mainForm_tabControl
+            // groupBox1
             // 
-            this.mainForm_tabControl.Controls.Add(this.tabPage1);
-            this.mainForm_tabControl.Controls.Add(this.tabPage2);
-            this.mainForm_tabControl.Controls.Add(this.tabPage3);
-            this.mainForm_tabControl.Controls.Add(this.tabPage4);
-            this.mainForm_tabControl.Controls.Add(this.tabPage5);
-            this.mainForm_tabControl.Controls.Add(this.tabPage6);
-            this.mainForm_tabControl.Location = new System.Drawing.Point(0, 0);
-            this.mainForm_tabControl.Name = "mainForm_tabControl";
-            this.mainForm_tabControl.SelectedIndex = 0;
-            this.mainForm_tabControl.Size = new System.Drawing.Size(899, 607);
-            this.mainForm_tabControl.TabIndex = 0;
+            this.groupBox1.AutoSize = true;
+            this.groupBox1.Controls.Add(this.btn_main_Statistics);
+            this.groupBox1.Controls.Add(this.btn_main_Manage);
+            this.groupBox1.Controls.Add(this.btn_home);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.Location = new System.Drawing.Point(3, -3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(139, 554);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
             // 
-            // tabPage1
+            // btn_main_Statistics
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(891, 581);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "SẢN PHẨM";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.btn_main_Statistics.BackColor = System.Drawing.Color.White;
+            this.btn_main_Statistics.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_main_Statistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_main_Statistics.Image = ((System.Drawing.Image)(resources.GetObject("btn_main_Statistics.Image")));
+            this.btn_main_Statistics.Location = new System.Drawing.Point(4, 279);
+            this.btn_main_Statistics.Name = "btn_main_Statistics";
+            this.btn_main_Statistics.Size = new System.Drawing.Size(128, 128);
+            this.btn_main_Statistics.TabIndex = 2;
+            this.btn_main_Statistics.UseVisualStyleBackColor = false;
             // 
-            // tabPage2
+            // btn_main_Manage
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(891, 581);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "KHÁCH HÀNG";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.btn_main_Manage.BackColor = System.Drawing.Color.White;
+            this.btn_main_Manage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_main_Manage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_main_Manage.Image = ((System.Drawing.Image)(resources.GetObject("btn_main_Manage.Image")));
+            this.btn_main_Manage.Location = new System.Drawing.Point(5, 145);
+            this.btn_main_Manage.Name = "btn_main_Manage";
+            this.btn_main_Manage.Size = new System.Drawing.Size(128, 128);
+            this.btn_main_Manage.TabIndex = 1;
+            this.btn_main_Manage.UseVisualStyleBackColor = false;
+            this.btn_main_Manage.Click += new System.EventHandler(this.btn_main_Manage_Click);
             // 
-            // tabPage3
+            // mainPanel
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(891, 581);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "LOẠI SẢN PHẨM";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(891, 581);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "HÓA ĐƠN";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(891, 581);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = " CHI TIẾT HÓA ĐƠN";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(891, 581);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "NHÂN VIÊN";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.mainPanel.AutoSize = true;
+            this.mainPanel.Location = new System.Drawing.Point(142, 5);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(885, 546);
+            this.mainPanel.TabIndex = 2;
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(899, 608);
-            this.Controls.Add(this.mainForm_tabControl);
+            this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1030, 563);
+            this.Controls.Add(this.mainPanel);
+            this.Controls.Add(this.groupBox1);
             this.Name = "mainForm";
-            this.Text = "mainForm";
-            ((System.ComponentModel.ISupportInitialize)(this.userNameAndPassBindingSource)).EndInit();
-            this.mainForm_tabControl.ResumeLayout(false);
+            this.Text = "realmainForm";
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource userNameAndPassBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn userNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TabControl mainForm_tabControl;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
+
+        private System.Windows.Forms.Button btn_home;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.Button btn_main_Statistics;
+        private System.Windows.Forms.Button btn_main_Manage;
     }
 }
-

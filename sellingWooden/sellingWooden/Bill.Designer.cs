@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbb_Bill_CustomerID = new System.Windows.Forms.ComboBox();
             this.dtm_Bill_DateSell = new System.Windows.Forms.DateTimePicker();
             this.txt_Bill_Note = new System.Windows.Forms.TextBox();
             this.txt_Bill_BillID = new System.Windows.Forms.TextBox();
@@ -45,7 +46,6 @@
             this.but_Bill_Refresh = new System.Windows.Forms.Button();
             this.dgv_Bill_InformatinBillDetail = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Bill_InformatinBillDetail)).BeginInit();
@@ -53,7 +53,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbb_Bill_CustomerID);
             this.groupBox1.Controls.Add(this.dtm_Bill_DateSell);
             this.groupBox1.Controls.Add(this.txt_Bill_Note);
             this.groupBox1.Controls.Add(this.txt_Bill_BillID);
@@ -67,6 +67,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hóa đơn";
+            // 
+            // cbb_Bill_CustomerID
+            // 
+            this.cbb_Bill_CustomerID.FormattingEnabled = true;
+            this.cbb_Bill_CustomerID.Location = new System.Drawing.Point(113, 58);
+            this.cbb_Bill_CustomerID.Name = "cbb_Bill_CustomerID";
+            this.cbb_Bill_CustomerID.Size = new System.Drawing.Size(121, 21);
+            this.cbb_Bill_CustomerID.TabIndex = 8;
             // 
             // dtm_Bill_DateSell
             // 
@@ -99,7 +107,6 @@
             this.label4.Size = new System.Drawing.Size(59, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Ghi chú :";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -182,6 +189,7 @@
             this.but_Bill_Add.TabIndex = 0;
             this.but_Bill_Add.Text = "Thêm";
             this.but_Bill_Add.UseVisualStyleBackColor = true;
+            this.but_Bill_Add.Click += new System.EventHandler(this.but_Bill_Add_Click);
             // 
             // but_Bill_Delete
             // 
@@ -221,18 +229,11 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Thông tin hóa đơn chi tiết";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(113, 58);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 8;
-            // 
             // Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(865, 534);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dgv_Bill_InformatinBillDetail);
@@ -271,6 +272,6 @@
         private System.Windows.Forms.Button but_Bill_Add;
         private System.Windows.Forms.DataGridView dgv_Bill_InformatinBillDetail;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbb_Bill_CustomerID;
     }
 }

@@ -86,7 +86,6 @@
             this.dtm_Customer_DOB.Name = "dtm_Customer_DOB";
             this.dtm_Customer_DOB.Size = new System.Drawing.Size(179, 20);
             this.dtm_Customer_DOB.TabIndex = 15;
-            this.dtm_Customer_DOB.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // cbo_Customer_Sex
             // 
@@ -98,7 +97,6 @@
             this.cbo_Customer_Sex.Name = "cbo_Customer_Sex";
             this.cbo_Customer_Sex.Size = new System.Drawing.Size(86, 21);
             this.cbo_Customer_Sex.TabIndex = 14;
-            this.cbo_Customer_Sex.SelectedIndexChanged += new System.EventHandler(this.cbo_Customer_Sex_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -124,7 +122,6 @@
             this.txt_Customer_Note.Name = "txt_Customer_Note";
             this.txt_Customer_Note.Size = new System.Drawing.Size(259, 53);
             this.txt_Customer_Note.TabIndex = 13;
-            this.txt_Customer_Note.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // txt_Customer_TEL
             // 
@@ -220,7 +217,6 @@
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Điều khiển";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // but_Customer_Edit
             // 
@@ -251,6 +247,7 @@
             this.but_Customer_Add.TabIndex = 0;
             this.but_Customer_Add.Text = "Thêm";
             this.but_Customer_Add.UseVisualStyleBackColor = false;
+            this.but_Customer_Add.Click += new System.EventHandler(this.but_Customer_Add_Click);
             // 
             // but_Customer_Refresh
             // 
@@ -290,7 +287,6 @@
             this.dgv_Customer_InformationCustomerDetail.Name = "dgv_Customer_InformationCustomerDetail";
             this.dgv_Customer_InformationCustomerDetail.Size = new System.Drawing.Size(838, 229);
             this.dgv_Customer_InformationCustomerDetail.TabIndex = 18;
-            this.dgv_Customer_InformationCustomerDetail.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label9
             // 
@@ -305,6 +301,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(862, 531);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dgv_Customer_InformationCustomerDetail);

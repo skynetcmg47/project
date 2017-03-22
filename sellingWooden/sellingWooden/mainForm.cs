@@ -12,50 +12,48 @@ namespace sellingWooden
 {
     public partial class mainForm : Form
     {
-        SQLHelp help = new SQLHelp();
         public mainForm()
         {
             InitializeComponent();
-            InitTabProduct();
-            InitTabCustomer();
-            InitTabType();
-            InitTabBill();
-            InitTabBillDetail();
-            InitTabEmployee();
+            InitHomeForm();
         }
-        private void InitTabProduct()
+        private void InitManageForm()
         {
-            Product a = new Product { TopLevel = false, Parent = mainForm_tabControl.TabPages[0], Dock = DockStyle.Fill };
-            a.Show();
+            // Xóa hết controls đang tồn tại trong pnlContain (nếu có)
+            this.mainPanel.Controls.Clear();
+
+            frmManage frmChild = new frmManage();
+            frmChild.TopLevel = false;
+
+            // Gắn vào panel
+            this.mainPanel.Controls.Add(frmChild);
+
+            // Hiển thị form
+            frmChild.Show();
         }
-        private void InitTabCustomer()
+        private void InitHomeForm()
         {
-            Customer a = new Customer { TopLevel = false, Parent = mainForm_tabControl.TabPages[1], Dock = DockStyle.Fill };
-            a.Show();
-        }
-        private void InitTabType()
-        {
-            Type a = new Type { TopLevel = false, Parent = mainForm_tabControl.TabPages[2], Dock = DockStyle.Fill };
-            a.Show();
-        }
-        private void InitTabBill()
-        {
-            Bill a = new Bill { TopLevel = false, Parent = mainForm_tabControl.TabPages[3], Dock = DockStyle.Fill };
-            a.Show();
-        }
-        private void InitTabBillDetail()
-        {
-            BillDetail a = new BillDetail { TopLevel = false, Parent = mainForm_tabControl.TabPages[4], Dock = DockStyle.Fill };
-            a.Show();
-        }
-        private void InitTabEmployee()
-        {
-            Employee a = new Employee { TopLevel = false, Parent = mainForm_tabControl.TabPages[5], Dock = DockStyle.Fill };
-            a.Show();
+            // Xóa hết controls đang tồn tại trong pnlContain (nếu có)
+            this.mainPanel.Controls.Clear();
+
+            frmHome frmChild = new frmHome();
+            frmChild.TopLevel = false;
+
+            // Gắn vào panel
+            this.mainPanel.Controls.Add(frmChild);
+
+            // Hiển thị form
+            frmChild.Show();
         }
 
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            InitHomeForm();
+        }
 
+        private void btn_main_Manage_Click(object sender, EventArgs e)
+        {
+            InitManageForm();
+        }
     }
-
-
 }

@@ -150,6 +150,7 @@
             this.but_Type_Add.TabIndex = 0;
             this.but_Type_Add.Text = "Thêm";
             this.but_Type_Add.UseVisualStyleBackColor = true;
+            this.but_Type_Add.Click += new System.EventHandler(this.but_Type_Add_Click);
             // 
             // dgv_Type_InformationTypeDetail
             // 
@@ -172,6 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(865, 534);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dgv_Type_InformationTypeDetail);

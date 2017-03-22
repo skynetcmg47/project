@@ -72,3 +72,5 @@ C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\obj\Debug\selling
 C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Properties.Resources.resources
 C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\obj\Debug\sellingWooden.Type.resources
 C:\Users\PC\Desktop\project-master\sellingWooden\sellingWooden\obj\Debug\sellingWooden.csproj.GenerateResource.Cache
+D:\C#\git project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.frmManage.resources
+D:\C#\git project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.frmHome.resources
