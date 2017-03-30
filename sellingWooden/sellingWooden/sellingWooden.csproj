@@ -33,9 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>C:\Users\Nam\Desktop\Bunifu_UI_v1.52_2\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,29 +51,65 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bill.cs">
+    <Compile Include="frm_Manage\Bill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Bill.Designer.cs">
+    <Compile Include="frm_Manage\Bill.Designer.cs">
       <DependentUpon>Bill.cs</DependentUpon>
     </Compile>
-    <Compile Include="BillDetail.cs">
+    <Compile Include="frm_Manage\BillDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BillDetail.Designer.cs">
+    <Compile Include="frm_Manage\BillDetail.Designer.cs">
       <DependentUpon>BillDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer.cs">
+    <Compile Include="frm_Manage\Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer.Designer.cs">
+    <Compile Include="frm_Manage\Customer.Designer.cs">
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee.cs">
+    <Compile Include="frm_Manage\Employee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employee.Designer.cs">
+    <Compile Include="frm_Manage\Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_edit\frmProduct_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_edit\frmProduct_Edit.Designer.cs">
+      <DependentUpon>frmProduct_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_edit\frmType_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_edit\frmType_Edit.Designer.cs">
+      <DependentUpon>frmType_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_edit\frmEmployee_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_edit\frmEmployee_Edit.Designer.cs">
+      <DependentUpon>frmEmployee_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_edit\frmCustomer_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_edit\frmCustomer_Edit.Designer.cs">
+      <DependentUpon>frmCustomer_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_edit\frmBillDetail_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_edit\frmBillDetail_Edit.Designer.cs">
+      <DependentUpon>frmBillDetail_Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_edit\frmBill_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_edit\frmBill_Edit.Designer.cs">
+      <DependentUpon>frmBill_Edit.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
@@ -83,10 +123,10 @@
     <Compile Include="frmManage.Designer.cs">
       <DependentUpon>frmManage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Product.cs">
+    <Compile Include="frm_Manage\Product.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Product.Designer.cs">
+    <Compile Include="frm_Manage\Product.Designer.cs">
       <DependentUpon>Product.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -96,6 +136,12 @@
     </Compile>
     <Compile Include="mainForm.Designer.cs">
       <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="setting.Designer.cs">
+      <DependentUpon>setting.cs</DependentUpon>
     </Compile>
     <Compile Include="SignIn.cs">
       <SubType>Form</SubType>
@@ -110,23 +156,41 @@
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="SQLHelp.cs" />
-    <Compile Include="Type.cs">
+    <Compile Include="frm_Manage\Type.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Type.Designer.cs">
+    <Compile Include="frm_Manage\Type.Designer.cs">
       <DependentUpon>Type.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Bill.resx">
+    <EmbeddedResource Include="frm_edit\frmBillDetail_Edit.resx">
+      <DependentUpon>frmBillDetail_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_edit\frmCustomer_Edit.resx">
+      <DependentUpon>frmCustomer_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_edit\frmEmployee_Edit.resx">
+      <DependentUpon>frmEmployee_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_edit\frmProduct_Edit.resx">
+      <DependentUpon>frmProduct_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_edit\frmType_Edit.resx">
+      <DependentUpon>frmType_Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Manage\Bill.resx">
       <DependentUpon>Bill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BillDetail.resx">
+    <EmbeddedResource Include="frm_Manage\BillDetail.resx">
       <DependentUpon>BillDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer.resx">
+    <EmbeddedResource Include="frm_Manage\Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee.resx">
+    <EmbeddedResource Include="frm_Manage\Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_edit\frmBill_Edit.resx">
+      <DependentUpon>frmBill_Edit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
@@ -134,7 +198,7 @@
     <EmbeddedResource Include="frmManage.resx">
       <DependentUpon>frmManage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Product.resx">
+    <EmbeddedResource Include="frm_Manage\Product.resx">
       <DependentUpon>Product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -150,7 +214,10 @@
     <EmbeddedResource Include="mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Type.resx">
+    <EmbeddedResource Include="setting.resx">
+      <DependentUpon>setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Manage\Type.resx">
       <DependentUpon>Type.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -168,6 +235,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1487855971_Administrator 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -55,7 +55,9 @@
             this.mainForm_tabControl.Controls.Add(this.tabPage6);
             this.mainForm_tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainForm_tabControl.Location = new System.Drawing.Point(0, 0);
+            this.mainForm_tabControl.Multiline = true;
             this.mainForm_tabControl.Name = "mainForm_tabControl";
+            this.mainForm_tabControl.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.mainForm_tabControl.SelectedIndex = 0;
             this.mainForm_tabControl.Size = new System.Drawing.Size(885, 546);
             this.mainForm_tabControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
@@ -76,7 +78,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(849, 520);
+            this.tabPage2.Size = new System.Drawing.Size(877, 520);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "KHÁCH HÀNG";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -86,7 +88,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(849, 520);
+            this.tabPage3.Size = new System.Drawing.Size(877, 520);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "LOẠI SẢN PHẨM";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -96,7 +98,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(849, 520);
+            this.tabPage4.Size = new System.Drawing.Size(877, 520);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "HÓA ĐƠN";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -106,7 +108,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(849, 520);
+            this.tabPage5.Size = new System.Drawing.Size(877, 520);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = " CHI TIẾT HÓA ĐƠN";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -117,15 +119,15 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(849, 520);
+            this.tabPage6.Size = new System.Drawing.Size(877, 520);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "NHÂN VIÊN";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // frmManage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(885, 546);
             this.Controls.Add(this.mainForm_tabControl);
