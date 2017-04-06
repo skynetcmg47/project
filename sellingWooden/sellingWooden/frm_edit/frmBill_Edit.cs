@@ -38,7 +38,7 @@ namespace sellingWooden
         }
 
         private void but_frmBill_Edit_OK_Click(object sender, EventArgs e)
-        {
+        { 
             string day = dtm_frmBill_Edit_DateSell.Value.Day.ToString();
             string month = dtm_frmBill_Edit_DateSell.Value.Month.ToString();
             string year = dtm_frmBill_Edit_DateSell.Value.Year.ToString();

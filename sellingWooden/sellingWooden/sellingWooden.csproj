@@ -36,10 +36,18 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>C:\Users\Nam\Desktop\Bunifu_UI_v1.52_2\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +59,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="account.Designer.cs">
+      <DependentUpon>account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BillReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="commonUtilities.cs" />
+    <Compile Include="frmBillReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBillReport.Designer.cs">
+      <DependentUpon>frmBillReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Manage\Bill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,12 +138,6 @@
     <Compile Include="frm_edit\frmBill_Edit.Designer.cs">
       <DependentUpon>frmBill_Edit.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHome.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmHome.Designer.cs">
-      <DependentUpon>frmHome.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmManage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +183,22 @@
     <Compile Include="frm_Manage\Type.Designer.cs">
       <DependentUpon>Type.cs</DependentUpon>
     </Compile>
+    <Compile Include="Statistic_Growth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistic_Growth.Designer.cs">
+      <DependentUpon>Statistic_Growth.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="account.resx">
+      <DependentUpon>account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>BillReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBillReport.resx">
+      <DependentUpon>frmBillReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_edit\frmBillDetail_Edit.resx">
       <DependentUpon>frmBillDetail_Edit.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,9 +229,6 @@
     <EmbeddedResource Include="frm_edit\frmBill_Edit.resx">
       <DependentUpon>frmBill_Edit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHome.resx">
-      <DependentUpon>frmHome.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmManage.resx">
       <DependentUpon>frmManage.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +254,12 @@
     <EmbeddedResource Include="frm_Manage\Type.resx">
       <DependentUpon>Type.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic_Growth.resx">
+      <DependentUpon>Statistic_Growth.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -238,6 +278,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\home %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

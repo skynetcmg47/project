@@ -63,7 +63,10 @@ namespace sellingWooden
             cmd.Dispose();
             return table;
         }
-
+        public DataTable getDataTable_excute(string sql)
+        {
+            return getDataTable(sql);
+        }
         public static void Excute(string sql)
         {
             //run the sql query
@@ -100,19 +103,7 @@ namespace sellingWooden
 
         }
 
-        public void updateDaTa(string sTableName, string sColumnName, string sNewValue, string sConditionColumn, string sConditionValue)
-        {
-            //this method will edit your data in sql sv
-            /*   UPDATE tableName
-                 SET columnName = newValue
-                 WHERE columnName = value
-            */
-
-            Excute("UPDATE " + sTableName + " SET " + sColumnName + " = '" + sNewValue + "' WHERE " + sConditionColumn + " = '" + sConditionValue + "'");
-
-        }
-
-        public void deleteData(string sTableName, string sColumnName, string sValue)
+               public void deleteData(string sTableName, string sColumnName, string sValue)
         {
             /*
              this method will delete your data base on your condition

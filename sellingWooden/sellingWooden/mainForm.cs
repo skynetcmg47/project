@@ -16,7 +16,8 @@ namespace sellingWooden
         public mainForm()
         {
             InitializeComponent();
-            InitHomeForm();
+            InitManageForm();
+            btn_main_Manage.selected = true;
         }
         private void InitManageForm()
         {
@@ -36,7 +37,7 @@ namespace sellingWooden
         {
             // Xóa hết controls đang tồn tại trong pnlContain (nếu có)
             this.viewPanel.Controls.Clear();
-            frmHome frmChild = new frmHome();
+            account frmChild = new account();
             frmChild.Size = viewPanel.Size;
             frmChild.TopLevel = false;
             // Gắn vào panel
@@ -74,7 +75,21 @@ namespace sellingWooden
 
         private void btn_main_Statistic_Click(object sender, EventArgs e)
         {
+            InitStatisticForm();
+        }
 
+        private void InitStatisticForm()
+        {
+            // Xóa hết controls đang tồn tại trong pnlContain (nếu có)
+            this.viewPanel.Controls.Clear();
+            Statistic_Growth frmChild = new Statistic_Growth();
+            frmChild.Size = viewPanel.Size;
+            frmChild.TopLevel = false;
+            // Gắn vào panel
+            this.viewPanel.Controls.Add(frmChild);
+
+            // Hiển thị form
+            frmChild.Show();
         }
 
         private void btn_hone_Click(object sender, EventArgs e)
@@ -85,8 +100,25 @@ namespace sellingWooden
 
         private void btn_system_close_Click(object sender, EventArgs e)
         {
-            //close program
-            this.Close();
+            if (this.isExpandPress)
+            {
+                this.WindowState = FormWindowState.Normal;
+                this.isExpandPress = false;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+
+                this.isExpandPress = true;
+            }
+            if (btn_main_Manage.selected)
+            {
+                InitManageForm();
+
+            }
+            else if (btn_main_Setting.selected)
+                InitSettingForm();
+            //else InitStatisticForm();
 
         }
 
@@ -131,29 +163,30 @@ namespace sellingWooden
 
         private void btn_expand_Click(object sender, EventArgs e)
         {
-            if(this.isExpandPress)
-            {
-                this.WindowState = FormWindowState.Normal;
-                this.isExpandPress = false;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Maximized;
+            //close program
+            this.Close();
+            
+        }
 
-                this.isExpandPress = true;
-            }
-            if (btn_main_Manage.selected)
-            {
-                InitManageForm();
+        private void InitAccount()
+        {
+            // Xóa hết controls đang tồn tại trong pnlContain (nếu có)
+            this.viewPanel.Controls.Clear();
 
-            }
-            else if (btn_hone.selected)
-                InitHomeForm();
-            else if (btn_main_Setting.selected)
-                InitSettingForm();
-            //else InitStatisticForm();
-               
+            account frmChild = new account();
+            frmChild.Size = viewPanel.Size;
+            frmChild.TopLevel = false;
 
+            // Gắn vào panel
+            this.viewPanel.Controls.Add(frmChild);
+
+            // Hiển thị form
+            frmChild.Show();
+        }
+
+        private void btn_main_account_Click(object sender, EventArgs e)
+        {
+            InitAccount();
         }
     }
 }

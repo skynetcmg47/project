@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace sellingWooden
 {
-    public partial class frmHome : Form
+    public partial class frmBillReport : Form
     {
-        public frmHome()
+        public frmBillReport()
         {
             InitializeComponent();
+        }
+
+        private void frmBillReport_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
