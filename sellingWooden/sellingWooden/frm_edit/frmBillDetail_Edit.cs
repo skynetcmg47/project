@@ -78,6 +78,11 @@ namespace sellingWooden
             this.Close();
         }
 
+        private void but_frmBillDetail_Edit_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         public void setAmount(string s)
         {
             Amount = s;

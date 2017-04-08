@@ -35,14 +35,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_Type_Search = new System.Windows.Forms.Button();
+            this.txt_Type_Search = new System.Windows.Forms.TextBox();
             this.but_Type_Delete = new System.Windows.Forms.Button();
             this.but_Type_Refresh = new System.Windows.Forms.Button();
             this.but_Type_Edit = new System.Windows.Forms.Button();
             this.but_Type_Add = new System.Windows.Forms.Button();
             this.dgv_Type_InformationTypeDetail = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_Type_Search = new System.Windows.Forms.TextBox();
-            this.btn_Type_Search = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Type_InformationTypeDetail)).BeginInit();
@@ -72,6 +72,7 @@
             // txt_Type_TypeID
             // 
             this.txt_Type_TypeID.Location = new System.Drawing.Point(94, 26);
+            this.txt_Type_TypeID.MaxLength = 5;
             this.txt_Type_TypeID.Name = "txt_Type_TypeID";
             this.txt_Type_TypeID.Size = new System.Drawing.Size(86, 20);
             this.txt_Type_TypeID.TabIndex = 2;
@@ -106,6 +107,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.btn_Type_Search);
             this.groupBox2.Controls.Add(this.txt_Type_Search);
             this.groupBox2.Controls.Add(this.but_Type_Delete);
@@ -119,9 +122,27 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Điều khiển";
             // 
+            // btn_Type_Search
+            // 
+            this.btn_Type_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Type_Search.Location = new System.Drawing.Point(313, 58);
+            this.btn_Type_Search.Name = "btn_Type_Search";
+            this.btn_Type_Search.Size = new System.Drawing.Size(85, 31);
+            this.btn_Type_Search.TabIndex = 6;
+            this.btn_Type_Search.Text = "Tìm Kiếm";
+            this.btn_Type_Search.UseVisualStyleBackColor = true;
+            this.btn_Type_Search.Click += new System.EventHandler(this.btn_Type_Search_Click);
+            // 
+            // txt_Type_Search
+            // 
+            this.txt_Type_Search.Location = new System.Drawing.Point(273, 26);
+            this.txt_Type_Search.Name = "txt_Type_Search";
+            this.txt_Type_Search.Size = new System.Drawing.Size(163, 20);
+            this.txt_Type_Search.TabIndex = 5;
+            // 
             // but_Type_Delete
             // 
-            this.but_Type_Delete.Location = new System.Drawing.Point(19, 54);
+            this.but_Type_Delete.Location = new System.Drawing.Point(140, 54);
             this.but_Type_Delete.Name = "but_Type_Delete";
             this.but_Type_Delete.Size = new System.Drawing.Size(90, 31);
             this.but_Type_Delete.TabIndex = 4;
@@ -131,18 +152,20 @@
             // 
             // but_Type_Refresh
             // 
-            this.but_Type_Refresh.Location = new System.Drawing.Point(140, 54);
+            this.but_Type_Refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.but_Type_Refresh.Location = new System.Drawing.Point(19, 54);
             this.but_Type_Refresh.Name = "but_Type_Refresh";
-            this.but_Type_Refresh.Size = new System.Drawing.Size(85, 31);
+            this.but_Type_Refresh.Size = new System.Drawing.Size(90, 31);
             this.but_Type_Refresh.TabIndex = 2;
             this.but_Type_Refresh.Text = "Làm mới";
             this.but_Type_Refresh.UseVisualStyleBackColor = true;
+            this.but_Type_Refresh.Click += new System.EventHandler(this.but_Type_Refresh_Click);
             // 
             // but_Type_Edit
             // 
             this.but_Type_Edit.Location = new System.Drawing.Point(140, 17);
             this.but_Type_Edit.Name = "but_Type_Edit";
-            this.but_Type_Edit.Size = new System.Drawing.Size(85, 31);
+            this.but_Type_Edit.Size = new System.Drawing.Size(90, 31);
             this.but_Type_Edit.TabIndex = 1;
             this.but_Type_Edit.Text = "Sửa";
             this.but_Type_Edit.UseVisualStyleBackColor = true;
@@ -150,9 +173,10 @@
             // 
             // but_Type_Add
             // 
+            this.but_Type_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.but_Type_Add.Location = new System.Drawing.Point(19, 17);
             this.but_Type_Add.Name = "but_Type_Add";
-            this.but_Type_Add.Size = new System.Drawing.Size(90, 29);
+            this.but_Type_Add.Size = new System.Drawing.Size(90, 31);
             this.but_Type_Add.TabIndex = 0;
             this.but_Type_Add.Text = "Thêm";
             this.but_Type_Add.UseVisualStyleBackColor = true;
@@ -160,6 +184,9 @@
             // 
             // dgv_Type_InformationTypeDetail
             // 
+            this.dgv_Type_InformationTypeDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Type_InformationTypeDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Type_InformationTypeDetail.Location = new System.Drawing.Point(21, 235);
             this.dgv_Type_InformationTypeDetail.Name = "dgv_Type_InformationTypeDetail";
@@ -175,23 +202,6 @@
             this.label4.Size = new System.Drawing.Size(153, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Thông tin loại hàng hóa chi tiết";
-            // 
-            // txt_Type_Search
-            // 
-            this.txt_Type_Search.Location = new System.Drawing.Point(273, 26);
-            this.txt_Type_Search.Name = "txt_Type_Search";
-            this.txt_Type_Search.Size = new System.Drawing.Size(163, 20);
-            this.txt_Type_Search.TabIndex = 5;
-            // 
-            // btn_Type_Search
-            // 
-            this.btn_Type_Search.Location = new System.Drawing.Point(313, 58);
-            this.btn_Type_Search.Name = "btn_Type_Search";
-            this.btn_Type_Search.Size = new System.Drawing.Size(85, 31);
-            this.btn_Type_Search.TabIndex = 6;
-            this.btn_Type_Search.Text = "Tìm Kiếm";
-            this.btn_Type_Search.UseVisualStyleBackColor = true;
-            this.btn_Type_Search.Click += new System.EventHandler(this.btn_Type_Search_Click);
             // 
             // Type
             // 

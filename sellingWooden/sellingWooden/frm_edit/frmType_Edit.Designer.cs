@@ -50,7 +50,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 124);
+            this.label2.Location = new System.Drawing.Point(12, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 20);
             this.label2.TabIndex = 1;
@@ -66,27 +66,29 @@
             // 
             // txt_frmType_Edit_NOT
             // 
-            this.txt_frmType_Edit_NOT.Location = new System.Drawing.Point(106, 124);
+            this.txt_frmType_Edit_NOT.Location = new System.Drawing.Point(106, 95);
+            this.txt_frmType_Edit_NOT.MaxLength = 40;
             this.txt_frmType_Edit_NOT.Name = "txt_frmType_Edit_NOT";
             this.txt_frmType_Edit_NOT.Size = new System.Drawing.Size(146, 20);
             this.txt_frmType_Edit_NOT.TabIndex = 3;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(38, 187);
+            this.button1.Location = new System.Drawing.Point(177, 148);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 33);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Cancel";
+            this.button1.Text = "Hủy";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btn_type_edit_ok
             // 
-            this.btn_type_edit_ok.Location = new System.Drawing.Point(213, 187);
+            this.btn_type_edit_ok.Location = new System.Drawing.Point(36, 148);
             this.btn_type_edit_ok.Name = "btn_type_edit_ok";
             this.btn_type_edit_ok.Size = new System.Drawing.Size(88, 33);
             this.btn_type_edit_ok.TabIndex = 5;
-            this.btn_type_edit_ok.Text = "OK";
+            this.btn_type_edit_ok.Text = "Sửa";
             this.btn_type_edit_ok.UseVisualStyleBackColor = true;
             this.btn_type_edit_ok.Click += new System.EventHandler(this.btn_type_edit_ok_Click);
             // 
@@ -94,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 289);
+            this.ClientSize = new System.Drawing.Size(297, 230);
             this.Controls.Add(this.btn_type_edit_ok);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txt_frmType_Edit_NOT);
@@ -102,7 +104,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmType_Edit";
-            this.Text = "frmType_Edit";
+            this.Text = "Sửa thông tin loại";
             this.ResumeLayout(false);
             this.PerformLayout();
 

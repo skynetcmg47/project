@@ -13,6 +13,8 @@ namespace sellingWooden
 {
     public partial class Customer : Form
     {
+        string CustomerID, NOC, DOB, Sex, Address, Note;
+        string TEL;
         SQLHelp help = new SQLHelp();
         public Customer()
         {
@@ -46,10 +48,7 @@ namespace sellingWooden
         {
             try {
                 if (txt_Customer_CustomerID.Text != ""
-                    && txt_Customer_NOC.Text != ""
-                    && cbo_Customer_Sex.Text != ""
-                    && txt_Customer_TEL.Text != ""
-                    && txt_Customer_Address.Text != "")
+                    && txt_Customer_NOC.Text != "")
                     if (help.checkID("Customer", txt_Customer_CustomerID.Text))
                     {
                         string day = dtm_Customer_DOB.Value.Day.ToString();
@@ -61,7 +60,7 @@ namespace sellingWooden
                                       "'" + dob + "'," +
                                       "N" + "'" + cbo_Customer_Sex.Text + "'," +
                                       "N" + "'" + txt_Customer_Address.Text + "'," +
-                                      "'" + txt_Customer_TEL.Text + "'," +
+                                      "'" + txt_Customer_TEL.Text+ "'," +
                                       "N" + "'" + txt_Customer_Note.Text + "'";
                         help.addData("Customer", Data);
                         InitCustomerDtgv();
@@ -124,34 +123,51 @@ namespace sellingWooden
         {
             index = dgv_Customer_InformationCustomerDetail.CurrentRow.Index;
             txt_Customer_CustomerID.Text = dgv_Customer_InformationCustomerDetail.Rows[index].Cells[0].Value.ToString();
+            CustomerID= dgv_Customer_InformationCustomerDetail.Rows[index].Cells[0].Value.ToString();
+
             txt_Customer_NOC.Text = dgv_Customer_InformationCustomerDetail.Rows[index].Cells[1].Value.ToString();
+            NOC = dgv_Customer_InformationCustomerDetail.Rows[index].Cells[1].Value.ToString();
+
             dtm_Customer_DOB.Text = dgv_Customer_InformationCustomerDetail.Rows[index].Cells[2].Value.ToString();
+            DOB = dgv_Customer_InformationCustomerDetail.Rows[index].Cells[2].Value.ToString();
+
             cbo_Customer_Sex.Text = dgv_Customer_InformationCustomerDetail.Rows[index].Cells[3].Value.ToString();
+            Sex = dgv_Customer_InformationCustomerDetail.Rows[index].Cells[3].Value.ToString();
+
             txt_Customer_Address.Text = dgv_Customer_InformationCustomerDetail.Rows[index].Cells[4].Value.ToString();
+            Address = dgv_Customer_InformationCustomerDetail.Rows[index].Cells[4].Value.ToString();
+
             txt_Customer_TEL.Text = dgv_Customer_InformationCustomerDetail.Rows[index].Cells[5].Value.ToString();
+            TEL = dgv_Customer_InformationCustomerDetail.Rows[index].Cells[5].Value.ToString();
+
             txt_Customer_Note.Text = dgv_Customer_InformationCustomerDetail.Rows[index].Cells[6].Value.ToString();
+            Note= dgv_Customer_InformationCustomerDetail.Rows[index].Cells[6].Value.ToString();
+
         }
 
         private void but_Customer_Edit_Click(object sender, EventArgs e)
         {
             frmCustomer_Edit run = new frmCustomer_Edit();
-            try
-            {
-                run.setCustomerID(txt_Customer_CustomerID.Text);
-                run.setNOC(txt_Customer_NOC.Text);
-                run.setDOB(dtm_Customer_DOB.Text);
-                run.setAddress(txt_Customer_Address.Text);
-                run.setNote(txt_Customer_Note.Text);
-                run.setSex(cbo_Customer_Sex.Text);
-                run.setTEL(txt_Customer_TEL.Text);
-                run.showInformation();
-                run.ShowDialog();
-                InitCustomerDtgv();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Bạn chưa chọn dòng cần sửa");
-            }
+            if (CustomerID != null && CustomerID != "")
+                try
+                {
+                    run.setCustomerID(CustomerID);
+                    run.setNOC(NOC);
+                    run.setDOB(DOB);
+                    run.setAddress(Address);
+                    run.setNote(Note);
+                    run.setSex(Sex);
+                    run.setTEL(TEL);
+                    run.showInformation();
+                    run.ShowDialog();
+                    InitCustomerDtgv();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Bạn chưa chọn dòng cần sửa");
+                }
+            else MessageBox.Show("Bạn chưa chọn dòng cần sửa");
+
         }
         //=================================================================================
         private void btn_Customer_Search_Click(object sender, EventArgs e)
@@ -166,6 +182,11 @@ namespace sellingWooden
                           + "or Note LIKE N'%" + txtSearch + "%'";
             help.Excute_query(sql);
             help.fillInDTGV(dgv_Customer_InformationCustomerDetail, "v_Customer_Search");
+        }
+
+        private void but_Customer_Refresh_Click(object sender, EventArgs e)
+        {
+            InitCustomerDtgv();
         }
     }
 }

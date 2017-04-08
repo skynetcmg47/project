@@ -29,33 +29,32 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.control_panel = new System.Windows.Forms.Panel();
             this.btn_main_account = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_menu = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_main_Setting = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_main_Statistic = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_main_Manage = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.top_panel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btn_SoftName = new Bunifu.Framework.UI.BunifuImageButton();
             this.SoftWareName = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btn_hide = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btn_system_exit = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_expand = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btn_system_exit = new Bunifu.Framework.UI.BunifuImageButton();
             this.panelTransit = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.viewPanel = new System.Windows.Forms.Panel();
-            this.top_panel = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.control_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_menu)).BeginInit();
+            this.top_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_SoftName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_hide)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_system_exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_expand)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_system_exit)).BeginInit();
             this.panel1.SuspendLayout();
-            this.top_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -70,7 +69,6 @@
             this.control_panel.BackColor = System.Drawing.Color.SeaGreen;
             this.control_panel.Controls.Add(this.btn_main_account);
             this.control_panel.Controls.Add(this.btn_menu);
-            this.control_panel.Controls.Add(this.btn_main_Setting);
             this.control_panel.Controls.Add(this.btn_main_Statistic);
             this.control_panel.Controls.Add(this.btn_main_Manage);
             this.panelTransit.SetDecoration(this.control_panel, BunifuAnimatorNS.DecorationType.None);
@@ -101,13 +99,13 @@
             this.btn_main_account.IconVisible = true;
             this.btn_main_account.IconZoom = 80D;
             this.btn_main_account.IsTab = true;
-            this.btn_main_account.Location = new System.Drawing.Point(3, 357);
+            this.btn_main_account.Location = new System.Drawing.Point(0, 303);
             this.btn_main_account.Name = "btn_main_account";
             this.btn_main_account.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btn_main_account.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_main_account.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_main_account.selected = false;
-            this.btn_main_account.Size = new System.Drawing.Size(182, 48);
+            this.btn_main_account.Size = new System.Drawing.Size(185, 48);
             this.btn_main_account.TabIndex = 12;
             this.btn_main_account.Text = "     Tài Khoản";
             this.btn_main_account.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -129,43 +127,6 @@
             this.btn_menu.TabIndex = 1;
             this.btn_menu.TabStop = false;
             this.btn_menu.Zoom = 20;
-            this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
-            // 
-            // btn_main_Setting
-            // 
-            this.btn_main_Setting.Activecolor = System.Drawing.Color.DodgerBlue;
-            this.btn_main_Setting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_main_Setting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_main_Setting.BorderRadius = 0;
-            this.btn_main_Setting.ButtonText = "     Cài Đặt";
-            this.btn_main_Setting.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelTransit.SetDecoration(this.btn_main_Setting, BunifuAnimatorNS.DecorationType.None);
-            this.btn_main_Setting.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_main_Setting.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_main_Setting.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_main_Setting.Iconimage")));
-            this.btn_main_Setting.Iconimage_right = null;
-            this.btn_main_Setting.Iconimage_right_Selected = null;
-            this.btn_main_Setting.Iconimage_Selected = null;
-            this.btn_main_Setting.IconMarginLeft = 0;
-            this.btn_main_Setting.IconMarginRight = 0;
-            this.btn_main_Setting.IconRightVisible = true;
-            this.btn_main_Setting.IconRightZoom = 0D;
-            this.btn_main_Setting.IconVisible = true;
-            this.btn_main_Setting.IconZoom = 80D;
-            this.btn_main_Setting.IsTab = true;
-            this.btn_main_Setting.Location = new System.Drawing.Point(3, 303);
-            this.btn_main_Setting.Name = "btn_main_Setting";
-            this.btn_main_Setting.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_main_Setting.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btn_main_Setting.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_main_Setting.selected = false;
-            this.btn_main_Setting.Size = new System.Drawing.Size(182, 48);
-            this.btn_main_Setting.TabIndex = 11;
-            this.btn_main_Setting.Text = "     Cài Đặt";
-            this.btn_main_Setting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_main_Setting.Textcolor = System.Drawing.Color.Black;
-            this.btn_main_Setting.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_main_Setting.Click += new System.EventHandler(this.btn_main_Setting_Click);
             // 
             // btn_main_Statistic
             // 
@@ -246,6 +207,28 @@
             this.bunifuDragControl1.TargetControl = this.top_panel;
             this.bunifuDragControl1.Vertical = true;
             // 
+            // top_panel
+            // 
+            this.top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.top_panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("top_panel.BackgroundImage")));
+            this.top_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.top_panel.Controls.Add(this.btn_SoftName);
+            this.top_panel.Controls.Add(this.SoftWareName);
+            this.top_panel.Controls.Add(this.btn_hide);
+            this.top_panel.Controls.Add(this.btn_expand);
+            this.top_panel.Controls.Add(this.btn_system_exit);
+            this.panelTransit.SetDecoration(this.top_panel, BunifuAnimatorNS.DecorationType.None);
+            this.top_panel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.top_panel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.top_panel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.top_panel.GradientTopLeft = System.Drawing.Color.MediumSpringGreen;
+            this.top_panel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.top_panel.Location = new System.Drawing.Point(0, 0);
+            this.top_panel.Name = "top_panel";
+            this.top_panel.Quality = 10;
+            this.top_panel.Size = new System.Drawing.Size(1074, 39);
+            this.top_panel.TabIndex = 2;
+            // 
             // btn_SoftName
             // 
             this.btn_SoftName.BackColor = System.Drawing.Color.Transparent;
@@ -289,22 +272,6 @@
             this.btn_hide.Zoom = 20;
             this.btn_hide.Click += new System.EventHandler(this.btn_hide_Click);
             // 
-            // btn_system_exit
-            // 
-            this.btn_system_exit.BackColor = System.Drawing.Color.Transparent;
-            this.panelTransit.SetDecoration(this.btn_system_exit, BunifuAnimatorNS.DecorationType.None);
-            this.btn_system_exit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_system_exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_system_exit.Image")));
-            this.btn_system_exit.ImageActive = null;
-            this.btn_system_exit.Location = new System.Drawing.Point(1048, 0);
-            this.btn_system_exit.Name = "btn_system_exit";
-            this.btn_system_exit.Size = new System.Drawing.Size(26, 39);
-            this.btn_system_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_system_exit.TabIndex = 1;
-            this.btn_system_exit.TabStop = false;
-            this.btn_system_exit.Zoom = 20;
-            this.btn_system_exit.Click += new System.EventHandler(this.btn_expand_Click);
-            // 
             // btn_expand
             // 
             this.btn_expand.BackColor = System.Drawing.Color.Transparent;
@@ -321,26 +288,42 @@
             this.btn_expand.Zoom = 20;
             this.btn_expand.Click += new System.EventHandler(this.btn_system_close_Click);
             // 
+            // btn_system_exit
+            // 
+            this.btn_system_exit.BackColor = System.Drawing.Color.Transparent;
+            this.panelTransit.SetDecoration(this.btn_system_exit, BunifuAnimatorNS.DecorationType.None);
+            this.btn_system_exit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btn_system_exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_system_exit.Image")));
+            this.btn_system_exit.ImageActive = null;
+            this.btn_system_exit.Location = new System.Drawing.Point(1048, 0);
+            this.btn_system_exit.Name = "btn_system_exit";
+            this.btn_system_exit.Size = new System.Drawing.Size(26, 39);
+            this.btn_system_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_system_exit.TabIndex = 1;
+            this.btn_system_exit.TabStop = false;
+            this.btn_system_exit.Zoom = 20;
+            this.btn_system_exit.Click += new System.EventHandler(this.btn_expand_Click);
+            // 
             // panelTransit
             // 
             this.panelTransit.AnimationType = BunifuAnimatorNS.AnimationType.HorizBlind;
             this.panelTransit.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.panelTransit.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.panelTransit.DefaultAnimation = animation1;
             // 
             // panel1
             // 
@@ -366,28 +349,6 @@
             this.viewPanel.Size = new System.Drawing.Size(893, 549);
             this.viewPanel.TabIndex = 1;
             // 
-            // top_panel
-            // 
-            this.top_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.top_panel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("top_panel.BackgroundImage")));
-            this.top_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.top_panel.Controls.Add(this.btn_SoftName);
-            this.top_panel.Controls.Add(this.SoftWareName);
-            this.top_panel.Controls.Add(this.btn_hide);
-            this.top_panel.Controls.Add(this.btn_expand);
-            this.top_panel.Controls.Add(this.btn_system_exit);
-            this.panelTransit.SetDecoration(this.top_panel, BunifuAnimatorNS.DecorationType.None);
-            this.top_panel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.top_panel.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.top_panel.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.top_panel.GradientTopLeft = System.Drawing.Color.MediumSpringGreen;
-            this.top_panel.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.top_panel.Location = new System.Drawing.Point(0, 0);
-            this.top_panel.Name = "top_panel";
-            this.top_panel.Quality = 10;
-            this.top_panel.Size = new System.Drawing.Size(1074, 39);
-            this.top_panel.TabIndex = 2;
-            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -403,13 +364,13 @@
             this.Text = "realmainForm";
             this.control_panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_menu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_SoftName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_hide)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_system_exit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_expand)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.top_panel.ResumeLayout(false);
             this.top_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_SoftName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_hide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_expand)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btn_system_exit)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -417,7 +378,6 @@
         #endregion
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.Panel control_panel;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_main_Setting;
         private Bunifu.Framework.UI.BunifuFlatButton btn_main_Statistic;
         private Bunifu.Framework.UI.BunifuFlatButton btn_main_Manage;
         private Bunifu.Framework.UI.BunifuImageButton btn_hide;

@@ -36,12 +36,12 @@
             this.lb_userName = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lb_pass = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.lb_notice = new System.Windows.Forms.Label();
-            this.btn_cancel = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btn_Signin = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pn_sign_top = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btn_SignIn_hide = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_signIn_close = new Bunifu.Framework.UI.BunifuImageButton();
+            this.lb_notice = new System.Windows.Forms.Label();
+            this.btn_cancel = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btn_Signin = new Bunifu.Framework.UI.BunifuThinButton2();
             this.pn_sign_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_SignIn_hide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_signIn_close)).BeginInit();
@@ -113,67 +113,6 @@
             this.bunifuDragControl1.TargetControl = this.pn_sign_top;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // lb_notice
-            // 
-            this.lb_notice.AutoSize = true;
-            this.lb_notice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_notice.Location = new System.Drawing.Point(200, 41);
-            this.lb_notice.Name = "lb_notice";
-            this.lb_notice.Size = new System.Drawing.Size(0, 20);
-            this.lb_notice.TabIndex = 10;
-            // 
-            // btn_cancel
-            // 
-            this.btn_cancel.ActiveBorderThickness = 1;
-            this.btn_cancel.ActiveCornerRadius = 20;
-            this.btn_cancel.ActiveFillColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_cancel.ActiveForecolor = System.Drawing.Color.White;
-            this.btn_cancel.ActiveLineColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_cancel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cancel.BackgroundImage")));
-            this.btn_cancel.ButtonText = "Thoát";
-            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancel.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btn_cancel.IdleBorderThickness = 1;
-            this.btn_cancel.IdleCornerRadius = 20;
-            this.btn_cancel.IdleFillColor = System.Drawing.Color.RoyalBlue;
-            this.btn_cancel.IdleForecolor = System.Drawing.Color.White;
-            this.btn_cancel.IdleLineColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_cancel.Location = new System.Drawing.Point(257, 186);
-            this.btn_cancel.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_cancel.Name = "btn_cancel";
-            this.btn_cancel.Size = new System.Drawing.Size(153, 41);
-            this.btn_cancel.TabIndex = 9;
-            this.btn_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
-            // 
-            // btn_Signin
-            // 
-            this.btn_Signin.ActiveBorderThickness = 1;
-            this.btn_Signin.ActiveCornerRadius = 20;
-            this.btn_Signin.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
-            this.btn_Signin.ActiveForecolor = System.Drawing.Color.White;
-            this.btn_Signin.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
-            this.btn_Signin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Signin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Signin.BackgroundImage")));
-            this.btn_Signin.ButtonText = "Đăng Nhập";
-            this.btn_Signin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Signin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Signin.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btn_Signin.IdleBorderThickness = 1;
-            this.btn_Signin.IdleCornerRadius = 20;
-            this.btn_Signin.IdleFillColor = System.Drawing.Color.SeaGreen;
-            this.btn_Signin.IdleForecolor = System.Drawing.Color.White;
-            this.btn_Signin.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
-            this.btn_Signin.Location = new System.Drawing.Point(82, 186);
-            this.btn_Signin.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_Signin.Name = "btn_Signin";
-            this.btn_Signin.Size = new System.Drawing.Size(153, 41);
-            this.btn_Signin.TabIndex = 8;
-            this.btn_Signin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Signin.Click += new System.EventHandler(this.btn_Signup_Click);
-            // 
             // pn_sign_top
             // 
             this.pn_sign_top.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
@@ -222,11 +161,72 @@
             this.btn_signIn_close.Zoom = 20;
             this.btn_signIn_close.Click += new System.EventHandler(this.btn_signIn_close_Click);
             // 
+            // lb_notice
+            // 
+            this.lb_notice.AutoSize = true;
+            this.lb_notice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_notice.Location = new System.Drawing.Point(200, 41);
+            this.lb_notice.Name = "lb_notice";
+            this.lb_notice.Size = new System.Drawing.Size(0, 20);
+            this.lb_notice.TabIndex = 10;
+            // 
+            // btn_cancel
+            // 
+            this.btn_cancel.ActiveBorderThickness = 1;
+            this.btn_cancel.ActiveCornerRadius = 20;
+            this.btn_cancel.ActiveFillColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_cancel.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_cancel.ActiveLineColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cancel.BackgroundImage")));
+            this.btn_cancel.ButtonText = "Thoát";
+            this.btn_cancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancel.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btn_cancel.IdleBorderThickness = 1;
+            this.btn_cancel.IdleCornerRadius = 20;
+            this.btn_cancel.IdleFillColor = System.Drawing.Color.RoyalBlue;
+            this.btn_cancel.IdleForecolor = System.Drawing.Color.White;
+            this.btn_cancel.IdleLineColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_cancel.Location = new System.Drawing.Point(257, 186);
+            this.btn_cancel.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_cancel.Name = "btn_cancel";
+            this.btn_cancel.Size = new System.Drawing.Size(153, 41);
+            this.btn_cancel.TabIndex = 9;
+            this.btn_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
+            // 
+            // btn_Signin
+            // 
+            this.btn_Signin.ActiveBorderThickness = 1;
+            this.btn_Signin.ActiveCornerRadius = 20;
+            this.btn_Signin.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
+            this.btn_Signin.ActiveForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_Signin.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
+            this.btn_Signin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_Signin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_Signin.BackgroundImage")));
+            this.btn_Signin.ButtonText = "Đăng Nhập";
+            this.btn_Signin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Signin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Signin.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btn_Signin.IdleBorderThickness = 1;
+            this.btn_Signin.IdleCornerRadius = 20;
+            this.btn_Signin.IdleFillColor = System.Drawing.Color.SeaGreen;
+            this.btn_Signin.IdleForecolor = System.Drawing.Color.White;
+            this.btn_Signin.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
+            this.btn_Signin.Location = new System.Drawing.Point(82, 186);
+            this.btn_Signin.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_Signin.Name = "btn_Signin";
+            this.btn_Signin.Size = new System.Drawing.Size(153, 41);
+            this.btn_Signin.TabIndex = 8;
+            this.btn_Signin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Signin.Click += new System.EventHandler(this.btn_Signup_Click);
+            // 
             // SignIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(504, 261);
             this.Controls.Add(this.lb_notice);
             this.Controls.Add(this.btn_cancel);

@@ -16,7 +16,9 @@ namespace sellingWooden
     public partial class Product : Form
     {
         SQLHelp help = new SQLHelp();
-
+        string ProductID, NOP, TypeID, Status, Note;
+        string Quanty, Size;
+        string Price;
 
         public Product()
         {
@@ -40,6 +42,7 @@ namespace sellingWooden
         public void InitProductDtgv()
         {
             help.fillInDTGV(dgv_Product_InformatinProductDetail, "Product");
+           // dgv_Product_InformatinProductDetail.Width = this.Width - 10;
         }
 
 
@@ -81,7 +84,7 @@ namespace sellingWooden
             }
             catch (Exception ex)
             {
-                MessageBox.Show("lỗi hệ thống, xin vui lòng khởi động lại chương trình");
+                MessageBox.Show("Lỗi nhập liệu, xin vui lòng thử lại");
             }
         }
 
@@ -106,13 +109,28 @@ namespace sellingWooden
         {
             index = dgv_Product_InformatinProductDetail.CurrentRow.Index;
             txt_Product_ProductID.Text = dgv_Product_InformatinProductDetail.Rows[index].Cells[0].Value.ToString();
+            ProductID = dgv_Product_InformatinProductDetail.Rows[index].Cells[0].Value.ToString();
+
             cbb_Product_TypeID.SelectedValue = dgv_Product_InformatinProductDetail.Rows[index].Cells[1].Value.ToString();
+            TypeID = dgv_Product_InformatinProductDetail.Rows[index].Cells[1].Value.ToString();
+
             txt_Product_NOP.Text = dgv_Product_InformatinProductDetail.Rows[index].Cells[2].Value.ToString();
+            NOP = dgv_Product_InformatinProductDetail.Rows[index].Cells[2].Value.ToString();
+
             cbb_Product_Status.Text = dgv_Product_InformatinProductDetail.Rows[index].Cells[3].Value.ToString();
+            Status = dgv_Product_InformatinProductDetail.Rows[index].Cells[3].Value.ToString();
+
             txt_Product_Quanty.Text = dgv_Product_InformatinProductDetail.Rows[index].Cells[4].Value.ToString();
+            Quanty = dgv_Product_InformatinProductDetail.Rows[index].Cells[4].Value.ToString();
+
             txt_Product_Price.Text = dgv_Product_InformatinProductDetail.Rows[index].Cells[5].Value.ToString();
+            Price= dgv_Product_InformatinProductDetail.Rows[index].Cells[5].Value.ToString();
+
             txt_Product_Size.Text = dgv_Product_InformatinProductDetail.Rows[index].Cells[6].Value.ToString();
+            Size= dgv_Product_InformatinProductDetail.Rows[index].Cells[6].Value.ToString();
+
             txt_Product_Note.Text = dgv_Product_InformatinProductDetail.Rows[index].Cells[7].Value.ToString();
+            Note = dgv_Product_InformatinProductDetail.Rows[index].Cells[7].Value.ToString();
 
         }
 
@@ -171,24 +189,26 @@ namespace sellingWooden
         private void but_Product_Edit_Click(object sender, EventArgs e)
         {
             frmProduct_Edit run = new frmProduct_Edit();
-            try
-            {
-                run.setProductID(txt_Product_ProductID.Text);
-                run.setNOP(txt_Product_NOP.Text);
-                run.setTypeID(cbb_Product_TypeID.Text);
-                run.setStatus(cbb_Product_Status.Text);
-                run.setQuanty(int.Parse(txt_Product_Quanty.Text));
-                run.setPrice(double.Parse(txt_Product_Price.Text));
-                run.setSize(int.Parse(txt_Product_Size.Text));
-                run.setNote(txt_Product_Note.Text);
-                run.showInformation();
-                run.ShowDialog();
-                InitProductDtgv();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Bạn chưa chọn dòng cần sửa");
-            }
+            if (ProductID != null&&ProductID!="")
+                try
+                {
+                    run.setProductID(ProductID);
+                    run.setNOP(NOP);
+                    run.setTypeID(TypeID);
+                    run.setStatus(Status);
+                    run.setQuanty(Quanty);
+                    run.setPrice(Price);
+                    run.setSize(Size);
+                    run.setNote(Note);
+                    run.showInformation();
+                    run.ShowDialog();
+                    InitProductDtgv();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Bạn chưa chọn dòng cần sửa");
+                }
+        else MessageBox.Show("Bạn chưa chọn dòng cần sửa");
 
         }
 
@@ -205,6 +225,11 @@ namespace sellingWooden
                           + "or Note LIKE N'%" + txtSearch + "%'";
             help.Excute_query(sql);
             help.fillInDTGV(dgv_Product_InformatinProductDetail, "v_Product_Search");
+        }
+
+        private void but_Product_Refresh_Click(object sender, EventArgs e)
+        {
+            InitProductDtgv();
         }
     }
 }

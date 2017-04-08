@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -43,6 +44,7 @@
             this.statistic_chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.cbo_chooseTime = new System.Windows.Forms.ComboBox();
             this.btn_Report = new System.Windows.Forms.Button();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pannel_nd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.statistic_chart)).BeginInit();
             this.SuspendLayout();
@@ -67,20 +69,22 @@
             // 
             // cbo_Statistic_type
             // 
+            this.cbo_Statistic_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_Statistic_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_Statistic_type.FormattingEnabled = true;
             this.cbo_Statistic_type.Items.AddRange(new object[] {
             "Doanh số bán hàng theo thời gian",
             "Doanh số bán hàng theo sản phẩm",
             "Doanh số từng sản phẩm"});
-            this.cbo_Statistic_type.Location = new System.Drawing.Point(127, 12);
+            this.cbo_Statistic_type.Location = new System.Drawing.Point(127, 15);
             this.cbo_Statistic_type.Name = "cbo_Statistic_type";
-            this.cbo_Statistic_type.Size = new System.Drawing.Size(156, 24);
+            this.cbo_Statistic_type.Size = new System.Drawing.Size(183, 24);
             this.cbo_Statistic_type.TabIndex = 9;
             this.cbo_Statistic_type.SelectedIndexChanged += new System.EventHandler(this.cbo_Statistic_type_SelectedIndexChanged);
             // 
             // cbo_Statistic_typedate
             // 
+            this.cbo_Statistic_typedate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_Statistic_typedate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_Statistic_typedate.FormattingEnabled = true;
             this.cbo_Statistic_typedate.Items.AddRange(new object[] {
@@ -89,7 +93,7 @@
             "Năm"});
             this.cbo_Statistic_typedate.Location = new System.Drawing.Point(127, 47);
             this.cbo_Statistic_typedate.Name = "cbo_Statistic_typedate";
-            this.cbo_Statistic_typedate.Size = new System.Drawing.Size(156, 24);
+            this.cbo_Statistic_typedate.Size = new System.Drawing.Size(183, 24);
             this.cbo_Statistic_typedate.TabIndex = 11;
             this.cbo_Statistic_typedate.SelectedIndexChanged += new System.EventHandler(this.cbo_Statistic_typedate_SelectedIndexChanged);
             // 
@@ -157,6 +161,7 @@
             // 
             // cbo_chooseTime
             // 
+            this.cbo_chooseTime.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_chooseTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_chooseTime.FormattingEnabled = true;
             this.cbo_chooseTime.Location = new System.Drawing.Point(386, 15);
@@ -174,6 +179,11 @@
             this.btn_Report.UseVisualStyleBackColor = true;
             this.btn_Report.Click += new System.EventHandler(this.btn_Report_Click);
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // Statistic_Growth
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,6 +200,7 @@
             this.Controls.Add(this.cbo_Statistic_type);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Statistic_Growth";
             this.Text = "Statistic_Growth";
             this.pannel_nd.ResumeLayout(false);
@@ -212,5 +223,6 @@
         private System.Windows.Forms.ComboBox cbo_chooseTime;
         private System.Windows.Forms.DataVisualization.Charting.Chart statistic_chart;
         private System.Windows.Forms.Button btn_Report;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

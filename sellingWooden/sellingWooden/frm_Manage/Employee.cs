@@ -13,6 +13,8 @@ namespace sellingWooden
 {
     public partial class Employee : Form
     {
+        string EmployeeID, NOE, DOB, Sex, Position, Address, Note;
+        string TEL;
         SQLHelp help = new SQLHelp();
         public Employee()
         {
@@ -87,24 +89,27 @@ namespace sellingWooden
         private void but_Employee_Edit_Click(object sender, EventArgs e)
         {
             frmEmployee_Edit run = new frmEmployee_Edit();
-            try
-            {
-                run.setEmployeeID(txt_Employee_EmployeeID.Text);
-                run.setNOE(txt_Employee_NOE.Text);
-                run.setDOB(dtm_Employee_DOB.Text);
-                run.setAddress(txt_Employee_Address.Text);
-                run.setNote(txt_Employee_Note.Text);
-                run.setSex(cbo_Employee_Sex.Text);
-                run.setTEL(int.Parse(txt_Employee_TEL.Text));
-                run.setPosition(txt_Employee_Position.Text);
-                run.showInformation();
-                run.ShowDialog();
-                InitEmployeetDtgv();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Bạn chưa chọn dòng cần sửa");
-            }
+            if (EmployeeID != null && EmployeeID != "")
+                try
+                {
+                    run.setEmployeeID(EmployeeID);
+                    run.setNOE(NOE);
+                    run.setDOB(DOB);
+                    run.setAddress(Address);
+                    run.setNote(Note);
+                    run.setSex(Sex);
+                    run.setTEL(TEL);
+                    run.setPosition(Position);
+                    run.showInformation();
+                    run.ShowDialog();
+                    InitEmployeetDtgv();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Bạn chưa chọn dòng cần sửa");
+                }
+            else MessageBox.Show("Bạn chưa chọn dòng cần sửa");
+
         }
 
         private void btn_Employee_Search_Click(object sender, EventArgs e)
@@ -128,6 +133,8 @@ namespace sellingWooden
                 MessageBox.Show("Định dạng ngày không đúng");
             }
         }
+
+
         //======================================Dat============================
         //khong nhap so vao TEL
         private void txt_Employee_TEL_KeyPress(object sender, KeyPressEventArgs e)
@@ -157,13 +164,35 @@ namespace sellingWooden
         {
             index = dgv_Employee_InformationEmployeeDetail.CurrentRow.Index;
             txt_Employee_EmployeeID.Text = dgv_Employee_InformationEmployeeDetail.Rows[index].Cells[0].Value.ToString();
+            EmployeeID=dgv_Employee_InformationEmployeeDetail.Rows[index].Cells[0].Value.ToString();
+
             txt_Employee_NOE.Text = dgv_Employee_InformationEmployeeDetail.Rows[index].Cells[1].Value.ToString();
+            NOE = dgv_Employee_InformationEmployeeDetail.Rows[index].Cells[1].Value.ToString();
+
             dtm_Employee_DOB.Text = dgv_Employee_InformationEmployeeDetail.Rows[index].Cells[2].Value.ToString();
+            DOB = dgv_Employee_InformationEmployeeDetail.Rows[index].Cells[2].Value.ToString();
+
             cbo_Employee_Sex.Text = dgv_Employee_InformationEmployeeDetail.Rows[index].Cells[3].Value.ToString();
+            Sex = dgv_Employee_InformationEmployeeDetail.Rows[index].Cells[3].Value.ToString();
+
             txt_Employee_Position.Text = dgv_Employee_InformationEmployeeDetail.Rows[index].Cells[4].Value.ToString();
+            Position = dgv_Employee_InformationEmployeeDetail.Rows[index].Cells[4].Value.ToString();
+
             txt_Employee_Address.Text = dgv_Employee_InformationEmployeeDetail.Rows[index].Cells[5].Value.ToString();
+            Address = dgv_Employee_InformationEmployeeDetail.Rows[index].Cells[5].Value.ToString();
+
             txt_Employee_TEL.Text = dgv_Employee_InformationEmployeeDetail.Rows[index].Cells[6].Value.ToString();
+            TEL = dgv_Employee_InformationEmployeeDetail.Rows[index].Cells[6].Value.ToString();
+
             txt_Employee_Note.Text = dgv_Employee_InformationEmployeeDetail.Rows[index].Cells[7].Value.ToString();
+            Note = dgv_Employee_InformationEmployeeDetail.Rows[index].Cells[7].Value.ToString();
+
+        }
+
+        private void but_Employee_Refresh_Click(object sender, EventArgs e)
+        {
+            InitEmployeetDtgv();
+
         }
         //========================================================================
     }

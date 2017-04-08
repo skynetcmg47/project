@@ -19,7 +19,7 @@ namespace sellingWooden
             InitializeComponent();
             txt_changeUserName.Text = cuser.getUserName();
             txt_changeUserName.Enabled = false;
-
+            lbusername.Text = cuser.getUserName();
         }
 
         private void btn_Signup_Click(object sender, EventArgs e)

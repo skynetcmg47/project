@@ -13,6 +13,8 @@ namespace sellingWooden
 {
     public partial class BillDetail : Form
     {
+        string BillID, EmployeeID, ProductID;
+        string Amount;
         SQLHelp help = new SQLHelp();
         public BillDetail()
         {
@@ -81,7 +83,7 @@ namespace sellingWooden
                     && cbb_BillDetail_ProductID.Text != ""
                     && cbo_BillDetail_EmployeeID.Text != ""
                     && txt_BillDetail_Amount.Text != "")
-                    if (help.checkIDBillDetail(cbo_BillDetail_BillID.Text, cbb_BillDetail_ProductID.Text))
+                    if (help.checkIDBillDetail(cbo_BillDetail_BillID.Text, cbb_BillDetail_ProductID.SelectedValue.ToString()))
                     {
                         string Data = "'" + cbo_BillDetail_BillID.Text + "'," +
                                       "'" + cbb_BillDetail_ProductID.SelectedValue + "'," +
@@ -141,28 +143,42 @@ namespace sellingWooden
         {
             index = dgv_BillDetail_BillDetailDetail.CurrentRow.Index;
             cbo_BillDetail_BillID.Text = dgv_BillDetail_BillDetailDetail.Rows[index].Cells[0].Value.ToString();
+            BillID = dgv_BillDetail_BillDetailDetail.Rows[index].Cells[0].Value.ToString();
+
             cbb_BillDetail_ProductID.Text = dgv_BillDetail_BillDetailDetail.Rows[index].Cells[1].Value.ToString();
+            ProductID=dgv_BillDetail_BillDetailDetail.Rows[index].Cells[1].Value.ToString();
+
             cbo_BillDetail_EmployeeID.Text = dgv_BillDetail_BillDetailDetail.Rows[index].Cells[2].Value.ToString();
+            EmployeeID = dgv_BillDetail_BillDetailDetail.Rows[index].Cells[2].Value.ToString();
+
             txt_BillDetail_Amount.Text = dgv_BillDetail_BillDetailDetail.Rows[index].Cells[3].Value.ToString();
+            Amount = dgv_BillDetail_BillDetailDetail.Rows[index].Cells[3].Value.ToString();
         }
 
         private void but_BillDetail_Edit_Click(object sender, EventArgs e)
         {
             frmBillDetail_Edit run = new frmBillDetail_Edit();
-            try
-            {
-                run.setBillID(cbo_BillDetail_BillID.Text);
-                run.setEmployeeID(cbo_BillDetail_EmployeeID.Text);
-                run.setProductID(cbb_BillDetail_ProductID.Text);
-                run.setAmount(txt_BillDetail_Amount.Text);
-                run.showInformation();
-                run.ShowDialog();
-                InitBillDetailDtgv();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Bạn chưa chọn dòng cần sửa");
-            }
+            if(BillID!=null&&BillID!="")
+                try
+                {
+                    run.setBillID(BillID);
+                    run.setEmployeeID(EmployeeID);
+                    run.setProductID(ProductID);
+                    run.setAmount(Amount);
+                    run.showInformation();
+                    run.ShowDialog();
+                    InitBillDetailDtgv();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Bạn chưa chọn dòng cần sửa");
+                }
+            else MessageBox.Show("Bạn chưa chọn dòng cần sửa");
+        }
+
+        private void but_BillDetail_Refresh_Click(object sender, EventArgs e)
+        {
+            InitBillDetailDtgv();
         }
     }
 }

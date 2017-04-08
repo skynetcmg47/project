@@ -66,9 +66,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 13);
+            this.label2.Size = new System.Drawing.Size(108, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Mã khách hàng :";
+            this.label2.Text = "Tên khách hàng :";
             // 
             // label1
             // 
@@ -82,6 +82,7 @@
             // 
             // cbo_frmBill_Edit_CustomerID
             // 
+            this.cbo_frmBill_Edit_CustomerID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_frmBill_Edit_CustomerID.FormattingEnabled = true;
             this.cbo_frmBill_Edit_CustomerID.Location = new System.Drawing.Point(132, 87);
             this.cbo_frmBill_Edit_CustomerID.Name = "cbo_frmBill_Edit_CustomerID";
@@ -91,14 +92,16 @@
             // dtm_frmBill_Edit_DateSell
             // 
             this.dtm_frmBill_Edit_DateSell.Location = new System.Drawing.Point(416, 51);
+            this.dtm_frmBill_Edit_DateSell.MinDate = new System.DateTime(1880, 1, 1, 0, 0, 0, 0);
             this.dtm_frmBill_Edit_DateSell.Name = "dtm_frmBill_Edit_DateSell";
             this.dtm_frmBill_Edit_DateSell.Size = new System.Drawing.Size(200, 20);
             this.dtm_frmBill_Edit_DateSell.TabIndex = 11;
+            this.dtm_frmBill_Edit_DateSell.Value = new System.DateTime(2017, 4, 7, 0, 0, 0, 0);
             // 
             // txt_frmBill_Edit_Note
             // 
             this.txt_frmBill_Edit_Note.Location = new System.Drawing.Point(416, 84);
-            this.txt_frmBill_Edit_Note.MaxLength = 322;
+            this.txt_frmBill_Edit_Note.MaxLength = 255;
             this.txt_frmBill_Edit_Note.Multiline = true;
             this.txt_frmBill_Edit_Note.Name = "txt_frmBill_Edit_Note";
             this.txt_frmBill_Edit_Note.Size = new System.Drawing.Size(200, 53);
@@ -115,20 +118,21 @@
             // 
             // but_frmBill_Edit_Cancel
             // 
-            this.but_frmBill_Edit_Cancel.Location = new System.Drawing.Point(117, 197);
+            this.but_frmBill_Edit_Cancel.Location = new System.Drawing.Point(416, 169);
             this.but_frmBill_Edit_Cancel.Name = "but_frmBill_Edit_Cancel";
             this.but_frmBill_Edit_Cancel.Size = new System.Drawing.Size(107, 38);
             this.but_frmBill_Edit_Cancel.TabIndex = 13;
-            this.but_frmBill_Edit_Cancel.Text = "Cancel";
+            this.but_frmBill_Edit_Cancel.Text = "Hủy";
             this.but_frmBill_Edit_Cancel.UseVisualStyleBackColor = true;
+            this.but_frmBill_Edit_Cancel.Click += new System.EventHandler(this.but_frmBill_Edit_Cancel_Click);
             // 
             // but_frmBill_Edit_OK
             // 
-            this.but_frmBill_Edit_OK.Location = new System.Drawing.Point(390, 197);
+            this.but_frmBill_Edit_OK.Location = new System.Drawing.Point(201, 169);
             this.but_frmBill_Edit_OK.Name = "but_frmBill_Edit_OK";
             this.but_frmBill_Edit_OK.Size = new System.Drawing.Size(107, 38);
             this.but_frmBill_Edit_OK.TabIndex = 14;
-            this.but_frmBill_Edit_OK.Text = "OK";
+            this.but_frmBill_Edit_OK.Text = "Sửa";
             this.but_frmBill_Edit_OK.UseVisualStyleBackColor = true;
             this.but_frmBill_Edit_OK.Click += new System.EventHandler(this.but_frmBill_Edit_OK_Click);
             // 
@@ -136,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(687, 336);
+            this.ClientSize = new System.Drawing.Size(638, 259);
             this.Controls.Add(this.but_frmBill_Edit_OK);
             this.Controls.Add(this.but_frmBill_Edit_Cancel);
             this.Controls.Add(this.cbo_frmBill_Edit_CustomerID);
@@ -148,7 +152,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmBill_Edit";
-            this.Text = "frmBill_Edit";
+            this.Text = "Sửa Hóa Đơn";
             this.ResumeLayout(false);
             this.PerformLayout();
 

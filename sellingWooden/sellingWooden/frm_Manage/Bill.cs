@@ -12,6 +12,7 @@ namespace sellingWooden
 {
     public partial class Bill : Form
     {
+        string BillID, CustomerID, DateSell, Note;
         SQLHelp help = new SQLHelp();
         public Bill()
         {
@@ -89,28 +90,37 @@ namespace sellingWooden
         {
             index = dgv_Bill_InformatinBillDetail.CurrentRow.Index;
             txt_Bill_BillID.Text = dgv_Bill_InformatinBillDetail.Rows[index].Cells[0].Value.ToString();
+            BillID = dgv_Bill_InformatinBillDetail.Rows[index].Cells[0].Value.ToString();
+
             txt_Bill_Note.Text = dgv_Bill_InformatinBillDetail.Rows[index].Cells[3].Value.ToString();
+            Note = dgv_Bill_InformatinBillDetail.Rows[index].Cells[3].Value.ToString();
+
             cbb_Bill_CustomerID.Text = dgv_Bill_InformatinBillDetail.Rows[index].Cells[1].Value.ToString();
+            CustomerID = dgv_Bill_InformatinBillDetail.Rows[index].Cells[1].Value.ToString();
+
             dtm_Bill_DateSell.Text = dgv_Bill_InformatinBillDetail.Rows[index].Cells[2].Value.ToString();
+            DateSell = dgv_Bill_InformatinBillDetail.Rows[index].Cells[2].Value.ToString();
         }
 
         private void but_Bill_Edit_Click(object sender, EventArgs e)
         {
             frmBill_Edit run = new frmBill_Edit();
-            try
-            {
-                run.setBillID(txt_Bill_BillID.Text);
-                run.setCustomerID(cbb_Bill_CustomerID.Text);
-                run.setDateSell(dtm_Bill_DateSell.Text);
-                run.setNote(txt_Bill_Note.Text);
-                run.showInformation();
-                run.ShowDialog();
-                InitBillDtgv();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Bạn chưa chọn dòng cần sửa");
-            }
+            if(BillID!=null&&BillID!="")
+                try
+                {
+                    run.setBillID(BillID);
+                    run.setCustomerID(CustomerID);
+                    run.setDateSell(DateSell);
+                    run.setNote(Note);
+                    run.showInformation();
+                    run.ShowDialog();
+                    InitBillDtgv();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Bạn chưa chọn dòng cần sửa");
+                }
+            else MessageBox.Show("Bạn chưa chọn dòng cần sửa");
         }
 
         private void btn_Bill_Search_Click(object sender, EventArgs e)
@@ -122,6 +132,11 @@ namespace sellingWooden
                           + "or Note LIKE N'%" + txtSearch + "%'";
             help.Excute_query(sql);
             help.fillInDTGV(dgv_Bill_InformatinBillDetail, "v_Bill_Search");
+        }
+
+        private void but_Bill_Refresh_Click(object sender, EventArgs e)
+        {
+            InitBillDtgv();
         }
     }
 }

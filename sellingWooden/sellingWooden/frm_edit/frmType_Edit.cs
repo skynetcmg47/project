@@ -34,6 +34,11 @@ namespace sellingWooden
             this.Close();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         public void showInformation()
         {
             txt_frmTypeID_Edit_TypeID.Text = TypeID;

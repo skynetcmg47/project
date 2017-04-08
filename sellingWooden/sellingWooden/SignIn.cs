@@ -36,22 +36,30 @@ namespace sellingWooden
 
         private void btn_Signup_Click(object sender, EventArgs e)
         {
-            if (checkLogin())
+            if (txt_userName.Text != "" && txt_pass.Text != "")
             {
-                mainForm mainform = new mainForm();
-                lb_notice.Text = "";
-                this.Hide();
-                mainform.ShowDialog();
-                this.Close();
+                if (checkLogin())
+                {
+                    mainForm mainform = new mainForm();
+                    lb_notice.Text = "";
+                    this.Hide();
+                    mainform.ShowDialog();
+                    this.Close();
 
+                }
+                else
+                {
+                    lb_notice.Text = "Sai tên đăng nhập hoặc mật khẩu!";
+                    lb_notice.ForeColor = Color.Red;
+                    txt_pass.Text = "";
+                    txt_userName.Text = "";
+
+                }
             }
             else
             {
-                lb_notice.Text = "Sai tên đăng nhập hoặc mật khẩu!";
+                lb_notice.Text = "Nhập đầy đủ thông tin!";
                 lb_notice.ForeColor = Color.Red;
-                txt_pass.Text = "";
-                txt_userName.Text = "";
-
             }
         }
 
@@ -60,7 +68,6 @@ namespace sellingWooden
             SQLHelp help = new SQLHelp();
             string userName = txt_userName.Text;
             string pass = txt_pass.Text;
-
             DataTable tb = help.getDataTable_excute("exec sp_checkLogin '" + userName + "' ,'" + pass + "'");
             if(tb.Rows.Count>0)
             {

@@ -65,6 +65,11 @@ namespace sellingWooden
             this.Close();
         }
 
+        private void but_fmrCustomer_Edit_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         ////////////////////
         private void txt_frmCustomer_Edit_TEL_KeyPress(object sender, KeyPressEventArgs e)
         {

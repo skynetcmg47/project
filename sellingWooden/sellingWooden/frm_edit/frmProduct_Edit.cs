@@ -16,8 +16,8 @@ namespace sellingWooden
         SQLHelp help = new SQLHelp();
 
         string ProductID, NOP, TypeID, Status, Note;
-        int Quanty, Size;
-        double Price;
+        string Quanty, Size;
+        string Price;
 
         public frmProduct_Edit()
         {
@@ -54,15 +54,15 @@ namespace sellingWooden
         {
             Note = s;
         }
-        public void setQuanty(int i)
+        public void setQuanty(string i)
         {
             Quanty = i;
         }
-        public void setPrice(double i)
+        public void setPrice(string i)
         {
             Price = i;
         }
-        public void setSize(int i)
+        public void setSize(string i)
         {
             Size = i;
         }
@@ -106,6 +106,11 @@ namespace sellingWooden
             this.Close();
         }
 
+        private void but_frmProduct_Edit_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void txt_frmProduct_Edit_Quanty_TextChanged(object sender, EventArgs e)
         {
             if (IsNumber(txt_frmProduct_Edit_Quanty.Text) != true)
@@ -141,10 +146,10 @@ namespace sellingWooden
             txt_frmProduct_Edit_ProductID.Text = ProductID;
             txt_frmProduct_Edit_NOP.Text = NOP;
             cbo_frmProduct_Edit_TypeID.Text = TypeID;
-            txt_frmProduct_Edit_Quanty.Text = Quanty.ToString();
+            txt_frmProduct_Edit_Quanty.Text = Quanty;
             txt_frmProduct_Edit_Note.Text = Note;
-            txt_frmProduct_Edit_Price.Text = Price.ToString();
-            txt_frmProduct_Edit_Size.Text = Size.ToString();
+            txt_frmProduct_Edit_Price.Text = Price;
+            txt_frmProduct_Edit_Size.Text = Size;
             cbo_frmProduct_Edit_Status.Text = Status;
         }
         // ham xu li sua

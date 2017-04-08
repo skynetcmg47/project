@@ -50,6 +50,11 @@ namespace sellingWooden
             this.Close();
         }
 
+        private void but_frmBill_Edit_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         public void setDateSell(string d)
         {
             DateSell = d;

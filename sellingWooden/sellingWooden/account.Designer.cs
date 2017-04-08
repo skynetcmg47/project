@@ -39,6 +39,8 @@
             this.txt_userName = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.lb_account = new System.Windows.Forms.Label();
             this.gr_change = new System.Windows.Forms.GroupBox();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txt_oldpass = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.btn_change = new Bunifu.Framework.UI.BunifuThinButton2();
             this.lb_rechangepass = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txt_renewpass = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -46,10 +48,11 @@
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txt_newpass = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txt_changeUserName = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txt_oldpass = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.lbusername = new System.Windows.Forms.Label();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.gr_add.SuspendLayout();
             this.gr_change.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // gr_add
@@ -61,7 +64,7 @@
             this.gr_add.Controls.Add(this.lb_userName);
             this.gr_add.Controls.Add(this.txt_pass);
             this.gr_add.Controls.Add(this.txt_userName);
-            this.gr_add.Location = new System.Drawing.Point(34, 69);
+            this.gr_add.Location = new System.Drawing.Point(32, 159);
             this.gr_add.Name = "gr_add";
             this.gr_add.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.gr_add.Size = new System.Drawing.Size(421, 288);
@@ -116,7 +119,7 @@
             this.btn_Signup.IdleFillColor = System.Drawing.Color.SeaGreen;
             this.btn_Signup.IdleForecolor = System.Drawing.Color.White;
             this.btn_Signup.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(176)))), ((int)(((byte)(80)))));
-            this.btn_Signup.Location = new System.Drawing.Point(140, 203);
+            this.btn_Signup.Location = new System.Drawing.Point(136, 222);
             this.btn_Signup.Margin = new System.Windows.Forms.Padding(5);
             this.btn_Signup.Name = "btn_Signup";
             this.btn_Signup.Size = new System.Drawing.Size(153, 41);
@@ -202,13 +205,42 @@
             this.gr_change.Controls.Add(this.bunifuCustomLabel4);
             this.gr_change.Controls.Add(this.txt_newpass);
             this.gr_change.Controls.Add(this.txt_changeUserName);
-            this.gr_change.Location = new System.Drawing.Point(461, 69);
+            this.gr_change.Location = new System.Drawing.Point(459, 159);
             this.gr_change.Name = "gr_change";
             this.gr_change.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.gr_change.Size = new System.Drawing.Size(406, 288);
             this.gr_change.TabIndex = 17;
             this.gr_change.TabStop = false;
             this.gr_change.Text = "Đổi mật khẩu";
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(25, 91);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(120, 26);
+            this.bunifuCustomLabel2.TabIndex = 18;
+            this.bunifuCustomLabel2.Text = "Mật khẩu cũ:";
+            // 
+            // txt_oldpass
+            // 
+            this.txt_oldpass.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txt_oldpass.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_oldpass.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txt_oldpass.BorderThickness = 3;
+            this.txt_oldpass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_oldpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.txt_oldpass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_oldpass.isPassword = true;
+            this.txt_oldpass.Location = new System.Drawing.Point(178, 86);
+            this.txt_oldpass.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_oldpass.Name = "txt_oldpass";
+            this.txt_oldpass.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txt_oldpass.Size = new System.Drawing.Size(212, 31);
+            this.txt_oldpass.TabIndex = 19;
+            this.txt_oldpass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btn_change
             // 
@@ -323,41 +355,36 @@
             this.txt_changeUserName.TabIndex = 14;
             this.txt_changeUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuCustomLabel2
+            // lbusername
             // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(25, 91);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(120, 26);
-            this.bunifuCustomLabel2.TabIndex = 18;
-            this.bunifuCustomLabel2.Text = "Mật khẩu cũ:";
+            this.lbusername.AutoSize = true;
+            this.lbusername.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbusername.Location = new System.Drawing.Point(164, 108);
+            this.lbusername.Name = "lbusername";
+            this.lbusername.Size = new System.Drawing.Size(0, 24);
+            this.lbusername.TabIndex = 19;
             // 
-            // txt_oldpass
+            // bunifuImageButton1
             // 
-            this.txt_oldpass.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txt_oldpass.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_oldpass.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txt_oldpass.BorderThickness = 3;
-            this.txt_oldpass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_oldpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txt_oldpass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_oldpass.isPassword = true;
-            this.txt_oldpass.Location = new System.Drawing.Point(178, 86);
-            this.txt_oldpass.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_oldpass.Name = "txt_oldpass";
-            this.txt_oldpass.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txt_oldpass.Size = new System.Drawing.Size(212, 31);
-            this.txt_oldpass.TabIndex = 19;
-            this.txt_oldpass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.White;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(32, 41);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(107, 101);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 20;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
             // 
             // account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(904, 381);
+            this.ClientSize = new System.Drawing.Size(893, 549);
+            this.Controls.Add(this.bunifuImageButton1);
+            this.Controls.Add(this.lbusername);
             this.Controls.Add(this.gr_change);
             this.Controls.Add(this.lb_account);
             this.Controls.Add(this.gr_add);
@@ -368,6 +395,7 @@
             this.gr_add.PerformLayout();
             this.gr_change.ResumeLayout(false);
             this.gr_change.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,5 +421,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btn_change;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuMetroTextbox txt_oldpass;
+        private System.Windows.Forms.Label lbusername;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }
 }

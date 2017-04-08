@@ -12,6 +12,7 @@ namespace sellingWooden
 {
     public partial class Type : Form
     {
+        string TypeID, NOT;
         SQLHelp help = new SQLHelp();
         public Type()
         {
@@ -49,10 +50,8 @@ namespace sellingWooden
                 && txt_Type_TypeID.Text != "")
                 if (help.checkID("Type", txt_Type_TypeID.Text))
                 {
-                    string TypeID = txt_Type_TypeID.Text;
-                    string TypeName = txt_Type_NOT.Text;
                     string Data = "'" + txt_Type_TypeID.Text + "'," +
-                                  "'" + txt_Type_NOT.Text + "')";
+                                  "'" + txt_Type_NOT.Text + "'";
                     help.addData("Type", Data);
                     InitTypeDtgv();
                     goto OPP;
@@ -72,25 +71,30 @@ namespace sellingWooden
         {
             index = dgv_Type_InformationTypeDetail.CurrentRow.Index;
             txt_Type_TypeID.Text = dgv_Type_InformationTypeDetail.Rows[index].Cells[0].Value.ToString();
+            TypeID = dgv_Type_InformationTypeDetail.Rows[index].Cells[0].Value.ToString();
+
             txt_Type_NOT.Text = dgv_Type_InformationTypeDetail.Rows[index].Cells[1].Value.ToString();
+            NOT= dgv_Type_InformationTypeDetail.Rows[index].Cells[1].Value.ToString();
         }
 
         private void but_Type_Edit_Click(object sender, EventArgs e)
         {
             frmType_Edit run = new frmType_Edit();
-            try
-            {
-                run.setTypeID(txt_Type_TypeID.Text);
-                run.setNOT(txt_Type_NOT.Text);
-                run.showInformation();
+            if(TypeID!=null&&TypeID!="")
+                try
+                {
+                    run.setTypeID(TypeID);
+                    run.setNOT(NOT);
+                    run.showInformation();
 
-                run.ShowDialog();
-                InitTypeDtgv();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Bạn chưa chọn dòng cần sửa");
-            }
+                    run.ShowDialog();
+                    InitTypeDtgv();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Bạn chưa chọn dòng cần sửa");
+                }
+            else MessageBox.Show("Bạn chưa chọn dòng cần sửa");
         }
         // ham xu li sua
         public void edit()
@@ -105,6 +109,11 @@ namespace sellingWooden
                           + "or TypeName LIKE N'%" + txtSearch.Trim() + "%'";
             help.Excute_query(sql);
             help.fillInDTGV(dgv_Type_InformationTypeDetail, "v_Type_Search");
+        }
+
+        private void but_Type_Refresh_Click(object sender, EventArgs e)
+        {
+            InitTypeDtgv();
         }
     }
 }

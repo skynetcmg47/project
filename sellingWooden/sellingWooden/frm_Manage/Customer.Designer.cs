@@ -44,15 +44,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_Customer_search = new System.Windows.Forms.TextBox();
             this.but_Customer_Edit = new System.Windows.Forms.Button();
+            this.btn_Customer_Search = new System.Windows.Forms.Button();
             this.but_Customer_Add = new System.Windows.Forms.Button();
             this.but_Customer_Delete = new System.Windows.Forms.Button();
             this.but_Customer_Refresh = new System.Windows.Forms.Button();
-            this.btn_Customer_Search = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.dgv_Customer_InformationCustomerDetail = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
-            this.txt_Customer_search = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Customer_InformationCustomerDetail)).BeginInit();
@@ -112,7 +112,7 @@
             // txt_Customer_Address
             // 
             this.txt_Customer_Address.Location = new System.Drawing.Point(141, 130);
-            this.txt_Customer_Address.MaxLength = 200;
+            this.txt_Customer_Address.MaxLength = 50;
             this.txt_Customer_Address.Name = "txt_Customer_Address";
             this.txt_Customer_Address.Size = new System.Drawing.Size(145, 20);
             this.txt_Customer_Address.TabIndex = 11;
@@ -214,6 +214,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.txt_Customer_search);
             this.groupBox2.Controls.Add(this.but_Customer_Edit);
             this.groupBox2.Controls.Add(this.btn_Customer_Search);
@@ -227,6 +229,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Điều khiển";
             // 
+            // txt_Customer_search
+            // 
+            this.txt_Customer_search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Customer_search.Location = new System.Drawing.Point(58, 106);
+            this.txt_Customer_search.Name = "txt_Customer_search";
+            this.txt_Customer_search.Size = new System.Drawing.Size(148, 20);
+            this.txt_Customer_search.TabIndex = 5;
+            // 
             // but_Customer_Edit
             // 
             this.but_Customer_Edit.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -238,8 +249,21 @@
             this.but_Customer_Edit.UseVisualStyleBackColor = false;
             this.but_Customer_Edit.Click += new System.EventHandler(this.but_Customer_Edit_Click);
             // 
+            // btn_Customer_Search
+            // 
+            this.btn_Customer_Search.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Customer_Search.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_Customer_Search.Location = new System.Drawing.Point(93, 141);
+            this.btn_Customer_Search.Name = "btn_Customer_Search";
+            this.btn_Customer_Search.Size = new System.Drawing.Size(80, 30);
+            this.btn_Customer_Search.TabIndex = 3;
+            this.btn_Customer_Search.Text = "Tìm Kiếm";
+            this.btn_Customer_Search.UseVisualStyleBackColor = false;
+            this.btn_Customer_Search.Click += new System.EventHandler(this.btn_Customer_Search_Click);
+            // 
             // but_Customer_Add
             // 
+            this.but_Customer_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.but_Customer_Add.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.but_Customer_Add.Location = new System.Drawing.Point(30, 20);
             this.but_Customer_Add.Name = "but_Customer_Add";
@@ -252,7 +276,7 @@
             // but_Customer_Delete
             // 
             this.but_Customer_Delete.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.but_Customer_Delete.Location = new System.Drawing.Point(30, 56);
+            this.but_Customer_Delete.Location = new System.Drawing.Point(162, 56);
             this.but_Customer_Delete.Name = "but_Customer_Delete";
             this.but_Customer_Delete.Size = new System.Drawing.Size(80, 30);
             this.but_Customer_Delete.TabIndex = 2;
@@ -262,24 +286,15 @@
             // 
             // but_Customer_Refresh
             // 
+            this.but_Customer_Refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.but_Customer_Refresh.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.but_Customer_Refresh.Location = new System.Drawing.Point(162, 56);
+            this.but_Customer_Refresh.Location = new System.Drawing.Point(30, 56);
             this.but_Customer_Refresh.Name = "but_Customer_Refresh";
             this.but_Customer_Refresh.Size = new System.Drawing.Size(80, 30);
             this.but_Customer_Refresh.TabIndex = 1;
             this.but_Customer_Refresh.Text = "Làm Mới";
             this.but_Customer_Refresh.UseVisualStyleBackColor = false;
-            // 
-            // btn_Customer_Search
-            // 
-            this.btn_Customer_Search.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_Customer_Search.Location = new System.Drawing.Point(93, 141);
-            this.btn_Customer_Search.Name = "btn_Customer_Search";
-            this.btn_Customer_Search.Size = new System.Drawing.Size(80, 30);
-            this.btn_Customer_Search.TabIndex = 3;
-            this.btn_Customer_Search.Text = "Tìm Kiếm";
-            this.btn_Customer_Search.UseVisualStyleBackColor = false;
-            this.btn_Customer_Search.Click += new System.EventHandler(this.btn_Customer_Search_Click);
+            this.but_Customer_Refresh.Click += new System.EventHandler(this.but_Customer_Refresh_Click);
             // 
             // label8
             // 
@@ -293,6 +308,9 @@
             // 
             // dgv_Customer_InformationCustomerDetail
             // 
+            this.dgv_Customer_InformationCustomerDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Customer_InformationCustomerDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Customer_InformationCustomerDetail.Location = new System.Drawing.Point(12, 275);
             this.dgv_Customer_InformationCustomerDetail.Name = "dgv_Customer_InformationCustomerDetail";
@@ -308,13 +326,6 @@
             this.label9.Size = new System.Drawing.Size(146, 13);
             this.label9.TabIndex = 19;
             this.label9.Text = "Thông tin khách hàng chi tiết";
-            // 
-            // txt_Customer_search
-            // 
-            this.txt_Customer_search.Location = new System.Drawing.Point(58, 106);
-            this.txt_Customer_search.Name = "txt_Customer_search";
-            this.txt_Customer_search.Size = new System.Drawing.Size(148, 20);
-            this.txt_Customer_search.TabIndex = 5;
             // 
             // Customer
             // 

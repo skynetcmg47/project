@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_Bill_Search = new System.Windows.Forms.TextBox();
             this.btn_Bill_Search = new System.Windows.Forms.Button();
             this.but_Bill_Edit = new System.Windows.Forms.Button();
             this.but_Bill_Add = new System.Windows.Forms.Button();
@@ -46,7 +47,6 @@
             this.but_Bill_Refresh = new System.Windows.Forms.Button();
             this.dgv_Bill_InformatinBillDetail = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.txt_Bill_Search = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Bill_InformatinBillDetail)).BeginInit();
@@ -64,7 +64,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 79);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(618, 167);
+            this.groupBox1.Size = new System.Drawing.Size(553, 167);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hóa đơn";
@@ -79,15 +79,15 @@
             // 
             // dtm_Bill_DateSell
             // 
-            this.dtm_Bill_DateSell.Location = new System.Drawing.Point(397, 33);
+            this.dtm_Bill_DateSell.Location = new System.Drawing.Point(335, 33);
             this.dtm_Bill_DateSell.Name = "dtm_Bill_DateSell";
             this.dtm_Bill_DateSell.Size = new System.Drawing.Size(200, 20);
             this.dtm_Bill_DateSell.TabIndex = 7;
             // 
             // txt_Bill_Note
             // 
-            this.txt_Bill_Note.Location = new System.Drawing.Point(397, 82);
-            this.txt_Bill_Note.MaxLength = 322;
+            this.txt_Bill_Note.Location = new System.Drawing.Point(335, 82);
+            this.txt_Bill_Note.MaxLength = 255;
             this.txt_Bill_Note.Multiline = true;
             this.txt_Bill_Note.Name = "txt_Bill_Note";
             this.txt_Bill_Note.Size = new System.Drawing.Size(200, 53);
@@ -98,14 +98,14 @@
             this.txt_Bill_BillID.Location = new System.Drawing.Point(113, 30);
             this.txt_Bill_BillID.MaxLength = 5;
             this.txt_Bill_BillID.Name = "txt_Bill_BillID";
-            this.txt_Bill_BillID.Size = new System.Drawing.Size(200, 20);
+            this.txt_Bill_BillID.Size = new System.Drawing.Size(121, 20);
             this.txt_Bill_BillID.TabIndex = 4;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(331, 85);
+            this.label4.Location = new System.Drawing.Point(269, 85);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 13);
             this.label4.TabIndex = 3;
@@ -115,7 +115,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(331, 33);
+            this.label3.Location = new System.Drawing.Point(269, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 2;
@@ -153,24 +153,36 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.txt_Bill_Search);
             this.groupBox2.Controls.Add(this.btn_Bill_Search);
             this.groupBox2.Controls.Add(this.but_Bill_Edit);
             this.groupBox2.Controls.Add(this.but_Bill_Add);
             this.groupBox2.Controls.Add(this.but_Bill_Delete);
             this.groupBox2.Controls.Add(this.but_Bill_Refresh);
-            this.groupBox2.Location = new System.Drawing.Point(636, 79);
+            this.groupBox2.Location = new System.Drawing.Point(571, 79);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(227, 167);
+            this.groupBox2.Size = new System.Drawing.Size(292, 167);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Điều khiển";
             // 
+            // txt_Bill_Search
+            // 
+            this.txt_Bill_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_Bill_Search.Location = new System.Drawing.Point(69, 106);
+            this.txt_Bill_Search.Name = "txt_Bill_Search";
+            this.txt_Bill_Search.Size = new System.Drawing.Size(156, 20);
+            this.txt_Bill_Search.TabIndex = 5;
+            // 
             // btn_Bill_Search
             // 
-            this.btn_Bill_Search.Location = new System.Drawing.Point(71, 138);
+            this.btn_Bill_Search.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Bill_Search.Location = new System.Drawing.Point(110, 132);
             this.btn_Bill_Search.Name = "btn_Bill_Search";
-            this.btn_Bill_Search.Size = new System.Drawing.Size(78, 23);
+            this.btn_Bill_Search.Size = new System.Drawing.Size(80, 30);
             this.btn_Bill_Search.TabIndex = 4;
             this.btn_Bill_Search.Text = "Tìm Kiếm";
             this.btn_Bill_Search.UseVisualStyleBackColor = true;
@@ -178,9 +190,9 @@
             // 
             // but_Bill_Edit
             // 
-            this.but_Bill_Edit.Location = new System.Drawing.Point(129, 17);
+            this.but_Bill_Edit.Location = new System.Drawing.Point(186, 24);
             this.but_Bill_Edit.Name = "but_Bill_Edit";
-            this.but_Bill_Edit.Size = new System.Drawing.Size(78, 23);
+            this.but_Bill_Edit.Size = new System.Drawing.Size(80, 30);
             this.but_Bill_Edit.TabIndex = 1;
             this.but_Bill_Edit.Text = "Sửa";
             this.but_Bill_Edit.UseVisualStyleBackColor = true;
@@ -188,9 +200,10 @@
             // 
             // but_Bill_Add
             // 
-            this.but_Bill_Add.Location = new System.Drawing.Point(20, 17);
+            this.but_Bill_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.but_Bill_Add.Location = new System.Drawing.Point(32, 23);
             this.but_Bill_Add.Name = "but_Bill_Add";
-            this.but_Bill_Add.Size = new System.Drawing.Size(78, 23);
+            this.but_Bill_Add.Size = new System.Drawing.Size(80, 30);
             this.but_Bill_Add.TabIndex = 0;
             this.but_Bill_Add.Text = "Thêm";
             this.but_Bill_Add.UseVisualStyleBackColor = true;
@@ -198,9 +211,9 @@
             // 
             // but_Bill_Delete
             // 
-            this.but_Bill_Delete.Location = new System.Drawing.Point(129, 53);
+            this.but_Bill_Delete.Location = new System.Drawing.Point(186, 60);
             this.but_Bill_Delete.Name = "but_Bill_Delete";
-            this.but_Bill_Delete.Size = new System.Drawing.Size(78, 23);
+            this.but_Bill_Delete.Size = new System.Drawing.Size(80, 30);
             this.but_Bill_Delete.TabIndex = 3;
             this.but_Bill_Delete.Text = "Xóa";
             this.but_Bill_Delete.UseVisualStyleBackColor = true;
@@ -208,15 +221,20 @@
             // 
             // but_Bill_Refresh
             // 
-            this.but_Bill_Refresh.Location = new System.Drawing.Point(20, 53);
+            this.but_Bill_Refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.but_Bill_Refresh.Location = new System.Drawing.Point(32, 60);
             this.but_Bill_Refresh.Name = "but_Bill_Refresh";
-            this.but_Bill_Refresh.Size = new System.Drawing.Size(78, 23);
+            this.but_Bill_Refresh.Size = new System.Drawing.Size(80, 30);
             this.but_Bill_Refresh.TabIndex = 2;
             this.but_Bill_Refresh.Text = "Làm mới";
             this.but_Bill_Refresh.UseVisualStyleBackColor = true;
+            this.but_Bill_Refresh.Click += new System.EventHandler(this.but_Bill_Refresh_Click);
             // 
             // dgv_Bill_InformatinBillDetail
             // 
+            this.dgv_Bill_InformatinBillDetail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Bill_InformatinBillDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Bill_InformatinBillDetail.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_Bill_InformatinBillDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -234,13 +252,6 @@
             this.label6.Size = new System.Drawing.Size(129, 13);
             this.label6.TabIndex = 4;
             this.label6.Text = "Thông tin hóa đơn chi tiết";
-            // 
-            // txt_Bill_Search
-            // 
-            this.txt_Bill_Search.Location = new System.Drawing.Point(40, 106);
-            this.txt_Bill_Search.Name = "txt_Bill_Search";
-            this.txt_Bill_Search.Size = new System.Drawing.Size(156, 20);
-            this.txt_Bill_Search.TabIndex = 5;
             // 
             // Bill
             // 

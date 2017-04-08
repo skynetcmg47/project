@@ -15,7 +15,7 @@ namespace sellingWooden
     public partial class frmEmployee_Edit : Form
     {
         string EmployeeID, NOE, DOB, Sex, Position, Address, Note;
-        int TEL;
+        string TEL;
         public frmEmployee_Edit()
         {
             InitializeComponent();
@@ -68,7 +68,12 @@ namespace sellingWooden
             this.Close();
         }
 
-        public void setTEL(int i)
+        private void but_frmEmployee_Edit_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        public void setTEL(string i)
         {
             TEL = i;
         }

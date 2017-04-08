@@ -52,7 +52,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(326, 255);
+            this.label8.Location = new System.Drawing.Point(326, 189);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 16);
             this.label8.TabIndex = 15;
@@ -62,7 +62,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(326, 181);
+            this.label7.Location = new System.Drawing.Point(326, 143);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 16);
             this.label7.TabIndex = 14;
@@ -72,7 +72,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(326, 116);
+            this.label6.Location = new System.Drawing.Point(326, 99);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 16);
             this.label6.TabIndex = 13;
@@ -92,7 +92,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(41, 255);
+            this.label4.Location = new System.Drawing.Point(41, 189);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 16);
             this.label4.TabIndex = 11;
@@ -102,7 +102,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(41, 181);
+            this.label3.Location = new System.Drawing.Point(41, 143);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 16);
             this.label3.TabIndex = 10;
@@ -112,7 +112,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(41, 116);
+            this.label2.Location = new System.Drawing.Point(41, 99);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 16);
             this.label2.TabIndex = 9;
@@ -138,14 +138,16 @@
             // 
             // txt_frmProduct_Edit_Note
             // 
-            this.txt_frmProduct_Edit_Note.Location = new System.Drawing.Point(409, 254);
+            this.txt_frmProduct_Edit_Note.Location = new System.Drawing.Point(409, 188);
+            this.txt_frmProduct_Edit_Note.MaxLength = 255;
             this.txt_frmProduct_Edit_Note.Name = "txt_frmProduct_Edit_Note";
             this.txt_frmProduct_Edit_Note.Size = new System.Drawing.Size(125, 20);
             this.txt_frmProduct_Edit_Note.TabIndex = 17;
             // 
             // txt_frmProduct_Edit_Size
             // 
-            this.txt_frmProduct_Edit_Size.Location = new System.Drawing.Point(409, 180);
+            this.txt_frmProduct_Edit_Size.Location = new System.Drawing.Point(409, 142);
+            this.txt_frmProduct_Edit_Size.MaxLength = 6;
             this.txt_frmProduct_Edit_Size.Name = "txt_frmProduct_Edit_Size";
             this.txt_frmProduct_Edit_Size.Size = new System.Drawing.Size(125, 20);
             this.txt_frmProduct_Edit_Size.TabIndex = 18;
@@ -154,7 +156,8 @@
             // 
             // txt_frmProduct_Edit_Price
             // 
-            this.txt_frmProduct_Edit_Price.Location = new System.Drawing.Point(409, 116);
+            this.txt_frmProduct_Edit_Price.Location = new System.Drawing.Point(409, 99);
+            this.txt_frmProduct_Edit_Price.MaxLength = 9;
             this.txt_frmProduct_Edit_Price.Name = "txt_frmProduct_Edit_Price";
             this.txt_frmProduct_Edit_Price.Size = new System.Drawing.Size(125, 20);
             this.txt_frmProduct_Edit_Price.TabIndex = 19;
@@ -163,7 +166,8 @@
             // 
             // txt_frmProduct_Edit_NOP
             // 
-            this.txt_frmProduct_Edit_NOP.Location = new System.Drawing.Point(142, 116);
+            this.txt_frmProduct_Edit_NOP.Location = new System.Drawing.Point(142, 99);
+            this.txt_frmProduct_Edit_NOP.MaxLength = 40;
             this.txt_frmProduct_Edit_NOP.Name = "txt_frmProduct_Edit_NOP";
             this.txt_frmProduct_Edit_NOP.Size = new System.Drawing.Size(138, 20);
             this.txt_frmProduct_Edit_NOP.TabIndex = 20;
@@ -171,6 +175,7 @@
             // txt_frmProduct_Edit_Quanty
             // 
             this.txt_frmProduct_Edit_Quanty.Location = new System.Drawing.Point(409, 54);
+            this.txt_frmProduct_Edit_Quanty.MaxLength = 6;
             this.txt_frmProduct_Edit_Quanty.Name = "txt_frmProduct_Edit_Quanty";
             this.txt_frmProduct_Edit_Quanty.Size = new System.Drawing.Size(125, 20);
             this.txt_frmProduct_Edit_Quanty.TabIndex = 21;
@@ -179,36 +184,39 @@
             // 
             // cbo_frmProduct_Edit_TypeID
             // 
+            this.cbo_frmProduct_Edit_TypeID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_frmProduct_Edit_TypeID.FormattingEnabled = true;
-            this.cbo_frmProduct_Edit_TypeID.Location = new System.Drawing.Point(142, 180);
+            this.cbo_frmProduct_Edit_TypeID.Location = new System.Drawing.Point(142, 142);
             this.cbo_frmProduct_Edit_TypeID.Name = "cbo_frmProduct_Edit_TypeID";
             this.cbo_frmProduct_Edit_TypeID.Size = new System.Drawing.Size(138, 21);
             this.cbo_frmProduct_Edit_TypeID.TabIndex = 22;
             // 
             // cbo_frmProduct_Edit_Status
             // 
+            this.cbo_frmProduct_Edit_Status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_frmProduct_Edit_Status.FormattingEnabled = true;
-            this.cbo_frmProduct_Edit_Status.Location = new System.Drawing.Point(142, 254);
+            this.cbo_frmProduct_Edit_Status.Location = new System.Drawing.Point(142, 188);
             this.cbo_frmProduct_Edit_Status.Name = "cbo_frmProduct_Edit_Status";
             this.cbo_frmProduct_Edit_Status.Size = new System.Drawing.Size(138, 21);
             this.cbo_frmProduct_Edit_Status.TabIndex = 23;
             // 
             // but_frmProduct_Edit_Cancel
             // 
-            this.but_frmProduct_Edit_Cancel.Location = new System.Drawing.Point(95, 321);
+            this.but_frmProduct_Edit_Cancel.Location = new System.Drawing.Point(347, 245);
             this.but_frmProduct_Edit_Cancel.Name = "but_frmProduct_Edit_Cancel";
             this.but_frmProduct_Edit_Cancel.Size = new System.Drawing.Size(97, 32);
             this.but_frmProduct_Edit_Cancel.TabIndex = 24;
-            this.but_frmProduct_Edit_Cancel.Text = "Cancel";
+            this.but_frmProduct_Edit_Cancel.Text = "Hủy";
             this.but_frmProduct_Edit_Cancel.UseVisualStyleBackColor = true;
+            this.but_frmProduct_Edit_Cancel.Click += new System.EventHandler(this.but_frmProduct_Edit_Cancel_Click);
             // 
             // but_frmProduct_Edit_Ok
             // 
-            this.but_frmProduct_Edit_Ok.Location = new System.Drawing.Point(329, 324);
+            this.but_frmProduct_Edit_Ok.Location = new System.Drawing.Point(154, 245);
             this.but_frmProduct_Edit_Ok.Name = "but_frmProduct_Edit_Ok";
             this.but_frmProduct_Edit_Ok.Size = new System.Drawing.Size(95, 29);
             this.but_frmProduct_Edit_Ok.TabIndex = 25;
-            this.but_frmProduct_Edit_Ok.Text = "OK";
+            this.but_frmProduct_Edit_Ok.Text = "Sửa";
             this.but_frmProduct_Edit_Ok.UseVisualStyleBackColor = true;
             this.but_frmProduct_Edit_Ok.Click += new System.EventHandler(this.but_frmProduct_Edit_Ok_Click);
             // 
@@ -216,7 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(567, 450);
+            this.ClientSize = new System.Drawing.Size(567, 300);
             this.Controls.Add(this.but_frmProduct_Edit_Ok);
             this.Controls.Add(this.but_frmProduct_Edit_Cancel);
             this.Controls.Add(this.cbo_frmProduct_Edit_Status);
@@ -236,7 +244,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmProduct_Edit";
-            this.Text = "7";
+            this.Text = "Sửa thông tin sản phẩm";
             this.ResumeLayout(false);
             this.PerformLayout();
 

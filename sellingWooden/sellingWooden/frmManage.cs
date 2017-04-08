@@ -15,6 +15,7 @@ namespace sellingWooden
         SQLHelp help = new SQLHelp();
         public frmManage()
         {
+            //mainForm_tabControl.Size = this.Size;
             InitializeComponent();
             InitTabProduct();
             InitTabCustomer();

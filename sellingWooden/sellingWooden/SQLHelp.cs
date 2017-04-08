@@ -138,12 +138,8 @@ namespace sellingWooden
         }
         public bool checkIDBillDetail(string BillID,string ProductID)
         {
-            DataTable dt = getDataTable("SELECT BillID,ProductID FROM BillDetail");
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                if (dt.Rows[i][0].ToString().Equals(BillID) && dt.Rows[i][1].ToString().Equals(ProductID)) return false;
-            }
-            return true;
+            DataTable dt = getDataTable("SELECT BillID,ProductID FROM BillDetail WHERE BillID = '" + BillID + "' and ProductID='" + ProductID + "'");
+            return !(dt.Rows.Count>0);
         }
     }
 }

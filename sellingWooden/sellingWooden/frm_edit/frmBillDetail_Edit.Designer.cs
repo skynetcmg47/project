@@ -42,7 +42,7 @@
             // 
             // txt_frmBillDetail_Edit_Amount
             // 
-            this.txt_frmBillDetail_Edit_Amount.Location = new System.Drawing.Point(409, 43);
+            this.txt_frmBillDetail_Edit_Amount.Location = new System.Drawing.Point(480, 36);
             this.txt_frmBillDetail_Edit_Amount.MaxLength = 6;
             this.txt_frmBillDetail_Edit_Amount.Name = "txt_frmBillDetail_Edit_Amount";
             this.txt_frmBillDetail_Edit_Amount.Size = new System.Drawing.Size(87, 20);
@@ -52,8 +52,9 @@
             // 
             // cbo_frmBillDetail_Edit_EmployeeID
             // 
+            this.cbo_frmBillDetail_Edit_EmployeeID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_frmBillDetail_Edit_EmployeeID.FormattingEnabled = true;
-            this.cbo_frmBillDetail_Edit_EmployeeID.Location = new System.Drawing.Point(204, 123);
+            this.cbo_frmBillDetail_Edit_EmployeeID.Location = new System.Drawing.Point(480, 78);
             this.cbo_frmBillDetail_Edit_EmployeeID.Name = "cbo_frmBillDetail_Edit_EmployeeID";
             this.cbo_frmBillDetail_Edit_EmployeeID.Size = new System.Drawing.Size(121, 21);
             this.cbo_frmBillDetail_Edit_EmployeeID.TabIndex = 22;
@@ -61,7 +62,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(336, 46);
+            this.label6.Location = new System.Drawing.Point(352, 39);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 13);
             this.label6.TabIndex = 21;
@@ -79,11 +80,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(71, 123);
+            this.label2.Location = new System.Drawing.Point(347, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 13);
+            this.label2.Size = new System.Drawing.Size(130, 13);
             this.label2.TabIndex = 19;
-            this.label2.Text = "Mã nhân viên bán hàng :";
+            this.label2.Text = "Tên nhân viên bán hàng :";
             // 
             // label1
             // 
@@ -96,20 +97,21 @@
             // 
             // but_frmBillDetail_Edit_Cancel
             // 
-            this.but_frmBillDetail_Edit_Cancel.Location = new System.Drawing.Point(93, 194);
+            this.but_frmBillDetail_Edit_Cancel.Location = new System.Drawing.Point(391, 143);
             this.but_frmBillDetail_Edit_Cancel.Name = "but_frmBillDetail_Edit_Cancel";
             this.but_frmBillDetail_Edit_Cancel.Size = new System.Drawing.Size(93, 40);
             this.but_frmBillDetail_Edit_Cancel.TabIndex = 26;
-            this.but_frmBillDetail_Edit_Cancel.Text = "button1";
+            this.but_frmBillDetail_Edit_Cancel.Text = "Hủy";
             this.but_frmBillDetail_Edit_Cancel.UseVisualStyleBackColor = true;
+            this.but_frmBillDetail_Edit_Cancel.Click += new System.EventHandler(this.but_frmBillDetail_Edit_Cancel_Click);
             // 
             // button2but_frmBillDetail_Edit_Ok
             // 
-            this.button2but_frmBillDetail_Edit_Ok.Location = new System.Drawing.Point(319, 194);
+            this.button2but_frmBillDetail_Edit_Ok.Location = new System.Drawing.Point(204, 143);
             this.button2but_frmBillDetail_Edit_Ok.Name = "button2but_frmBillDetail_Edit_Ok";
             this.button2but_frmBillDetail_Edit_Ok.Size = new System.Drawing.Size(93, 40);
             this.button2but_frmBillDetail_Edit_Ok.TabIndex = 27;
-            this.button2but_frmBillDetail_Edit_Ok.Text = "OK";
+            this.button2but_frmBillDetail_Edit_Ok.Text = "Sửa";
             this.button2but_frmBillDetail_Edit_Ok.UseVisualStyleBackColor = true;
             this.button2but_frmBillDetail_Edit_Ok.Click += new System.EventHandler(this.button2but_frmBillDetail_Edit_Ok_Click);
             // 
@@ -135,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 485);
+            this.ClientSize = new System.Drawing.Size(669, 242);
             this.Controls.Add(this.txt_frmBillDetail_Edit_ProductID);
             this.Controls.Add(this.txt_frmBillDetail_Edit_BillID);
             this.Controls.Add(this.button2but_frmBillDetail_Edit_Ok);
@@ -147,7 +149,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmBillDetail_Edit";
-            this.Text = "frmBillDetail_Edit";
+            this.Text = "Sửa Hóa Đơn Chi Tiết";
             this.ResumeLayout(false);
             this.PerformLayout();
 

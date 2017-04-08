@@ -33,46 +33,14 @@ namespace sellingWooden
             // Hiển thị form
             frmChild.Show();
         }
-        private void InitHomeForm()
-        {
-            // Xóa hết controls đang tồn tại trong pnlContain (nếu có)
-            this.viewPanel.Controls.Clear();
-            account frmChild = new account();
-            frmChild.Size = viewPanel.Size;
-            frmChild.TopLevel = false;
-            // Gắn vào panel
-            this.viewPanel.Controls.Add(frmChild);
-
-            // Hiển thị form
-            frmChild.Show();
-        }
-        private void InitSettingForm()
-        {
-            // Xóa hết controls đang tồn tại trong pnlContain (nếu có)
-            this.viewPanel.Controls.Clear();
-
-            setting frmChild = new setting();
-            frmChild.Size = viewPanel.Size;
-            frmChild.TopLevel = false;
-
-            // Gắn vào panel
-            this.viewPanel.Controls.Add(frmChild);
-
-            // Hiển thị form
-            frmChild.Show();
-        }
+        
+       
 
         private void btn_main_Manage_Click(object sender, EventArgs e)
         {
             InitManageForm();
 
         }
-
-        private void btn_main_Setting_Click(object sender, EventArgs e)
-        {
-            InitSettingForm();
-        }
-
         private void btn_main_Statistic_Click(object sender, EventArgs e)
         {
             InitStatisticForm();
@@ -91,13 +59,6 @@ namespace sellingWooden
             // Hiển thị form
             frmChild.Show();
         }
-
-        private void btn_hone_Click(object sender, EventArgs e)
-        {
-            InitHomeForm();
-
-        }
-
         private void btn_system_close_Click(object sender, EventArgs e)
         {
             if (this.isExpandPress)
@@ -114,47 +75,19 @@ namespace sellingWooden
             if (btn_main_Manage.selected)
             {
                 InitManageForm();
-
             }
-            else if (btn_main_Setting.selected)
-                InitSettingForm();
-            //else InitStatisticForm();
+            else if(btn_main_account.selected)
+            {
+                InitAccount();
+            }
+            else if(btn_main_Statistic.selected)
+            {
+                InitStatisticForm();
+            }
 
         }
 
-        private void btn_menu_Click(object sender, EventArgs e)
-        {
-            //su dung bunifu transit 
-            if(control_panel.Width == 50)
-            {
-                control_panel.Visible = false;
-                control_panel.Width = 185;
-                panelTransit.ShowSync(control_panel);
-                viewPanel.Width = this.Size.Width - control_panel.Size.Width;
-                // viewPanel.Width = 893;
-                //logo transit here
-            }
-            else
-            {
-                control_panel.Visible = false;
-                control_panel.Width = 50;
-                panelTransit.ShowSync(control_panel);
-               // viewPanel.Visible = false;
-                viewPanel.Width = this.Size.Width - control_panel.Size.Width;
-              //  panelTransit.ShowSync(viewPanel);
-                
-            }
-           /* if (btn_main_Manage.selected)
-            {
-                InitManageForm();
-
-            }
-            else if (btn_hone.selected)
-                InitHomeForm();
-            else if (btn_main_Setting.selected)
-                InitSettingForm();*/
-            //else InitStatisticForm();
-        }
+        
 
         private void btn_hide_Click(object sender, EventArgs e)
         {

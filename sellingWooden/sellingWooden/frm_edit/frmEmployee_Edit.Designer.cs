@@ -131,6 +131,7 @@
             // txt_frmEmployee_Edit_NOE
             // 
             this.txt_frmEmployee_Edit_NOE.Location = new System.Drawing.Point(133, 100);
+            this.txt_frmEmployee_Edit_NOE.MaxLength = 40;
             this.txt_frmEmployee_Edit_NOE.Name = "txt_frmEmployee_Edit_NOE";
             this.txt_frmEmployee_Edit_NOE.Size = new System.Drawing.Size(142, 20);
             this.txt_frmEmployee_Edit_NOE.TabIndex = 9;
@@ -138,6 +139,7 @@
             // txt_frmEmployee_Edit_Note
             // 
             this.txt_frmEmployee_Edit_Note.Location = new System.Drawing.Point(410, 210);
+            this.txt_frmEmployee_Edit_Note.MaxLength = 255;
             this.txt_frmEmployee_Edit_Note.Multiline = true;
             this.txt_frmEmployee_Edit_Note.Name = "txt_frmEmployee_Edit_Note";
             this.txt_frmEmployee_Edit_Note.Size = new System.Drawing.Size(142, 76);
@@ -146,6 +148,7 @@
             // txt_frmEmployee_Edit_Address
             // 
             this.txt_frmEmployee_Edit_Address.Location = new System.Drawing.Point(410, 152);
+            this.txt_frmEmployee_Edit_Address.MaxLength = 50;
             this.txt_frmEmployee_Edit_Address.Name = "txt_frmEmployee_Edit_Address";
             this.txt_frmEmployee_Edit_Address.Size = new System.Drawing.Size(142, 20);
             this.txt_frmEmployee_Edit_Address.TabIndex = 11;
@@ -153,6 +156,7 @@
             // txt_frmEmployee_Edit_TEL
             // 
             this.txt_frmEmployee_Edit_TEL.Location = new System.Drawing.Point(410, 100);
+            this.txt_frmEmployee_Edit_TEL.MaxLength = 11;
             this.txt_frmEmployee_Edit_TEL.Name = "txt_frmEmployee_Edit_TEL";
             this.txt_frmEmployee_Edit_TEL.Size = new System.Drawing.Size(142, 20);
             this.txt_frmEmployee_Edit_TEL.TabIndex = 12;
@@ -163,15 +167,19 @@
             // 
             this.dtm_frmEmployee_Edit_DOB.Location = new System.Drawing.Point(133, 149);
             this.dtm_frmEmployee_Edit_DOB.Name = "dtm_frmEmployee_Edit_DOB";
-            this.dtm_frmEmployee_Edit_DOB.Size = new System.Drawing.Size(180, 20);
+            this.dtm_frmEmployee_Edit_DOB.Size = new System.Drawing.Size(142, 20);
             this.dtm_frmEmployee_Edit_DOB.TabIndex = 13;
             // 
             // cbo_frmEmployee_Edit_Sex
             // 
+            this.cbo_frmEmployee_Edit_Sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_frmEmployee_Edit_Sex.FormattingEnabled = true;
+            this.cbo_frmEmployee_Edit_Sex.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
             this.cbo_frmEmployee_Edit_Sex.Location = new System.Drawing.Point(133, 210);
             this.cbo_frmEmployee_Edit_Sex.Name = "cbo_frmEmployee_Edit_Sex";
-            this.cbo_frmEmployee_Edit_Sex.Size = new System.Drawing.Size(120, 21);
+            this.cbo_frmEmployee_Edit_Sex.Size = new System.Drawing.Size(142, 21);
             this.cbo_frmEmployee_Edit_Sex.TabIndex = 14;
             // 
             // cbo_frmEmployee_Edit_Position
@@ -184,20 +192,21 @@
             // 
             // but_frmEmployee_Edit_Cancel
             // 
-            this.but_frmEmployee_Edit_Cancel.Location = new System.Drawing.Point(144, 318);
+            this.but_frmEmployee_Edit_Cancel.Location = new System.Drawing.Point(410, 315);
             this.but_frmEmployee_Edit_Cancel.Name = "but_frmEmployee_Edit_Cancel";
             this.but_frmEmployee_Edit_Cancel.Size = new System.Drawing.Size(87, 34);
             this.but_frmEmployee_Edit_Cancel.TabIndex = 16;
-            this.but_frmEmployee_Edit_Cancel.Text = "Cancel";
+            this.but_frmEmployee_Edit_Cancel.Text = "Hủy";
             this.but_frmEmployee_Edit_Cancel.UseVisualStyleBackColor = true;
+            this.but_frmEmployee_Edit_Cancel.Click += new System.EventHandler(this.but_frmEmployee_Edit_Cancel_Click);
             // 
             // but_frmEmployee_Edit_OK
             // 
-            this.but_frmEmployee_Edit_OK.Location = new System.Drawing.Point(396, 318);
+            this.but_frmEmployee_Edit_OK.Location = new System.Drawing.Point(188, 315);
             this.but_frmEmployee_Edit_OK.Name = "but_frmEmployee_Edit_OK";
             this.but_frmEmployee_Edit_OK.Size = new System.Drawing.Size(87, 34);
             this.but_frmEmployee_Edit_OK.TabIndex = 17;
-            this.but_frmEmployee_Edit_OK.Text = "Ok";
+            this.but_frmEmployee_Edit_OK.Text = "Sửa";
             this.but_frmEmployee_Edit_OK.UseVisualStyleBackColor = true;
             this.but_frmEmployee_Edit_OK.Click += new System.EventHandler(this.but_frmEmployee_Edit_OK_Click);
             // 
@@ -225,7 +234,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmEmployee_Edit";
-            this.Text = "frmEmployee_Edit";
+            this.Text = "Sửa thông tin nhân viên";
             this.ResumeLayout(false);
             this.PerformLayout();
 
