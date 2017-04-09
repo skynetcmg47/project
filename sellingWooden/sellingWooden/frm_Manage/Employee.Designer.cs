@@ -62,6 +62,7 @@
             // 
             // cbo_Employee_Sex
             // 
+            this.cbo_Employee_Sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_Employee_Sex.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.cbo_Employee_Sex.FormattingEnabled = true;
             this.cbo_Employee_Sex.Items.AddRange(new object[] {
@@ -158,7 +159,7 @@
             this.txt_Employee_TEL.Location = new System.Drawing.Point(316, 56);
             this.txt_Employee_TEL.MaxLength = 11;
             this.txt_Employee_TEL.Name = "txt_Employee_TEL";
-            this.txt_Employee_TEL.Size = new System.Drawing.Size(110, 20);
+            this.txt_Employee_TEL.Size = new System.Drawing.Size(153, 20);
             this.txt_Employee_TEL.TabIndex = 12;
             this.txt_Employee_TEL.TextChanged += new System.EventHandler(this.txt_Employee_TEL_TextChanged);
             this.txt_Employee_TEL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Employee_TEL_KeyPress);
@@ -195,10 +196,14 @@
             // 
             this.txt_Employee_Position.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txt_Employee_Position.FormattingEnabled = true;
+            this.txt_Employee_Position.Items.AddRange(new object[] {
+            "Kế toán",
+            "Bán hàng",
+            "Quản lí"});
             this.txt_Employee_Position.Location = new System.Drawing.Point(316, 25);
             this.txt_Employee_Position.MaxLength = 30;
             this.txt_Employee_Position.Name = "txt_Employee_Position";
-            this.txt_Employee_Position.Size = new System.Drawing.Size(79, 21);
+            this.txt_Employee_Position.Size = new System.Drawing.Size(153, 21);
             this.txt_Employee_Position.TabIndex = 10;
             // 
             // dtm_Employee_DOB

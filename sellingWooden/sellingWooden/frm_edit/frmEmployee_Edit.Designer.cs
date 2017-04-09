@@ -185,7 +185,12 @@
             // cbo_frmEmployee_Edit_Position
             // 
             this.cbo_frmEmployee_Edit_Position.FormattingEnabled = true;
+            this.cbo_frmEmployee_Edit_Position.Items.AddRange(new object[] {
+            "Kế toán",
+            "Bán hàng",
+            "Quản lí"});
             this.cbo_frmEmployee_Edit_Position.Location = new System.Drawing.Point(410, 49);
+            this.cbo_frmEmployee_Edit_Position.MaxLength = 30;
             this.cbo_frmEmployee_Edit_Position.Name = "cbo_frmEmployee_Edit_Position";
             this.cbo_frmEmployee_Edit_Position.Size = new System.Drawing.Size(142, 21);
             this.cbo_frmEmployee_Edit_Position.TabIndex = 15;

@@ -161,6 +161,7 @@
             // 
             // cbo_frmCustomer_Edit_Sex
             // 
+            this.cbo_frmCustomer_Edit_Sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_frmCustomer_Edit_Sex.FormattingEnabled = true;
             this.cbo_frmCustomer_Edit_Sex.Items.AddRange(new object[] {
             "Nam",

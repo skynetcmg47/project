@@ -34,7 +34,6 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.control_panel = new System.Windows.Forms.Panel();
             this.btn_main_account = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_menu = new Bunifu.Framework.UI.BunifuImageButton();
             this.btn_main_Statistic = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_main_Manage = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -48,7 +47,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.viewPanel = new System.Windows.Forms.Panel();
             this.control_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btn_menu)).BeginInit();
             this.top_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_SoftName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_hide)).BeginInit();
@@ -68,7 +66,6 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.control_panel.BackColor = System.Drawing.Color.SeaGreen;
             this.control_panel.Controls.Add(this.btn_main_account);
-            this.control_panel.Controls.Add(this.btn_menu);
             this.control_panel.Controls.Add(this.btn_main_Statistic);
             this.control_panel.Controls.Add(this.btn_main_Manage);
             this.panelTransit.SetDecoration(this.control_panel, BunifuAnimatorNS.DecorationType.None);
@@ -112,21 +109,6 @@
             this.btn_main_account.Textcolor = System.Drawing.Color.Black;
             this.btn_main_account.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_main_account.Click += new System.EventHandler(this.btn_main_account_Click);
-            // 
-            // btn_menu
-            // 
-            this.btn_menu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_menu.BackColor = System.Drawing.Color.Transparent;
-            this.panelTransit.SetDecoration(this.btn_menu, BunifuAnimatorNS.DecorationType.None);
-            this.btn_menu.Image = ((System.Drawing.Image)(resources.GetObject("btn_menu.Image")));
-            this.btn_menu.ImageActive = null;
-            this.btn_menu.Location = new System.Drawing.Point(150, 6);
-            this.btn_menu.Name = "btn_menu";
-            this.btn_menu.Size = new System.Drawing.Size(25, 25);
-            this.btn_menu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_menu.TabIndex = 1;
-            this.btn_menu.TabStop = false;
-            this.btn_menu.Zoom = 20;
             // 
             // btn_main_Statistic
             // 
@@ -363,7 +345,6 @@
             this.Name = "mainForm";
             this.Text = "realmainForm";
             this.control_panel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btn_menu)).EndInit();
             this.top_panel.ResumeLayout(false);
             this.top_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_SoftName)).EndInit();
@@ -383,7 +364,6 @@
         private Bunifu.Framework.UI.BunifuImageButton btn_hide;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private BunifuAnimatorNS.BunifuTransition panelTransit;
-        private Bunifu.Framework.UI.BunifuImageButton btn_menu;
         private Bunifu.Framework.UI.BunifuImageButton btn_expand;
         private Bunifu.Framework.UI.BunifuImageButton btn_system_exit;
         private System.Windows.Forms.Panel panel1;

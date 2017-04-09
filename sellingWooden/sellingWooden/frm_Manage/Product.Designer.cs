@@ -88,6 +88,9 @@
             // cbb_Product_Status
             // 
             this.cbb_Product_Status.FormattingEnabled = true;
+            this.cbb_Product_Status.Items.AddRange(new object[] {
+            "Hàng đặt",
+            "Hàng bán"});
             this.cbb_Product_Status.Location = new System.Drawing.Point(127, 143);
             this.cbb_Product_Status.MaxLength = 30;
             this.cbb_Product_Status.Name = "cbb_Product_Status";
@@ -96,6 +99,7 @@
             // 
             // cbb_Product_TypeID
             // 
+            this.cbb_Product_TypeID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_Product_TypeID.FormattingEnabled = true;
             this.cbb_Product_TypeID.Location = new System.Drawing.Point(127, 103);
             this.cbb_Product_TypeID.MaxLength = 5;

@@ -193,9 +193,12 @@
             // 
             // cbo_frmProduct_Edit_Status
             // 
-            this.cbo_frmProduct_Edit_Status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_frmProduct_Edit_Status.FormattingEnabled = true;
+            this.cbo_frmProduct_Edit_Status.Items.AddRange(new object[] {
+            "Hàng đặt",
+            "Hàng bán"});
             this.cbo_frmProduct_Edit_Status.Location = new System.Drawing.Point(142, 188);
+            this.cbo_frmProduct_Edit_Status.MaxLength = 20;
             this.cbo_frmProduct_Edit_Status.Name = "cbo_frmProduct_Edit_Status";
             this.cbo_frmProduct_Edit_Status.Size = new System.Drawing.Size(138, 21);
             this.cbo_frmProduct_Edit_Status.TabIndex = 23;

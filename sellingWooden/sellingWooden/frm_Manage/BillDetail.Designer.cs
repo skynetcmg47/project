@@ -71,6 +71,7 @@
             // 
             // cbb_BillDetail_ProductID
             // 
+            this.cbb_BillDetail_ProductID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbb_BillDetail_ProductID.FormattingEnabled = true;
             this.cbb_BillDetail_ProductID.Location = new System.Drawing.Point(384, 89);
             this.cbb_BillDetail_ProductID.Name = "cbb_BillDetail_ProductID";
@@ -79,6 +80,7 @@
             // 
             // cbo_BillDetail_BillID
             // 
+            this.cbo_BillDetail_BillID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_BillDetail_BillID.FormattingEnabled = true;
             this.cbo_BillDetail_BillID.Location = new System.Drawing.Point(152, 49);
             this.cbo_BillDetail_BillID.Name = "cbo_BillDetail_BillID";
@@ -97,6 +99,7 @@
             // 
             // cbo_BillDetail_EmployeeID
             // 
+            this.cbo_BillDetail_EmployeeID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo_BillDetail_EmployeeID.FormattingEnabled = true;
             this.cbo_BillDetail_EmployeeID.Location = new System.Drawing.Point(152, 92);
             this.cbo_BillDetail_EmployeeID.Name = "cbo_BillDetail_EmployeeID";
