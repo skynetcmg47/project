@@ -21,7 +21,7 @@ namespace sellingWooden
         }
         private void InitTypeDtgv()
         {
-            help.fillInDTGV(dgv_Type_InformationTypeDetail, "Type");
+            help.fillInDTGV(dgv_Type_InformationTypeDetail, "v_dtgv_Type");
         }
         private void but_Type_Delete_Click(object sender, EventArgs e)
         {

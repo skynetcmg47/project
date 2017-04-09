@@ -27,7 +27,7 @@ namespace sellingWooden
 
         private void InitBillDetailDtgv()
         {
-            help.fillInDTGV(dgv_BillDetail_BillDetailDetail, "v_BillDetail");
+            help.fillInDTGV(dgv_BillDetail_BillDetailDetail, "v_dtgv_BillDetail");
         }
         private void InitBillIDCbb()
         {

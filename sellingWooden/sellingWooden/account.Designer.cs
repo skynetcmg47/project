@@ -49,10 +49,10 @@
             this.txt_newpass = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txt_changeUserName = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.lbusername = new System.Windows.Forms.Label();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnaccoun = new Bunifu.Framework.UI.BunifuImageButton();
             this.gr_add.SuspendLayout();
             this.gr_change.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnaccoun)).BeginInit();
             this.SuspendLayout();
             // 
             // gr_add
@@ -189,7 +189,7 @@
             // 
             this.lb_account.AutoSize = true;
             this.lb_account.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_account.Location = new System.Drawing.Point(77, 41);
+            this.lb_account.Location = new System.Drawing.Point(150, 100);
             this.lb_account.Name = "lb_account";
             this.lb_account.Size = new System.Drawing.Size(0, 20);
             this.lb_account.TabIndex = 1;
@@ -364,18 +364,18 @@
             this.lbusername.Size = new System.Drawing.Size(0, 24);
             this.lbusername.TabIndex = 19;
             // 
-            // bunifuImageButton1
+            // btnaccoun
             // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.White;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(32, 41);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(107, 101);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 20;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
+            this.btnaccoun.BackColor = System.Drawing.Color.White;
+            this.btnaccoun.Image = ((System.Drawing.Image)(resources.GetObject("btnaccoun.Image")));
+            this.btnaccoun.ImageActive = null;
+            this.btnaccoun.Location = new System.Drawing.Point(32, 41);
+            this.btnaccoun.Name = "btnaccoun";
+            this.btnaccoun.Size = new System.Drawing.Size(107, 101);
+            this.btnaccoun.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnaccoun.TabIndex = 20;
+            this.btnaccoun.TabStop = false;
+            this.btnaccoun.Zoom = 10;
             // 
             // account
             // 
@@ -383,7 +383,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(893, 549);
-            this.Controls.Add(this.bunifuImageButton1);
+            this.Controls.Add(this.btnaccoun);
             this.Controls.Add(this.lbusername);
             this.Controls.Add(this.gr_change);
             this.Controls.Add(this.lb_account);
@@ -395,7 +395,7 @@
             this.gr_add.PerformLayout();
             this.gr_change.ResumeLayout(false);
             this.gr_change.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnaccoun)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,6 +422,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuMetroTextbox txt_oldpass;
         private System.Windows.Forms.Label lbusername;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuImageButton btnaccoun;
     }
 }

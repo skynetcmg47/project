@@ -26,7 +26,7 @@ namespace sellingWooden
         /// </summary>
         private void InitEmployeetDtgv()
         {
-            help.fillInDTGV(dgv_Employee_InformationEmployeeDetail, "Employee");
+            help.fillInDTGV(dgv_Employee_InformationEmployeeDetail, "v_dtgv_Employee");
         }
         private void button3_Click(object sender, EventArgs e)
         {

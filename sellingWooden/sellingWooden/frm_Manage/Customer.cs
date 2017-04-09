@@ -25,7 +25,7 @@ namespace sellingWooden
        
         private void InitCustomerDtgv()
         {
-            help.fillInDTGV(dgv_Customer_InformationCustomerDetail, "Customer");
+            help.fillInDTGV(dgv_Customer_InformationCustomerDetail, "v_dtgv_Customer");
         }
         private void but_Customer_Delete_Click(object sender, EventArgs e)
         {

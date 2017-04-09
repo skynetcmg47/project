@@ -41,7 +41,7 @@ namespace sellingWooden
         }
         public void InitProductDtgv()
         {
-            help.fillInDTGV(dgv_Product_InformatinProductDetail, "Product");
+            help.fillInDTGV(dgv_Product_InformatinProductDetail, "v_dtgv_Product");
            // dgv_Product_InformatinProductDetail.Width = this.Width - 10;
         }
 

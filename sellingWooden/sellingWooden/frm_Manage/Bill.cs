@@ -23,7 +23,7 @@ namespace sellingWooden
 
         private void InitBillDtgv()
         {
-            help.fillInDTGV(dgv_Bill_InformatinBillDetail, "Bill");
+            help.fillInDTGV(dgv_Bill_InformatinBillDetail, "v_dtgv_Bill");
         }
         private void but_Bill_Delete_Click(object sender, EventArgs e)
         {
