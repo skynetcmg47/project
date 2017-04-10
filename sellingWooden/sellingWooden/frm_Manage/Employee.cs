@@ -117,7 +117,7 @@ namespace sellingWooden
             try
             {
                 string txtSearch = txt_Employee_Search.Text.Trim();
-                string sql = "ALTER VIEW v_Employee_Search AS SELECT * FROM Employee WHERE EmployeeID LIKE '%" + txtSearch + "%'"
+                string sql = "ALTER VIEW v_Employee_Search AS SELECT EmployeeID AS [Mã NV], EmployeeName AS [Tên NV], DateOfBirth AS [Ngày sinh], sex AS [Giới tính], Position AS [Chức vụ], Address AS [Địa chỉ], PhoneNumber AS [Số Đt], Note AS [Ghi chú] FROM Employee WHERE EmployeeID LIKE '%" + txtSearch + "%'"
                               + "or EmployeeName LIKE N'%" + txtSearch + "%'"
                               //+ "or DAY(DateOfBirth) LIKE '%" + txtSearch.Substring(0,2) + "%'"
                               + "or sex LIKE N'%" + txtSearch + "%'"

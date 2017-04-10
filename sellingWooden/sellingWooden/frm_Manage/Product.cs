@@ -215,7 +215,7 @@ namespace sellingWooden
         private void btn_Product_Search_Click(object sender, EventArgs e)
         {
             string txtSearch = txt_Product_Search.Text;
-            string sql = "ALTER VIEW v_Product_Search AS SELECT * FROM Product WHERE ProductID LIKE '%" + txtSearch + "%'"
+            string sql = "ALTER VIEW v_Product_Search AS SELECT ProductID AS [Mã SP], ProductTypeID AS [Mã Loại], ProductName AS [Tên SP], Status AS [Trạng thái], Quanty AS [Số lượng], Price AS Giá, Size AS [Kích thước], Note AS [Ghi chú] FROM Product WHERE ProductID LIKE '%" + txtSearch + "%'"
                           + "or ProductName LIKE N'%" + txtSearch + "%'"
                           + "or ProductTypeID LIKE '%" + txtSearch + "%'"
                           + "or Status LIKE N'%" + txtSearch + "%'"
@@ -230,6 +230,7 @@ namespace sellingWooden
         private void but_Product_Refresh_Click(object sender, EventArgs e)
         {
             InitProductDtgv();
+            initTypeCbb();
         }
     }
 }

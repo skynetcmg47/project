@@ -126,7 +126,7 @@ namespace sellingWooden
         private void btn_Bill_Search_Click(object sender, EventArgs e)
         {
             string txtSearch = txt_Bill_Search.Text;
-            string sql = "ALTER VIEW v_Bill_Search AS SELECT * FROM Bill WHERE BillID LIKE '%" + txtSearch + "%'"
+            string sql = "ALTER VIEW v_Bill_Search AS SELECT BillID AS [Mã HD], CustomerID AS [Mã KH], Selldate AS [Ngày bán], Note AS [Ghi chú] FROM Bill WHERE BillID LIKE '%" + txtSearch + "%'"
                           + "or CustomerID LIKE '%" + txtSearch + "%'"
                           + "or SellDate LIKE '%" + txtSearch + "%'"
                           + "or Note LIKE N'%" + txtSearch + "%'";
@@ -137,6 +137,7 @@ namespace sellingWooden
         private void but_Bill_Refresh_Click(object sender, EventArgs e)
         {
             InitBillDtgv();
+            InitCustomerCbb();
         }
     }
 }

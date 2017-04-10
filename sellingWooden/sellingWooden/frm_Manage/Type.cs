@@ -105,7 +105,7 @@ namespace sellingWooden
         private void btn_Type_Search_Click(object sender, EventArgs e)
         {
             string txtSearch = txt_Type_Search.Text;
-            string sql = "ALTER VIEW v_Type_Search AS SELECT * FROM Type WHERE TypeID LIKE N'%" + txtSearch + "%'"
+            string sql = "ALTER VIEW v_Type_Search AS SELECT TypeID AS [Mã loại], TypeName AS [Tên loại] FROM Type WHERE TypeID LIKE N'%" + txtSearch + "%'"
                           + "or TypeName LIKE N'%" + txtSearch.Trim() + "%'";
             help.Excute_query(sql);
             help.fillInDTGV(dgv_Type_InformationTypeDetail, "v_Type_Search");

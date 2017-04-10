@@ -110,12 +110,14 @@ namespace sellingWooden
         private void btn_BillDetail_Search_Click(object sender, EventArgs e)
         {
             string txtSearch = txt_BillDetail_Search.Text;
-            string sql = "ALTER VIEW v_BillDetail_Search AS SELECT * FROM BillDetail WHERE BillID LIKE '%" + txtSearch + "%'"
-                          + "or ProductID LIKE '%" + txtSearch + "%'"
-                          + "or EmployeeID LIKE '%" + txtSearch + "%'"
-                          + "or Amount  ="+ txtSearch + "";
+            string sql = "ALTER VIEW v_BillDetail_Search as SELECT dbo.BillDetail.BillID AS[Mã HD], dbo.BillDetail.ProductID AS[Mã SP], dbo.BillDetail.EmployeeID AS[Mã NV], dbo.BillDetail.Amount AS[Số Lượng], dbo.BillDetail.Amount* dbo.Product.Price AS[Thành Tiền]"
+                          +" FROM dbo.BillDetail INNER JOIN"
+                          +" dbo.Product ON dbo.Product.ProductID = dbo.BillDetail.ProductID WHERE BillDetail.BillID LIKE '%" + txtSearch + "%'"
+                          + " or BillDetail.ProductID LIKE '%" + txtSearch + "%'"
+                          + " or BillDetail.EmployeeID LIKE '%" + txtSearch + "%'"
+                          + " or BillDetail.Amount  =" + txtSearch + "";
             help.Excute_query(sql);
-            help.fillInDTGV(dgv_BillDetail_BillDetailDetail, "v_BillDetail  _Search");
+            help.fillInDTGV(dgv_BillDetail_BillDetailDetail, "v_BillDetail_Search");
         }
         //==================Dat=================================
         private void txt_BillDetail_Amount_KeyPress(object sender, KeyPressEventArgs e)
@@ -179,6 +181,9 @@ namespace sellingWooden
         private void but_BillDetail_Refresh_Click(object sender, EventArgs e)
         {
             InitBillDetailDtgv();
+            InitBillIDCbb();
+            InitEmployeeIDCbb();
+            InitProductIDCbb();
         }
     }
 }

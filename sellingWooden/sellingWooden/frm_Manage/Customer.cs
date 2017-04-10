@@ -173,7 +173,7 @@ namespace sellingWooden
         private void btn_Customer_Search_Click(object sender, EventArgs e)
         {
             string txtSearch = txt_Customer_search.Text;
-            string sql = "ALTER VIEW v_Customer_Search AS SELECT * FROM Customer WHERE CustomerID LIKE '%" + txtSearch + "%'"
+            string sql = "ALTER VIEW v_Customer_Search AS SELECT  CustomerID AS [Mã KH], CustomerName AS [Tên KH], DateOfBirth AS [Ngày sinh], Sex AS [Giới tính], Address AS [Địa chỉ], PhoneNumber AS [Số đt], Note AS [Ghi chú] FROM Customer WHERE CustomerID LIKE '%" + txtSearch + "%'"
                           + "or CustomerName LIKE N'%" + txtSearch + "%'"
                           + "or DateOfBirth LIKE '%" + txtSearch + "%'"
                           + "or Sex LIKE N'%" + txtSearch + "%'"
