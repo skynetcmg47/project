@@ -78,6 +78,12 @@
     <Compile Include="frmBillReport.Designer.cs">
       <DependentUpon>frmBillReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSell.Designer.cs">
+      <DependentUpon>frmSell.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_Manage\Bill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBillReport.resx">
       <DependentUpon>frmBillReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSell.resx">
+      <DependentUpon>frmSell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_edit\frmBillDetail_Edit.resx">
       <DependentUpon>frmBillDetail_Edit.cs</DependentUpon>
