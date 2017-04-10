@@ -78,7 +78,7 @@
             this.txt_pass.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txt_pass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_pass.isPassword = false;
+            this.txt_pass.isPassword = true;
             this.txt_pass.Location = new System.Drawing.Point(204, 120);
             this.txt_pass.Margin = new System.Windows.Forms.Padding(4);
             this.txt_pass.Name = "txt_pass";

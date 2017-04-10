@@ -28,29 +28,38 @@ namespace sellingWooden
             string pass = txt_pass.Text;
             string repass = txt_repass.Text;
             SQLHelp help = new SQLHelp();
-            if (txt_changeUserName.Text.Equals("admin"))
-                if (help.checkID("UserNameAndPass", username))
-                    if (pass.Equals(repass))
-                    {
-                        help.Excute_query("INSERT INTO UserNameAndPass VALUES ('" + username + "','" + pass + "')");
-                        lb_account.Text = "Tạo tài khoản thành công";
-                        lb_account.ForeColor = Color.Green;
-                        txt_userName.Text = "";
-                    }
+            try
+            {
+                if (username.Length <= 30 && pass.Length <= 50 && repass.Length <= 50)
+                    if (txt_changeUserName.Text.Equals("admin"))
+                        if (help.checkID("UserNameAndPass", username))
+                            if (pass.Equals(repass))
+                            {
+                                help.Excute_query("INSERT INTO UserNameAndPass VALUES ('" + username + "','" + pass + "')");
+                                lb_account.Text = "Tạo tài khoản thành công";
+                                lb_account.ForeColor = Color.Green;
+                                txt_userName.Text = "";
+                            }
+                            else
+                            {
+                                lb_account.Text = "Mật khẩu không trùng khớp";
+                                lb_account.ForeColor = Color.Red;
+                            }
+                        else
+                        {
+                            lb_account.Text = "Tên đăng nhập đã tồn tại";
+                            lb_account.ForeColor = Color.Red;
+                        }
                     else
                     {
-                        lb_account.Text = "Mật khẩu không trùng khớp";
+                        lb_account.Text = "Bạn không có quyền tạo tài khoản";
                         lb_account.ForeColor = Color.Red;
                     }
-                else
-                {
-                    lb_account.Text = "Tên đăng nhập đã tồn tại";
-                    lb_account.ForeColor = Color.Red;
-                }
-            else
+                else MessageBox.Show("Không nhập quá dài");
+            }
+            catch(Exception ex)
             {
-                lb_account.Text = "Bạn không có quyền tạo tài khoản";
-                lb_account.ForeColor = Color.Red;
+                MessageBox.Show("Không nhập tiếng Việt có dấu");
             }
         }
 
