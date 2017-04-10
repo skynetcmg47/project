@@ -103,3 +103,5 @@ D:\C#\git project\sellingWooden\sellingWooden\bin\Debug\stdole.dll
 D:\C#\git project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.frmBillReport.resources
 D:\C#\git project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.SignIn.resources
 D:\C#\git project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.account.resources
+D:\C#\git project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.frmSell.resources
+D:\C#\git project\sellingWooden\sellingWooden\obj\Debug\sellingWooden.sellBillReport.resources

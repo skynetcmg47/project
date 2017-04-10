@@ -141,5 +141,13 @@ namespace sellingWooden
             DataTable dt = getDataTable("SELECT BillID,ProductID FROM BillDetail WHERE BillID = '" + BillID + "' and ProductID='" + ProductID + "'");
             return !(dt.Rows.Count>0);
         }
+        public bool checkCustomerID(string CustomerID)
+        {
+            DataTable dtt = getDataTable("SELECT * FROM sell");
+            DataTable dt = getDataTable("SELECT * FROM sell WHERE CustomerID = '" + CustomerID + "'");
+            if (dtt.Rows.Count == 0) return true;
+            else 
+                return (dt.Rows.Count > 0);
+        }
     }
 }

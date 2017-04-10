@@ -30,6 +30,7 @@
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.BillReport1 = new sellingWooden.BillReport();
+            this.BillReport2 = new sellingWooden.BillReport();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -40,7 +41,7 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.BillReport1;
+            this.crystalReportViewer1.ReportSource = this.BillReport2;
             this.crystalReportViewer1.Size = new System.Drawing.Size(1057, 385);
             this.crystalReportViewer1.TabIndex = 0;
             // 
@@ -62,5 +63,6 @@
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private BillReport BillReport1;
+        private BillReport BillReport2;
     }
 }

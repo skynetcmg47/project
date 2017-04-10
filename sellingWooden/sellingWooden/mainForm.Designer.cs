@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.control_panel = new System.Windows.Forms.Panel();
+            this.btn_sell = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_main_account = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_main_Statistic = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_main_Manage = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -65,6 +66,7 @@
             this.control_panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.control_panel.BackColor = System.Drawing.Color.SeaGreen;
+            this.control_panel.Controls.Add(this.btn_sell);
             this.control_panel.Controls.Add(this.btn_main_account);
             this.control_panel.Controls.Add(this.btn_main_Statistic);
             this.control_panel.Controls.Add(this.btn_main_Manage);
@@ -73,6 +75,42 @@
             this.control_panel.Name = "control_panel";
             this.control_panel.Size = new System.Drawing.Size(185, 549);
             this.control_panel.TabIndex = 5;
+            // 
+            // btn_sell
+            // 
+            this.btn_sell.Activecolor = System.Drawing.Color.DodgerBlue;
+            this.btn_sell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_sell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_sell.BorderRadius = 0;
+            this.btn_sell.ButtonText = "     Bán Hàng";
+            this.btn_sell.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelTransit.SetDecoration(this.btn_sell, BunifuAnimatorNS.DecorationType.None);
+            this.btn_sell.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_sell.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_sell.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_sell.Iconimage")));
+            this.btn_sell.Iconimage_right = null;
+            this.btn_sell.Iconimage_right_Selected = null;
+            this.btn_sell.Iconimage_Selected = null;
+            this.btn_sell.IconMarginLeft = 0;
+            this.btn_sell.IconMarginRight = 0;
+            this.btn_sell.IconRightVisible = true;
+            this.btn_sell.IconRightZoom = 0D;
+            this.btn_sell.IconVisible = true;
+            this.btn_sell.IconZoom = 90D;
+            this.btn_sell.IsTab = true;
+            this.btn_sell.Location = new System.Drawing.Point(-2, 141);
+            this.btn_sell.Name = "btn_sell";
+            this.btn_sell.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_sell.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_sell.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_sell.selected = true;
+            this.btn_sell.Size = new System.Drawing.Size(184, 48);
+            this.btn_sell.TabIndex = 13;
+            this.btn_sell.Text = "     Bán Hàng";
+            this.btn_sell.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_sell.Textcolor = System.Drawing.Color.Black;
+            this.btn_sell.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sell.Click += new System.EventHandler(this.btn_sell_Click);
             // 
             // btn_main_account
             // 
@@ -173,7 +211,7 @@
             this.btn_main_Manage.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btn_main_Manage.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
             this.btn_main_Manage.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_main_Manage.selected = true;
+            this.btn_main_Manage.selected = false;
             this.btn_main_Manage.Size = new System.Drawing.Size(184, 48);
             this.btn_main_Manage.TabIndex = 9;
             this.btn_main_Manage.Text = "     Quản Lí";
@@ -290,22 +328,22 @@
             // 
             this.panelTransit.AnimationType = BunifuAnimatorNS.AnimationType.HorizBlind;
             this.panelTransit.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.panelTransit.DefaultAnimation = animation1;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.panelTransit.DefaultAnimation = animation2;
             // 
             // panel1
             // 
@@ -373,5 +411,6 @@
         private Bunifu.Framework.UI.BunifuImageButton btn_SoftName;
         private Bunifu.Framework.UI.BunifuFlatButton btn_main_account;
         private Bunifu.Framework.UI.BunifuGradientPanel top_panel;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_sell;
     }
 }
