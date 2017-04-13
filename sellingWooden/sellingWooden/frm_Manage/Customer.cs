@@ -20,6 +20,7 @@ namespace sellingWooden
         {
             InitializeComponent();
             InitCustomerDtgv();
+            InitTxtCustomerID();
         }
 
        
@@ -46,6 +47,7 @@ namespace sellingWooden
 
         private void but_Customer_Add_Click(object sender, EventArgs e)
         {
+            InitTxtCustomerID();
             try {
                 if (txt_Customer_CustomerID.Text != ""
                     && txt_Customer_NOC.Text != "")
@@ -77,6 +79,7 @@ namespace sellingWooden
             {
                 MessageBox.Show("Lỗi hệ thống, xin vui lòng khởi động lại chương trình");
             }
+            InitTxtCustomerID();
           }
 
         private void btn_Customer_delete_Click(object sender, EventArgs e)
@@ -187,6 +190,19 @@ namespace sellingWooden
         private void but_Customer_Refresh_Click(object sender, EventArgs e)
         {
             InitCustomerDtgv();
+        }
+
+        private void InitTxtCustomerID()
+        {
+            if (help.checkID("Customer", "KH0000"))
+            {
+                txt_Customer_CustomerID.Text = "KH0000";
+            }
+            else
+            {
+                Common common = new Common();
+                txt_Customer_CustomerID.Text = common.initID("Customer", "CustomerID", "KH");
+            }
         }
     }
 }

@@ -16,7 +16,7 @@ namespace sellingWooden
     public partial class Product : Form
     {
         SQLHelp help = new SQLHelp();
-        string ProductID, NOP, TypeID, Status, Note;
+        string ProductID, NOP, TypeID, Note;
         string Quanty, Size;
         string Price;
 
@@ -27,6 +27,8 @@ namespace sellingWooden
             InitProductDtgv();
             //khoi tao combobox
             initTypeCbb();
+            InitTxtProductID();
+
 
         }
         //ham nay dung de khoi tao combobox type
@@ -53,6 +55,7 @@ namespace sellingWooden
         //bien co dang combobox phai dung SelectedValue de lay gia tri
         private void but_Product_Add_Click(object sender, EventArgs e)
         {
+            InitTxtProductID();
             try
             {
                 if (txt_Product_ProductID.Text != ""
@@ -65,7 +68,6 @@ namespace sellingWooden
                         string Data = "'" + txt_Product_ProductID.Text + "'," +
                                       "N" + "'" + cbb_Product_TypeID.SelectedValue + "'," +
                                       "N" + "'" + txt_Product_NOP.Text + "'," +
-                                      "N" + "'" + cbb_Product_Status.Text + " '," +
                                       "" + txt_Product_Quanty.Text + "," +
                                       "" + txt_Product_Price.Text + "," +
                                       "'" + txt_Product_Size.Text + " '," +
@@ -85,6 +87,21 @@ namespace sellingWooden
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi nhập liệu, xin vui lòng thử lại");
+            }
+            InitTxtProductID();
+
+        }
+
+        private void InitTxtProductID()
+        {
+            if (help.checkID("Product", "SP0000"))
+            {
+                txt_Product_ProductID.Text = "SP0000";
+            }
+            else
+            {
+                Common common = new Common();
+                txt_Product_ProductID.Text = common.initID("Product", "ProductID", "SP");
             }
         }
 
@@ -117,8 +134,6 @@ namespace sellingWooden
             txt_Product_NOP.Text = dgv_Product_InformatinProductDetail.Rows[index].Cells[2].Value.ToString();
             NOP = dgv_Product_InformatinProductDetail.Rows[index].Cells[2].Value.ToString();
 
-            cbb_Product_Status.Text = dgv_Product_InformatinProductDetail.Rows[index].Cells[3].Value.ToString();
-            Status = dgv_Product_InformatinProductDetail.Rows[index].Cells[3].Value.ToString();
 
             txt_Product_Quanty.Text = dgv_Product_InformatinProductDetail.Rows[index].Cells[4].Value.ToString();
             Quanty = dgv_Product_InformatinProductDetail.Rows[index].Cells[4].Value.ToString();
@@ -195,7 +210,6 @@ namespace sellingWooden
                     run.setProductID(ProductID);
                     run.setNOP(NOP);
                     run.setTypeID(TypeID);
-                    run.setStatus(Status);
                     run.setQuanty(Quanty);
                     run.setPrice(Price);
                     run.setSize(Size);

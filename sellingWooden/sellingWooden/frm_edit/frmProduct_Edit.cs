@@ -15,7 +15,7 @@ namespace sellingWooden
     {
         SQLHelp help = new SQLHelp();
 
-        string ProductID, NOP, TypeID, Status, Note;
+        string ProductID, NOP, TypeID, Note;
         string Quanty, Size;
         string Price;
 
@@ -45,10 +45,6 @@ namespace sellingWooden
         public void setTypeID(string id)
         {
             TypeID = id;
-        }
-        public void setStatus(string s)
-        {
-            Status = s;
         }
         public void setNote(string s)
         {
@@ -96,7 +92,6 @@ namespace sellingWooden
 
             string sql = "UPDATE Product SET ProductTypeID ='" + cbo_frmProduct_Edit_TypeID.SelectedValue + "',"
                        + "ProductName = N'" + txt_frmProduct_Edit_NOP.Text + "',"
-                       + "Status = N'" + cbo_frmProduct_Edit_Status.Text + "',"
                        + "Quanty = " + txt_frmProduct_Edit_Quanty.Text + ","
                        + "Price = " + txt_frmProduct_Edit_Price.Text + ","
                        + "Size = '" + txt_frmProduct_Edit_Size.Text + "',"
@@ -150,12 +145,6 @@ namespace sellingWooden
             txt_frmProduct_Edit_Note.Text = Note;
             txt_frmProduct_Edit_Price.Text = Price;
             txt_frmProduct_Edit_Size.Text = Size;
-            cbo_frmProduct_Edit_Status.Text = Status;
-        }
-        // ham xu li sua
-        public void edit()
-        {
-
         }
 
     }

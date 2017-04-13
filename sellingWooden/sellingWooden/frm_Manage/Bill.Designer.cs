@@ -98,6 +98,7 @@
             this.txt_Bill_BillID.Location = new System.Drawing.Point(113, 30);
             this.txt_Bill_BillID.MaxLength = 5;
             this.txt_Bill_BillID.Name = "txt_Bill_BillID";
+            this.txt_Bill_BillID.ReadOnly = true;
             this.txt_Bill_BillID.Size = new System.Drawing.Size(121, 20);
             this.txt_Bill_BillID.TabIndex = 4;
             // 

@@ -18,6 +18,7 @@ namespace sellingWooden
         {
             InitializeComponent();
             InitTypeDtgv();
+            InitTxtTypeID();
         }
         private void InitTypeDtgv()
         {
@@ -44,8 +45,7 @@ namespace sellingWooden
 
         private void but_Type_Add_Click(object sender, EventArgs e)
         {
-
-
+            InitTxtTypeID();
             if (txt_Type_NOT.Text != ""
                 && txt_Type_TypeID.Text != "")
                 if (help.checkID("Type", txt_Type_TypeID.Text))
@@ -62,7 +62,8 @@ namespace sellingWooden
                     goto OPP;
                 }
             MessageBox.Show("Hãy nhập đầy đủ thông tin loại sản phẩm");
-        OPP:;
+            OPP:;
+            InitTxtTypeID();
         }
 
         //hien thong tin len cac box
@@ -114,6 +115,37 @@ namespace sellingWooden
         private void but_Type_Refresh_Click(object sender, EventArgs e)
         {
             InitTypeDtgv();
+        }
+        public string initTypeID(string st)
+        {
+            string s, snew;
+            int i = 0;
+            DataTable typeIDtable;
+            typeIDtable = help.getDataTable_excute("select top 1 TypeID from Type order by TypeID desc");
+            s = typeIDtable.Rows[0][0].ToString();
+            snew = s.Substring(1, 4).ToString();
+            i = int.Parse(snew);
+            i++;
+            if (i < 10)
+                return st.ToString() + "000" + i.ToString();
+            else if (i >= 10 && i < 100)
+                return st.ToString() + "00" + i.ToString();
+            else if (i >= 100 && i < 1000)
+                return st.ToString() + "0" + i.ToString();
+            else
+                return st.ToString() + i.ToString();
+        }
+        private void InitTxtTypeID()
+        {
+            if (help.checkID("Type", "L0000"))
+            {
+                txt_Type_TypeID.Text = "L0000";
+            }
+            else
+            {
+
+                txt_Type_TypeID.Text = initTypeID("L");
+            }
         }
     }
 }

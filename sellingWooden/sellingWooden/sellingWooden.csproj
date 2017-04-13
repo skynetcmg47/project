@@ -59,11 +59,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="account.cs">
+    <Compile Include="Common.cs" />
+    <Compile Include="main_menu\account.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="account.Designer.cs">
+    <Compile Include="main_menu\account.Designer.cs">
       <DependentUpon>account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addCustomer.Designer.cs">
+      <DependentUpon>addCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="BillReport.cs">
       <AutoGen>True</AutoGen>
@@ -78,10 +85,10 @@
     <Compile Include="frmBillReport.Designer.cs">
       <DependentUpon>frmBillReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSell.cs">
+    <Compile Include="main_menu\frmSell.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSell.Designer.cs">
+    <Compile Include="main_menu\frmSell.Designer.cs">
       <DependentUpon>frmSell.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Manage\Bill.cs">
@@ -176,23 +183,11 @@
       <DependentUpon>sellReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="setting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="setting.Designer.cs">
-      <DependentUpon>setting.cs</DependentUpon>
-    </Compile>
     <Compile Include="SignIn.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SignIn.Designer.cs">
       <DependentUpon>SignIn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SignUp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SignUp.Designer.cs">
-      <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="SQLHelp.cs" />
     <Compile Include="frm_Manage\Type.cs">
@@ -201,14 +196,17 @@
     <Compile Include="frm_Manage\Type.Designer.cs">
       <DependentUpon>Type.cs</DependentUpon>
     </Compile>
-    <Compile Include="Statistic_Growth.cs">
+    <Compile Include="main_menu\Statistic_Growth.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Statistic_Growth.Designer.cs">
+    <Compile Include="main_menu\Statistic_Growth.Designer.cs">
       <DependentUpon>Statistic_Growth.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="account.resx">
+    <EmbeddedResource Include="main_menu\account.resx">
       <DependentUpon>account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addCustomer.resx">
+      <DependentUpon>addCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BillReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -217,7 +215,7 @@
     <EmbeddedResource Include="frmBillReport.resx">
       <DependentUpon>frmBillReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSell.resx">
+    <EmbeddedResource Include="main_menu\frmSell.resx">
       <DependentUpon>frmSell.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_edit\frmBillDetail_Edit.resx">
@@ -276,16 +274,13 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>sellReport.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="setting.resx">
-      <DependentUpon>setting.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_Manage\Type.resx">
       <DependentUpon>Type.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Statistic_Growth.resx">
+    <EmbeddedResource Include="main_menu\Statistic_Growth.resx">
       <DependentUpon>Statistic_Growth.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -310,6 +305,7 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

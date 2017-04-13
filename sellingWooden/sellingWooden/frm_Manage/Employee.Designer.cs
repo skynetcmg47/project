@@ -170,6 +170,7 @@
             this.txt_Employee_EmployeeID.Location = new System.Drawing.Point(89, 26);
             this.txt_Employee_EmployeeID.MaxLength = 5;
             this.txt_Employee_EmployeeID.Name = "txt_Employee_EmployeeID";
+            this.txt_Employee_EmployeeID.ReadOnly = true;
             this.txt_Employee_EmployeeID.Size = new System.Drawing.Size(148, 20);
             this.txt_Employee_EmployeeID.TabIndex = 6;
             // 

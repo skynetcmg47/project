@@ -19,6 +19,7 @@ namespace sellingWooden
         public Employee()
         {
             InitializeComponent();
+            InitTxtEmployeeID();
             InitEmployeetDtgv();
         }
         /// <summary>
@@ -46,15 +47,13 @@ namespace sellingWooden
 
         private void but_Employee_Add_Click(object sender, EventArgs e)
         {
+            InitTxtEmployeeID();
             try
             {
                 if (txt_Employee_EmployeeID.Text != ""
                     && txt_Employee_NOE.Text != ""
-                    && dtm_Employee_DOB.Text != ""
-                    && cbo_Employee_Sex.Text != ""
                     && txt_Employee_Position.Text != ""
-                    && txt_Employee_TEL.Text != ""
-                    && txt_Employee_Address.Text != "")
+                    )
                     if (help.checkID("Employee", txt_Employee_EmployeeID.Text))
                     {
                         string day = dtm_Employee_DOB.Value.Day.ToString();
@@ -84,6 +83,7 @@ namespace sellingWooden
             {
                 MessageBox.Show("lỗi hệ thống, xin vui lòng khởi động lại chương trình");
             }
+            InitTxtEmployeeID();
         }
 
         private void but_Employee_Edit_Click(object sender, EventArgs e)
@@ -195,5 +195,34 @@ namespace sellingWooden
 
         }
         //========================================================================
+        public string initEmployeeID(string st)
+        {
+            string s, snew;
+            int i = 0;
+            DataTable billIDtable;
+            billIDtable = help.getDataTable_excute("select top 1 EmployeeID from Employee order by EmployeeID desc");
+            s = billIDtable.Rows[0][0].ToString();
+            snew = s.Substring(2, 3).ToString();
+            i = int.Parse(snew);
+            i++;
+            if (i < 10)
+                return st.ToString() + "00" + i.ToString();
+            else if (i >= 10 && i < 100)
+                return st.ToString() + "0" + i.ToString();
+            else
+                return st.ToString() + i.ToString();
+        }
+        private void InitTxtEmployeeID()
+        {
+            if (help.checkID("Employee", "NV000"))
+            {
+                txt_Employee_EmployeeID.Text = "NV000";
+            }
+            else
+            {
+
+                txt_Employee_EmployeeID.Text = initEmployeeID("NV");
+            }
+        }
     }
 }

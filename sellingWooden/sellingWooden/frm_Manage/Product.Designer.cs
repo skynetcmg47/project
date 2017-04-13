@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbb_Product_Status = new System.Windows.Forms.ComboBox();
             this.cbb_Product_TypeID = new System.Windows.Forms.ComboBox();
             this.txt_Product_Note = new System.Windows.Forms.TextBox();
             this.txt_Product_Size = new System.Windows.Forms.TextBox();
@@ -41,7 +40,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,7 +60,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cbb_Product_Status);
             this.groupBox1.Controls.Add(this.cbb_Product_TypeID);
             this.groupBox1.Controls.Add(this.txt_Product_Note);
             this.groupBox1.Controls.Add(this.txt_Product_Size);
@@ -74,7 +71,6 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -84,18 +80,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin sản phẩm";
-            // 
-            // cbb_Product_Status
-            // 
-            this.cbb_Product_Status.FormattingEnabled = true;
-            this.cbb_Product_Status.Items.AddRange(new object[] {
-            "Hàng đặt",
-            "Hàng bán"});
-            this.cbb_Product_Status.Location = new System.Drawing.Point(127, 143);
-            this.cbb_Product_Status.MaxLength = 30;
-            this.cbb_Product_Status.Name = "cbb_Product_Status";
-            this.cbb_Product_Status.Size = new System.Drawing.Size(121, 21);
-            this.cbb_Product_Status.TabIndex = 17;
             // 
             // cbb_Product_TypeID
             // 
@@ -149,7 +133,7 @@
             // txt_Product_NOP
             // 
             this.txt_Product_NOP.Location = new System.Drawing.Point(127, 60);
-            this.txt_Product_NOP.MaxLength = 30;
+            this.txt_Product_NOP.MaxLength = 40;
             this.txt_Product_NOP.Name = "txt_Product_NOP";
             this.txt_Product_NOP.Size = new System.Drawing.Size(166, 20);
             this.txt_Product_NOP.TabIndex = 9;
@@ -157,8 +141,9 @@
             // txt_Product_ProductID
             // 
             this.txt_Product_ProductID.Location = new System.Drawing.Point(127, 20);
-            this.txt_Product_ProductID.MaxLength = 5;
+            this.txt_Product_ProductID.MaxLength = 6;
             this.txt_Product_ProductID.Name = "txt_Product_ProductID";
+            this.txt_Product_ProductID.ReadOnly = true;
             this.txt_Product_ProductID.Size = new System.Drawing.Size(166, 20);
             this.txt_Product_ProductID.TabIndex = 8;
             // 
@@ -197,15 +182,6 @@
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Số lượng :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 143);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Trạng thái :";
             // 
             // label3
             // 
@@ -391,7 +367,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -405,7 +380,6 @@
         private System.Windows.Forms.Button but_Product_Add;
         private System.Windows.Forms.Button but_Product_Refresh;
         private System.Windows.Forms.Button but_Product_Delete;
-        private System.Windows.Forms.ComboBox cbb_Product_Status;
         private System.Windows.Forms.TextBox txt_Product_Search;
     }
 }

@@ -32,7 +32,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,7 +42,6 @@
             this.txt_frmProduct_Edit_NOP = new System.Windows.Forms.TextBox();
             this.txt_frmProduct_Edit_Quanty = new System.Windows.Forms.TextBox();
             this.cbo_frmProduct_Edit_TypeID = new System.Windows.Forms.ComboBox();
-            this.cbo_frmProduct_Edit_Status = new System.Windows.Forms.ComboBox();
             this.but_frmProduct_Edit_Cancel = new System.Windows.Forms.Button();
             this.but_frmProduct_Edit_Ok = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -87,16 +85,6 @@
             this.label5.Size = new System.Drawing.Size(67, 16);
             this.label5.TabIndex = 12;
             this.label5.Text = "Số lượng :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(41, 189);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 16);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Trạng thái :";
             // 
             // label3
             // 
@@ -191,18 +179,6 @@
             this.cbo_frmProduct_Edit_TypeID.Size = new System.Drawing.Size(138, 21);
             this.cbo_frmProduct_Edit_TypeID.TabIndex = 22;
             // 
-            // cbo_frmProduct_Edit_Status
-            // 
-            this.cbo_frmProduct_Edit_Status.FormattingEnabled = true;
-            this.cbo_frmProduct_Edit_Status.Items.AddRange(new object[] {
-            "Hàng đặt",
-            "Hàng bán"});
-            this.cbo_frmProduct_Edit_Status.Location = new System.Drawing.Point(142, 188);
-            this.cbo_frmProduct_Edit_Status.MaxLength = 20;
-            this.cbo_frmProduct_Edit_Status.Name = "cbo_frmProduct_Edit_Status";
-            this.cbo_frmProduct_Edit_Status.Size = new System.Drawing.Size(138, 21);
-            this.cbo_frmProduct_Edit_Status.TabIndex = 23;
-            // 
             // but_frmProduct_Edit_Cancel
             // 
             this.but_frmProduct_Edit_Cancel.Location = new System.Drawing.Point(347, 245);
@@ -230,7 +206,6 @@
             this.ClientSize = new System.Drawing.Size(567, 300);
             this.Controls.Add(this.but_frmProduct_Edit_Ok);
             this.Controls.Add(this.but_frmProduct_Edit_Cancel);
-            this.Controls.Add(this.cbo_frmProduct_Edit_Status);
             this.Controls.Add(this.cbo_frmProduct_Edit_TypeID);
             this.Controls.Add(this.txt_frmProduct_Edit_Quanty);
             this.Controls.Add(this.txt_frmProduct_Edit_NOP);
@@ -242,7 +217,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -259,7 +233,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -270,7 +243,6 @@
         private System.Windows.Forms.TextBox txt_frmProduct_Edit_NOP;
         private System.Windows.Forms.TextBox txt_frmProduct_Edit_Quanty;
         private System.Windows.Forms.ComboBox cbo_frmProduct_Edit_TypeID;
-        private System.Windows.Forms.ComboBox cbo_frmProduct_Edit_Status;
         private System.Windows.Forms.Button but_frmProduct_Edit_Cancel;
         private System.Windows.Forms.Button but_frmProduct_Edit_Ok;
     }

@@ -74,6 +74,7 @@
             this.txt_Type_TypeID.Location = new System.Drawing.Point(94, 26);
             this.txt_Type_TypeID.MaxLength = 5;
             this.txt_Type_TypeID.Name = "txt_Type_TypeID";
+            this.txt_Type_TypeID.ReadOnly = true;
             this.txt_Type_TypeID.Size = new System.Drawing.Size(86, 20);
             this.txt_Type_TypeID.TabIndex = 2;
             // 

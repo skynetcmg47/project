@@ -19,6 +19,7 @@ namespace sellingWooden
             InitializeComponent();
             InitBillDtgv();
             InitCustomerCbb();
+            InitTxtBillID();
         }
 
         private void InitBillDtgv()
@@ -52,6 +53,7 @@ namespace sellingWooden
         }
         private void but_Bill_Add_Click(object sender, EventArgs e)
         {
+            InitTxtBillID();
             try
             {
                 if (txt_Bill_BillID.Text != ""
@@ -83,6 +85,8 @@ namespace sellingWooden
             {
                 MessageBox.Show("Lỗi hệ thống, xin vui lòng khởi động lại chương trình");
             }
+
+            InitTxtBillID();
         }
         // cai nay la de khi bam vao 1 hang trong dtg thi thong tin se hien len tren cac box
         int index;
@@ -139,5 +143,19 @@ namespace sellingWooden
             InitBillDtgv();
             InitCustomerCbb();
         }
+        private void InitTxtBillID()
+        {
+
+            if (help.checkID("Bill", "HD0000"))
+            {
+                txt_Bill_BillID.Text = "HD0000";
+            }
+            else
+            {
+                Common common = new Common();
+                txt_Bill_BillID.Text = common.initID("Bill","BillID","HD");
+            }
+        }
+        
     }
 }
