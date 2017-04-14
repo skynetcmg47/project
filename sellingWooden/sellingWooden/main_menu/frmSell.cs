@@ -196,7 +196,6 @@ namespace sellingWooden
                     isPrintBill = false;
                     help.Excute_query("delete from sell");
                     txt_totalPrice.Text = "";
-
                 }
             }
             InitSellDtgv();

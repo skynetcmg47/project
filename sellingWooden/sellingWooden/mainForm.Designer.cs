@@ -420,7 +420,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "mainForm";
             this.Text = "realmainForm";
-            this.Load += new System.EventHandler(this.mainForm_Load);
             this.control_panel.ResumeLayout(false);
             this.top_panel.ResumeLayout(false);
             this.top_panel.PerformLayout();

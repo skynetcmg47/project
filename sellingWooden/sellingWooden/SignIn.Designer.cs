@@ -239,6 +239,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignIn";
             this.Text = "SignIn";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SignIn_KeyDown);
             this.pn_sign_top.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btn_SignIn_hide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_signIn_close)).EndInit();

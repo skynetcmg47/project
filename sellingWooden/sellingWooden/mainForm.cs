@@ -127,9 +127,6 @@ namespace sellingWooden
             InitAccount();
         }
 
-        private void mainForm_Load(object sender, EventArgs e)
-        {
-        }
 
         private void btn_sell_Click(object sender, EventArgs e)
         {
@@ -153,14 +150,16 @@ namespace sellingWooden
 
         private void btn_signOut_Click(object sender, EventArgs e)
         {
-            DialogResult = MessageBox.Show("Bạn có chắc muốn đăng xuất!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
-            if (DialogResult == DialogResult.OK)
+
+            DialogResult dl= MessageBox.Show("Bạn có thực sự muốn đăng xuất ?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dl == DialogResult.OK)
             {
-                SignIn i = new SignIn();
+                SignIn signIn = new SignIn();
                 this.Hide();
-                i.ShowDialog();
+                signIn.ShowDialog();
                 this.Close();
             }
+            
         }
     }
 }

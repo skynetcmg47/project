@@ -15,7 +15,8 @@ namespace sellingWooden
         public SignIn()
         {
             InitializeComponent();
-
+            //AcceptButton = (Button)btn_Signin;
+            this.KeyPreview = true;
 
         }
 
@@ -36,7 +37,10 @@ namespace sellingWooden
 
         private void btn_Signup_Click(object sender, EventArgs e)
         {
-
+            SignUpAction();
+        }
+        private void SignUpAction()
+        {
             if (txt_userName.Text != "" && txt_pass.Text != "")
             {
                 if (checkLogin())
@@ -63,7 +67,6 @@ namespace sellingWooden
                 lb_notice.ForeColor = Color.Red;
             }
         }
-
         private bool checkLogin()
         {
             SQLHelp help = new SQLHelp();
@@ -83,6 +86,14 @@ namespace sellingWooden
                 return false;
             }
 
+        }
+
+        private void SignIn_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                SignUpAction();
+            }
         }
     }
 }

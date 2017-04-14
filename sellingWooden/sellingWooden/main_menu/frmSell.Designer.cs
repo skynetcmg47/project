@@ -61,7 +61,7 @@
             "----Tất cả----"});
             this.tf_Product_Type.Location = new System.Drawing.Point(12, 245);
             this.tf_Product_Type.Name = "tf_Product_Type";
-            this.tf_Product_Type.Size = new System.Drawing.Size(155, 251);
+            this.tf_Product_Type.Size = new System.Drawing.Size(140, 251);
             this.tf_Product_Type.TabIndex = 37;
             this.tf_Product_Type.SelectedIndexChanged += new System.EventHandler(this.tf_Product_Type_SelectedIndexChanged);
             // 
@@ -73,9 +73,9 @@
             // tf_Product
             // 
             this.tf_Product.FormattingEnabled = true;
-            this.tf_Product.Location = new System.Drawing.Point(173, 245);
+            this.tf_Product.Location = new System.Drawing.Point(153, 245);
             this.tf_Product.Name = "tf_Product";
-            this.tf_Product.Size = new System.Drawing.Size(155, 251);
+            this.tf_Product.Size = new System.Drawing.Size(139, 251);
             this.tf_Product.TabIndex = 38;
             this.tf_Product.SelectedIndexChanged += new System.EventHandler(this.tf_Product_SelectedIndexChanged);
             // 
@@ -152,11 +152,14 @@
             // 
             // dtgv_sell
             // 
+            this.dtgv_sell.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgv_sell.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgv_sell.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_sell.Location = new System.Drawing.Point(340, 219);
+            this.dtgv_sell.Location = new System.Drawing.Point(298, 219);
             this.dtgv_sell.Name = "dtgv_sell";
             this.dtgv_sell.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dtgv_sell.Size = new System.Drawing.Size(551, 279);
+            this.dtgv_sell.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dtgv_sell.Size = new System.Drawing.Size(593, 279);
             this.dtgv_sell.TabIndex = 58;
             this.dtgv_sell.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_sell_CellValueChanged);
             // 
