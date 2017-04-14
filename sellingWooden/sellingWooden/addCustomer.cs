@@ -15,6 +15,7 @@ namespace sellingWooden
         public addCustomer()
         {
             InitializeComponent();
+            InitTxtCustomerID();
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
@@ -24,6 +25,7 @@ namespace sellingWooden
 
         private void btn_add_Click(object sender, EventArgs e)
         {
+
             SQLHelp help = new SQLHelp();
             try
             {
@@ -58,6 +60,19 @@ namespace sellingWooden
                 MessageBox.Show("Lỗi hệ thống, xin vui lòng khởi động lại chương trình");
             }
             this.Close();
+        }
+        private void InitTxtCustomerID()
+        {
+            SQLHelp help = new SQLHelp();
+            if (help.checkID("Customer", "KH0000"))
+            {
+                txt_customerID.Text = "KH0000";
+            }
+            else
+            {
+                Common common = new Common();
+                txt_customerID.Text = common.initID("Customer", "CustomerID", "KH");
+            }
         }
     }
 }

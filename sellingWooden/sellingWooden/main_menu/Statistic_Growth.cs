@@ -96,80 +96,94 @@ namespace sellingWooden
 
         private void btn_Statistic_Click(object sender, EventArgs e)
         {
-            if (cbo_Statistic_type.Text == "Doanh số bán hàng theo sản phẩm")
+            try
             {
-                if (cbo_Statistic_typedate.Text == "Tháng")
+                if (cbo_Statistic_type.Text == "Doanh số bán hàng theo sản phẩm")
                 {
-                    DataTable tb = help.getDataTable_excute("select Product.ProductName,SUM(BillDetail.Amount) as SellAmount from Product join BillDetail on Product.ProductID = BillDetail.ProductID join Bill on BillDetail.BillID = Bill.BillID where MONTH(Bill.sellDate) = " + cbo_chooseTime.Text + " and Year(Bill.sellDate) = Year(GETDATE()) group by ProductName");
-                    statistic_chart.DataSource = tb;
+                    if (cbo_Statistic_typedate.Text == "Tháng")
+                    {
+                        DataTable tb = help.getDataTable_excute("select Product.ProductName,SUM(BillDetail.Amount) as SellAmount from Product join BillDetail on Product.ProductID = BillDetail.ProductID join Bill on BillDetail.BillID = Bill.BillID where MONTH(Bill.sellDate) = " + cbo_chooseTime.Text + " and Year(Bill.sellDate) = Year(GETDATE()) group by ProductName");
+                        statistic_chart.DataSource = tb;
+
+                    }
+                    else if (cbo_Statistic_typedate.Text == "Năm")
+                    {
+                        DataTable tb = help.getDataTable_excute("select Product.ProductName,SUM(BillDetail.Amount) as SellAmount from Product join BillDetail on Product.ProductID = BillDetail.ProductID join Bill on BillDetail.BillID = Bill.BillID where YEAR(Bill.sellDate) = " + cbo_chooseTime.Text + " group by ProductName");
+                        statistic_chart.DataSource = tb;
+
+                    }
+                    else
+                    {
+                        DataTable tb = help.getDataTable_excute("select Product.ProductName,SUM(BillDetail.Amount) as SellAmount from Product join BillDetail on Product.ProductID = BillDetail.ProductID join Bill on BillDetail.BillID = Bill.BillID where Bill.sellDate = '" + cbo_chooseTime.Text + "' group by ProductName");
+                        statistic_chart.DataSource = tb;
+                    }
+                    statistic_chart.ChartAreas["ChartArea1"].AxisX.Title = "Sản Phẩm";
+                    statistic_chart.ChartAreas["ChartArea1"].AxisY.Title = "Số lượng";
+                    statistic_chart.Series["Series1"].XValueMember = "ProductName";
+                    statistic_chart.Series["Series1"].YValueMembers = "SellAmount";
+                }
+                else if (cbo_Statistic_type.Text == "Doanh số bán hàng theo thời gian")
+                {
+                    if (cbo_Statistic_typedate.Text == "Năm")
+                    {
+                        DataTable tb = help.getDataTable_excute("select Month(Bill.SellDate) as sellMonth ,SUM(BillDetail.Amount) as sellAmount from Product join BillDetail on Product.ProductID = BillDetail.ProductID join Bill on BillDetail.BillID = Bill.BillID where YEAR(Bill.sellDate) = " + cbo_chooseTime.Text + " group by Month(Bill.SellDate)");
+                        statistic_chart.DataSource = tb;
+                        statistic_chart.ChartAreas["ChartArea1"].AxisX.Title = "Tháng";
+                        statistic_chart.ChartAreas["ChartArea1"].AxisY.Title = "Số lượng";
+                        statistic_chart.Series["Series1"].XValueMember = "sellMonth";
+                        statistic_chart.Series["Series1"].YValueMembers = "sellAmount";
+                    }
+                    else if (cbo_Statistic_typedate.Text == "Tháng")
+                    {
+                        DataTable tb = help.getDataTable_excute("select DAY(Bill.SellDate) as sellDay ,SUM(BillDetail.Amount) as sellAmount from Product join BillDetail on Product.ProductID = BillDetail.ProductID join Bill on BillDetail.BillID = Bill.BillID where MONTH(Bill.sellDate) = " + cbo_chooseTime.Text + " group by Bill.SellDate");
+                        statistic_chart.DataSource = tb;
+                        statistic_chart.ChartAreas["ChartArea1"].AxisX.Title = "Ngày";
+                        statistic_chart.ChartAreas["ChartArea1"].AxisY.Title = "Số lượng";
+                        statistic_chart.Series["Series1"].XValueMember = "sellDay";
+                        statistic_chart.Series["Series1"].YValueMembers = "sellAmount";
+                    }
 
                 }
-                else if (cbo_Statistic_typedate.Text == "Năm")
+                else if (cbo_Statistic_type.Text == "Doanh số từng sản phẩm")
                 {
-                    DataTable tb = help.getDataTable_excute("select Product.ProductName,SUM(BillDetail.Amount) as SellAmount from Product join BillDetail on Product.ProductID = BillDetail.ProductID join Bill on BillDetail.BillID = Bill.BillID where YEAR(Bill.sellDate) = " + cbo_chooseTime.Text + " group by ProductName");
-                    statistic_chart.DataSource = tb;
-
+                    string id = txt_Product_List.SelectedValue.ToString();
+                    if (cbo_Statistic_typedate.Text == "Năm")
+                    {
+                        DataTable tb = help.getDataTable_excute("select Month(Bill.SellDate) as sellMonth ,SUM(BillDetail.Amount) as sellAmount from Product join BillDetail on Product.ProductID = BillDetail.ProductID join Bill on BillDetail.BillID = Bill.BillID where YEAR(Bill.sellDate) = " + cbo_chooseTime.Text + " and Product.ProductID='" + id + "' group by Month(Bill.SellDate)");
+                        statistic_chart.DataSource = tb;
+                        statistic_chart.ChartAreas["ChartArea1"].AxisX.Title = "Tháng";
+                        statistic_chart.ChartAreas["ChartArea1"].AxisY.Title = "Số lượng";
+                        statistic_chart.Series["Series1"].XValueMember = "sellMonth";
+                        statistic_chart.Series["Series1"].YValueMembers = "sellAmount";
+                    }
+                    else if (cbo_Statistic_typedate.Text == "Tháng")
+                    {
+                        DataTable tb = help.getDataTable_excute("select DAY(Bill.SellDate) as sellDay ,SUM(BillDetail.Amount) as sellAmount from Product join BillDetail on Product.ProductID = BillDetail.ProductID join Bill on BillDetail.BillID = Bill.BillID where MONTH(Bill.sellDate) = " + cbo_chooseTime.Text + " and Product.ProductID='" + id + "' group by Bill.SellDate");
+                        statistic_chart.DataSource = tb;
+                        statistic_chart.ChartAreas["ChartArea1"].AxisX.Title = "Ngày";
+                        statistic_chart.ChartAreas["ChartArea1"].AxisY.Title = "Số lượng";
+                        statistic_chart.Series["Series1"].XValueMember = "sellDay";
+                        statistic_chart.Series["Series1"].YValueMembers = "sellAmount";
+                    }
                 }
-                else
-                {
-                    DataTable tb = help.getDataTable_excute("select Product.ProductName,SUM(BillDetail.Amount) as SellAmount from Product join BillDetail on Product.ProductID = BillDetail.ProductID join Bill on BillDetail.BillID = Bill.BillID where Bill.sellDate = '" + cbo_chooseTime.Text + "' group by ProductName");
-                    statistic_chart.DataSource = tb;
-                }
-                statistic_chart.ChartAreas["ChartArea1"].AxisX.Title = "Sản Phẩm";
-                statistic_chart.ChartAreas["ChartArea1"].AxisY.Title = "Số lượng";
-                statistic_chart.Series["Series1"].XValueMember = "ProductName";
-                statistic_chart.Series["Series1"].YValueMembers = "SellAmount";
             }
-            else if (cbo_Statistic_type.Text == "Doanh số bán hàng theo thời gian")
+            catch(Exception ex)
             {
-                if(cbo_Statistic_typedate.Text=="Năm")
-                {
-                    DataTable tb = help.getDataTable_excute("select Month(Bill.SellDate) as sellMonth ,SUM(BillDetail.Amount) as sellAmount from Product join BillDetail on Product.ProductID = BillDetail.ProductID join Bill on BillDetail.BillID = Bill.BillID where YEAR(Bill.sellDate) = " + cbo_chooseTime.Text + " group by Month(Bill.SellDate)");
-                    statistic_chart.DataSource = tb;
-                    statistic_chart.ChartAreas["ChartArea1"].AxisX.Title = "Tháng";
-                    statistic_chart.ChartAreas["ChartArea1"].AxisY.Title = "Số lượng";
-                    statistic_chart.Series["Series1"].XValueMember = "sellMonth";
-                    statistic_chart.Series["Series1"].YValueMembers = "sellAmount";
-                }
-                else if(cbo_Statistic_typedate.Text == "Tháng")
-                {
-                    DataTable tb = help.getDataTable_excute("select DAY(Bill.SellDate) as sellDay ,SUM(BillDetail.Amount) as sellAmount from Product join BillDetail on Product.ProductID = BillDetail.ProductID join Bill on BillDetail.BillID = Bill.BillID where MONTH(Bill.sellDate) = " + cbo_chooseTime.Text + " group by Bill.SellDate");
-                    statistic_chart.DataSource = tb;
-                    statistic_chart.ChartAreas["ChartArea1"].AxisX.Title = "Ngày";
-                    statistic_chart.ChartAreas["ChartArea1"].AxisY.Title = "Số lượng";
-                    statistic_chart.Series["Series1"].XValueMember = "sellDay";
-                    statistic_chart.Series["Series1"].YValueMembers = "sellAmount";
-                }
-
-            }
-            else if(cbo_Statistic_type.Text == "Doanh số từng sản phẩm")
-            {
-                string id = txt_Product_List.SelectedValue.ToString();
-                if (cbo_Statistic_typedate.Text == "Năm")
-                {
-                    DataTable tb = help.getDataTable_excute("select Month(Bill.SellDate) as sellMonth ,SUM(BillDetail.Amount) as sellAmount from Product join BillDetail on Product.ProductID = BillDetail.ProductID join Bill on BillDetail.BillID = Bill.BillID where YEAR(Bill.sellDate) = " + cbo_chooseTime.Text + " and Product.ProductID='"+id+"' group by Month(Bill.SellDate)");
-                    statistic_chart.DataSource = tb;
-                    statistic_chart.ChartAreas["ChartArea1"].AxisX.Title = "Tháng";
-                    statistic_chart.ChartAreas["ChartArea1"].AxisY.Title = "Số lượng";
-                    statistic_chart.Series["Series1"].XValueMember = "sellMonth";
-                    statistic_chart.Series["Series1"].YValueMembers = "sellAmount";
-                }
-                else if (cbo_Statistic_typedate.Text == "Tháng")
-                {
-                    DataTable tb = help.getDataTable_excute("select DAY(Bill.SellDate) as sellDay ,SUM(BillDetail.Amount) as sellAmount from Product join BillDetail on Product.ProductID = BillDetail.ProductID join Bill on BillDetail.BillID = Bill.BillID where MONTH(Bill.sellDate) = " + cbo_chooseTime.Text + " and Product.ProductID='" + id + "' group by Bill.SellDate");
-                    statistic_chart.DataSource = tb;
-                    statistic_chart.ChartAreas["ChartArea1"].AxisX.Title = "Ngày";
-                    statistic_chart.ChartAreas["ChartArea1"].AxisY.Title = "Số lượng";
-                    statistic_chart.Series["Series1"].XValueMember = "sellDay";
-                    statistic_chart.Series["Series1"].YValueMembers = "sellAmount";
-                }
+                MessageBox.Show("Có lỗi xảy ra, vui lòng khởi động lại");
             }
         }
 
         private void btn_Report_Click(object sender, EventArgs e)
         {
-            frmBillReport f = new frmBillReport();
-            f.ShowDialog();
+            try
+            {
+                frmBillReport f = new frmBillReport();
+                f.ShowDialog();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Có lỗi xảy ra trong quá trình xuất hóa đơn, vui lòng khởi động lại");
+            }
         }
     }
 }

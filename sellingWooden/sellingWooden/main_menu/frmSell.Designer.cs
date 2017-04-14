@@ -283,7 +283,7 @@
             // 
             // btn_Add_Customer
             // 
-            this.btn_Add_Customer.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Add_Customer.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Add_Customer.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add_Customer.Image")));
             this.btn_Add_Customer.ImageActive = null;
             this.btn_Add_Customer.Location = new System.Drawing.Point(264, 69);

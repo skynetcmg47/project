@@ -49,7 +49,9 @@
             // txt_customerID
             // 
             this.txt_customerID.Location = new System.Drawing.Point(114, 35);
+            this.txt_customerID.MaxLength = 6;
             this.txt_customerID.Name = "txt_customerID";
+            this.txt_customerID.ReadOnly = true;
             this.txt_customerID.Size = new System.Drawing.Size(127, 20);
             this.txt_customerID.TabIndex = 0;
             // 

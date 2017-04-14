@@ -50,6 +50,8 @@
             this.txt_changeUserName = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.lbusername = new System.Windows.Forms.Label();
             this.btnaccoun = new Bunifu.Framework.UI.BunifuImageButton();
+            this.lb_manage = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.cb_manageAuthorities = new System.Windows.Forms.CheckBox();
             this.gr_add.SuspendLayout();
             this.gr_change.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnaccoun)).BeginInit();
@@ -57,6 +59,8 @@
             // 
             // gr_add
             // 
+            this.gr_add.Controls.Add(this.cb_manageAuthorities);
+            this.gr_add.Controls.Add(this.lb_manage);
             this.gr_add.Controls.Add(this.bunifuCustomLabel1);
             this.gr_add.Controls.Add(this.txt_repass);
             this.gr_add.Controls.Add(this.btn_Signup);
@@ -76,7 +80,7 @@
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(25, 158);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(25, 135);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(96, 26);
@@ -93,7 +97,7 @@
             this.txt_repass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txt_repass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_repass.isPassword = true;
-            this.txt_repass.Location = new System.Drawing.Point(178, 153);
+            this.txt_repass.Location = new System.Drawing.Point(178, 130);
             this.txt_repass.Margin = new System.Windows.Forms.Padding(4);
             this.txt_repass.Name = "txt_repass";
             this.txt_repass.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -131,7 +135,7 @@
             // 
             this.lb_pass.AutoSize = true;
             this.lb_pass.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_pass.Location = new System.Drawing.Point(25, 105);
+            this.lb_pass.Location = new System.Drawing.Point(25, 91);
             this.lb_pass.Name = "lb_pass";
             this.lb_pass.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lb_pass.Size = new System.Drawing.Size(96, 26);
@@ -159,7 +163,7 @@
             this.txt_pass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txt_pass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_pass.isPassword = true;
-            this.txt_pass.Location = new System.Drawing.Point(178, 100);
+            this.txt_pass.Location = new System.Drawing.Point(178, 86);
             this.txt_pass.Margin = new System.Windows.Forms.Padding(4);
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -377,6 +381,27 @@
             this.btnaccoun.TabStop = false;
             this.btnaccoun.Zoom = 10;
             // 
+            // lb_manage
+            // 
+            this.lb_manage.AutoSize = true;
+            this.lb_manage.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_manage.Location = new System.Drawing.Point(25, 176);
+            this.lb_manage.Name = "lb_manage";
+            this.lb_manage.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lb_manage.Size = new System.Drawing.Size(135, 26);
+            this.lb_manage.TabIndex = 17;
+            this.lb_manage.Text = "Quyền quản lí:";
+            // 
+            // cb_manageAuthorities
+            // 
+            this.cb_manageAuthorities.AutoSize = true;
+            this.cb_manageAuthorities.Location = new System.Drawing.Point(178, 184);
+            this.cb_manageAuthorities.Name = "cb_manageAuthorities";
+            this.cb_manageAuthorities.Size = new System.Drawing.Size(113, 17);
+            this.cb_manageAuthorities.TabIndex = 18;
+            this.cb_manageAuthorities.Text = "Cấp quyền quản lí";
+            this.cb_manageAuthorities.UseVisualStyleBackColor = true;
+            // 
             // account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,5 +448,7 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox txt_oldpass;
         private System.Windows.Forms.Label lbusername;
         private Bunifu.Framework.UI.BunifuImageButton btnaccoun;
+        private Bunifu.Framework.UI.BunifuCustomLabel lb_manage;
+        private System.Windows.Forms.CheckBox cb_manageAuthorities;
     }
 }

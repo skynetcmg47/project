@@ -10,7 +10,16 @@ namespace sellingWooden
     {
         public static string userName;
         public static string pass;
+        public static string authorities;
 
+        public void setAuthorities(string values)
+        {
+            authorities = values;
+        }
+        public string getAuthorities()
+        {
+            return authorities;
+        }
         public void setUserName(string values)
         {
             userName = values;

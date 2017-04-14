@@ -30,12 +30,14 @@ namespace sellingWooden
             SQLHelp help = new SQLHelp();
             try
             {
+                commonUtilities common = new commonUtilities();
                 if (username.Length <= 30 && pass.Length <= 50 && repass.Length <= 50)
-                    if (txt_changeUserName.Text.Equals("admin"))
+                    if (common.getAuthorities().Equals("admin"))
                         if (help.checkID("UserNameAndPass", username))
                             if (pass.Equals(repass))
                             {
-                                help.Excute_query("INSERT INTO UserNameAndPass VALUES ('" + username + "','" + pass + "')");
+                                String authorities = (cb_manageAuthorities.Checked == true) ? "admin" : "";
+                                help.Excute_query("INSERT INTO UserNameAndPass VALUES ('" + username + "','" + pass + "','" + authorities + "')");
                                 lb_account.Text = "Tạo tài khoản thành công";
                                 lb_account.ForeColor = Color.Green;
                                 txt_userName.Text = "";

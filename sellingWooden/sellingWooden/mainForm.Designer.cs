@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.control_panel = new System.Windows.Forms.Panel();
@@ -47,6 +47,7 @@
             this.panelTransit = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.viewPanel = new System.Windows.Forms.Panel();
+            this.btn_signOut = new Bunifu.Framework.UI.BunifuFlatButton();
             this.control_panel.SuspendLayout();
             this.top_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_SoftName)).BeginInit();
@@ -65,7 +66,8 @@
             // 
             this.control_panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.control_panel.BackColor = System.Drawing.Color.SeaGreen;
+            this.control_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(195)))), ((int)(((byte)(65)))));
+            this.control_panel.Controls.Add(this.btn_signOut);
             this.control_panel.Controls.Add(this.btn_sell);
             this.control_panel.Controls.Add(this.btn_main_account);
             this.control_panel.Controls.Add(this.btn_main_Statistic);
@@ -78,8 +80,8 @@
             // 
             // btn_sell
             // 
-            this.btn_sell.Activecolor = System.Drawing.Color.DodgerBlue;
-            this.btn_sell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_sell.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+            this.btn_sell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
             this.btn_sell.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_sell.BorderRadius = 0;
             this.btn_sell.ButtonText = "     Bán Hàng";
@@ -100,11 +102,11 @@
             this.btn_sell.IsTab = true;
             this.btn_sell.Location = new System.Drawing.Point(-2, 141);
             this.btn_sell.Name = "btn_sell";
-            this.btn_sell.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_sell.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_sell.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(195)))), ((int)(((byte)(65)))));
+            this.btn_sell.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(195)))), ((int)(((byte)(65)))));
             this.btn_sell.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_sell.selected = true;
-            this.btn_sell.Size = new System.Drawing.Size(184, 48);
+            this.btn_sell.Size = new System.Drawing.Size(187, 48);
             this.btn_sell.TabIndex = 13;
             this.btn_sell.Text = "     Bán Hàng";
             this.btn_sell.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -114,8 +116,8 @@
             // 
             // btn_main_account
             // 
-            this.btn_main_account.Activecolor = System.Drawing.Color.DodgerBlue;
-            this.btn_main_account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_main_account.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+            this.btn_main_account.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(195)))), ((int)(((byte)(65)))));
             this.btn_main_account.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_main_account.BorderRadius = 0;
             this.btn_main_account.ButtonText = "     Tài Khoản";
@@ -136,8 +138,8 @@
             this.btn_main_account.IsTab = true;
             this.btn_main_account.Location = new System.Drawing.Point(0, 303);
             this.btn_main_account.Name = "btn_main_account";
-            this.btn_main_account.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_main_account.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_main_account.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(195)))), ((int)(((byte)(65)))));
+            this.btn_main_account.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(195)))), ((int)(((byte)(65)))));
             this.btn_main_account.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_main_account.selected = false;
             this.btn_main_account.Size = new System.Drawing.Size(185, 48);
@@ -150,8 +152,8 @@
             // 
             // btn_main_Statistic
             // 
-            this.btn_main_Statistic.Activecolor = System.Drawing.Color.DodgerBlue;
-            this.btn_main_Statistic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_main_Statistic.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+            this.btn_main_Statistic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(195)))), ((int)(((byte)(65)))));
             this.btn_main_Statistic.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_main_Statistic.BorderRadius = 0;
             this.btn_main_Statistic.ButtonText = "     Thống Kê";
@@ -172,11 +174,11 @@
             this.btn_main_Statistic.IsTab = true;
             this.btn_main_Statistic.Location = new System.Drawing.Point(0, 249);
             this.btn_main_Statistic.Name = "btn_main_Statistic";
-            this.btn_main_Statistic.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_main_Statistic.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_main_Statistic.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(195)))), ((int)(((byte)(65)))));
+            this.btn_main_Statistic.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(195)))), ((int)(((byte)(65)))));
             this.btn_main_Statistic.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_main_Statistic.selected = false;
-            this.btn_main_Statistic.Size = new System.Drawing.Size(182, 48);
+            this.btn_main_Statistic.Size = new System.Drawing.Size(185, 48);
             this.btn_main_Statistic.TabIndex = 10;
             this.btn_main_Statistic.Text = "     Thống Kê";
             this.btn_main_Statistic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -186,8 +188,8 @@
             // 
             // btn_main_Manage
             // 
-            this.btn_main_Manage.Activecolor = System.Drawing.Color.DodgerBlue;
-            this.btn_main_Manage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btn_main_Manage.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+            this.btn_main_Manage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(195)))), ((int)(((byte)(65)))));
             this.btn_main_Manage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_main_Manage.BorderRadius = 0;
             this.btn_main_Manage.ButtonText = "     Quản Lí";
@@ -208,8 +210,8 @@
             this.btn_main_Manage.IsTab = true;
             this.btn_main_Manage.Location = new System.Drawing.Point(1, 195);
             this.btn_main_Manage.Name = "btn_main_Manage";
-            this.btn_main_Manage.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btn_main_Manage.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btn_main_Manage.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(195)))), ((int)(((byte)(65)))));
+            this.btn_main_Manage.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(195)))), ((int)(((byte)(65)))));
             this.btn_main_Manage.OnHoverTextColor = System.Drawing.Color.White;
             this.btn_main_Manage.selected = false;
             this.btn_main_Manage.Size = new System.Drawing.Size(184, 48);
@@ -328,22 +330,22 @@
             // 
             this.panelTransit.AnimationType = BunifuAnimatorNS.AnimationType.HorizBlind;
             this.panelTransit.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.panelTransit.DefaultAnimation = animation2;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.panelTransit.DefaultAnimation = animation3;
             // 
             // panel1
             // 
@@ -368,6 +370,42 @@
             this.viewPanel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.viewPanel.Size = new System.Drawing.Size(893, 549);
             this.viewPanel.TabIndex = 1;
+            // 
+            // btn_signOut
+            // 
+            this.btn_signOut.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+            this.btn_signOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(195)))), ((int)(((byte)(65)))));
+            this.btn_signOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_signOut.BorderRadius = 0;
+            this.btn_signOut.ButtonText = "     Đăng Xuất";
+            this.btn_signOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelTransit.SetDecoration(this.btn_signOut, BunifuAnimatorNS.DecorationType.None);
+            this.btn_signOut.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_signOut.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_signOut.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_signOut.Iconimage")));
+            this.btn_signOut.Iconimage_right = null;
+            this.btn_signOut.Iconimage_right_Selected = null;
+            this.btn_signOut.Iconimage_Selected = null;
+            this.btn_signOut.IconMarginLeft = 0;
+            this.btn_signOut.IconMarginRight = 0;
+            this.btn_signOut.IconRightVisible = true;
+            this.btn_signOut.IconRightZoom = 0D;
+            this.btn_signOut.IconVisible = true;
+            this.btn_signOut.IconZoom = 80D;
+            this.btn_signOut.IsTab = true;
+            this.btn_signOut.Location = new System.Drawing.Point(0, 364);
+            this.btn_signOut.Name = "btn_signOut";
+            this.btn_signOut.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(195)))), ((int)(((byte)(65)))));
+            this.btn_signOut.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(195)))), ((int)(((byte)(65)))));
+            this.btn_signOut.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_signOut.selected = false;
+            this.btn_signOut.Size = new System.Drawing.Size(185, 48);
+            this.btn_signOut.TabIndex = 14;
+            this.btn_signOut.Text = "     Đăng Xuất";
+            this.btn_signOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_signOut.Textcolor = System.Drawing.Color.Black;
+            this.btn_signOut.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_signOut.Click += new System.EventHandler(this.btn_signOut_Click);
             // 
             // mainForm
             // 
@@ -412,5 +450,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btn_main_account;
         private Bunifu.Framework.UI.BunifuGradientPanel top_panel;
         private Bunifu.Framework.UI.BunifuFlatButton btn_sell;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_signOut;
     }
 }

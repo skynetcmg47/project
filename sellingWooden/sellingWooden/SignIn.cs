@@ -75,6 +75,7 @@ namespace sellingWooden
                 commonUtilities setUser = new commonUtilities();
                 setUser.setUserName(tb.Rows[0][0].ToString());
                 setUser.setPass(tb.Rows[0][1].ToString());
+                setUser.setAuthorities(tb.Rows[0][2].ToString());
                 return true;
             }
             else

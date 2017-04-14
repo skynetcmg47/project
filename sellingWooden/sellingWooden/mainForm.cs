@@ -13,12 +13,16 @@ namespace sellingWooden
     public partial class mainForm : Form
     {
         private bool isExpandPress = false;
+        private commonUtilities common = new commonUtilities();
         public mainForm()
         {
             InitializeComponent();
             //InitManageForm();
+            btn_main_Manage.selected = false;
             initSellForm();
             btn_main_Manage.selected = true;
+            if (!common.getAuthorities().Equals("admin"))
+                btn_main_Manage.Enabled = false;
         }
         private void InitManageForm()
         {
@@ -145,6 +149,18 @@ namespace sellingWooden
 
             // Hiển thị form
             frmChild.Show();
+        }
+
+        private void btn_signOut_Click(object sender, EventArgs e)
+        {
+            DialogResult = MessageBox.Show("Bạn có chắc muốn đăng xuất!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (DialogResult == DialogResult.OK)
+            {
+                SignIn i = new SignIn();
+                this.Hide();
+                i.ShowDialog();
+                this.Close();
+            }
         }
     }
 }
