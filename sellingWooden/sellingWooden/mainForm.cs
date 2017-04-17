@@ -89,6 +89,10 @@ namespace sellingWooden
             {
                 InitStatisticForm();
             }
+            else if(btn_sell.selected)
+            {
+                initSellForm();
+            }
 
         }
 

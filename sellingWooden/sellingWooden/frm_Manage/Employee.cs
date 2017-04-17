@@ -70,15 +70,13 @@ namespace sellingWooden
                                       "N" + "'" + txt_Employee_Note.Text + "'";
                         help.addData("Employee", Data);
                         InitEmployeetDtgv();
-                        goto OPP;
                     }
                     else
                     {
                         MessageBox.Show("Mã nhân viên đã tồn tại");
-                        goto OPP;
                     }
-                MessageBox.Show("Hãy nhập đầy đủ thông tin nhân viên");
-            OPP:;
+                else
+                    MessageBox.Show("Hãy nhập đầy đủ thông tin nhân viên");
             }catch(Exception ex)
             {
                 MessageBox.Show("lỗi hệ thống, xin vui lòng khởi động lại chương trình");

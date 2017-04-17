@@ -74,15 +74,13 @@ namespace sellingWooden
                                       "N" + "'" + txt_Product_Note.Text + " '";
                         help.addData("Product", Data);
                         InitProductDtgv();
-                        goto OPP;
                     }
                     else
                     {
                         MessageBox.Show("Mã Sản Phẩm đã tồn tại");
-                        goto OPP;
                     }
-                MessageBox.Show("Hãy nhập đầy đủ thông tin sản phẩm");
-            OPP:;
+                else
+                    MessageBox.Show("Hãy nhập đầy đủ thông tin sản phẩm");
             }
             catch (Exception ex)
             {
@@ -135,17 +133,17 @@ namespace sellingWooden
             NOP = dgv_Product_InformatinProductDetail.Rows[index].Cells[2].Value.ToString();
 
 
-            txt_Product_Quanty.Text = dgv_Product_InformatinProductDetail.Rows[index].Cells[4].Value.ToString();
-            Quanty = dgv_Product_InformatinProductDetail.Rows[index].Cells[4].Value.ToString();
+            txt_Product_Quanty.Text = dgv_Product_InformatinProductDetail.Rows[index].Cells[3].Value.ToString();
+            Quanty = dgv_Product_InformatinProductDetail.Rows[index].Cells[3].Value.ToString();
 
-            txt_Product_Price.Text = dgv_Product_InformatinProductDetail.Rows[index].Cells[5].Value.ToString();
-            Price= dgv_Product_InformatinProductDetail.Rows[index].Cells[5].Value.ToString();
+            txt_Product_Price.Text = dgv_Product_InformatinProductDetail.Rows[index].Cells[4].Value.ToString();
+            Price= dgv_Product_InformatinProductDetail.Rows[index].Cells[4].Value.ToString();
 
-            txt_Product_Size.Text = dgv_Product_InformatinProductDetail.Rows[index].Cells[6].Value.ToString();
-            Size= dgv_Product_InformatinProductDetail.Rows[index].Cells[6].Value.ToString();
+            txt_Product_Size.Text = dgv_Product_InformatinProductDetail.Rows[index].Cells[5].Value.ToString();
+            Size= dgv_Product_InformatinProductDetail.Rows[index].Cells[5].Value.ToString();
 
-            txt_Product_Note.Text = dgv_Product_InformatinProductDetail.Rows[index].Cells[7].Value.ToString();
-            Note = dgv_Product_InformatinProductDetail.Rows[index].Cells[7].Value.ToString();
+            txt_Product_Note.Text = dgv_Product_InformatinProductDetail.Rows[index].Cells[6].Value.ToString();
+            Note = dgv_Product_InformatinProductDetail.Rows[index].Cells[6].Value.ToString();
 
         }
 

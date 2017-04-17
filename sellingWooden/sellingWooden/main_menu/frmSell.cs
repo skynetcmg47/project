@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace sellingWooden
 {
@@ -57,6 +58,7 @@ namespace sellingWooden
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Không thể khởi tạo danh sách sản phẩm, hãy kiểm tra lại cơ sở dữ liệu");
             }
 
         }
@@ -87,6 +89,7 @@ namespace sellingWooden
 
         private void btn_add_Click(object sender, EventArgs e)
         {
+
             if (help.checkCustomerID(cbb_CustomerID.SelectedValue.ToString()))
             {
                 if (help.checkIDBillDetail(txt_BillID.Text, txt_ProductID.Text))
@@ -96,22 +99,29 @@ namespace sellingWooden
                         && txt_amount.Text.Trim() != "" && txt_amount.Text.Trim() != null
                     )
                     {
+                        
                         try
                         {
-                            int day = DateTime.Now.Day;
-                            int month = DateTime.Now.Month;
-                            int year = DateTime.Now.Year;
-                            string date = year + "/" + month + "/" + day;
+                            DataTable tbProductQuanty = help.getDataTable_excute("select Quanty from Product Where ProductID='" + txt_ProductID.Text + "'");
 
-                            
-                            if (help.checkID("Bill", txt_BillID.Text))
-                                help.Excute_query("INSERT INTO Bill VALUES ('" + txt_BillID.Text + "','" + cbb_CustomerID.SelectedValue.ToString() + "','" + date + "',''" + ")");
-                            help.Excute_query("INSERT INTO BillDetail VALUES ('" + txt_BillID.Text + "','" + txt_ProductID.Text + "','" + cbb_EmployeeID.SelectedValue.ToString() + "'," + txt_amount.Text + ")");
-                            help.Excute_query("INSERT INTO sell VALUES ('" + txt_BillID.Text + "','" + cbb_CustomerID.SelectedValue.ToString() + "','" + txt_ProductID.Text + "'," + txt_amount.Text + ")");
-                            DataTable tb = help.getDataTable_excute("select sum(dbo.sell.Amount * dbo.Product.Price) AS totalPrice FROM  dbo.sell INNER JOIN dbo.Product ON dbo.Product.ProductID = dbo.sell.ProductID");
-                            if (tb.Rows.Count > 0)
-                                txt_totalPrice.Text = tb.Rows[0][0].ToString();
-                            InitSellDtgv();
+                            if (Convert.ToInt16(tbProductQuanty.Rows[0][0].ToString()) >= Convert.ToInt16(txt_amount.Text))
+                            {
+                            int day = DateTime.Now.Day;
+                                int month = DateTime.Now.Month;
+                                int year = DateTime.Now.Year;
+                                string date = year + "/" + month + "/" + day;
+
+
+                                if (help.checkID("Bill", txt_BillID.Text))
+                                    help.Excute_query("INSERT INTO Bill VALUES ('" + txt_BillID.Text + "','" + cbb_CustomerID.SelectedValue.ToString() + "','" + date + "',''" + ")");
+                                help.Excute_query("INSERT INTO BillDetail VALUES ('" + txt_BillID.Text + "','" + txt_ProductID.Text + "','" + cbb_EmployeeID.SelectedValue.ToString() + "'," + txt_amount.Text + ")");
+                                help.Excute_query("INSERT INTO sell VALUES ('" + txt_BillID.Text + "','" + cbb_CustomerID.SelectedValue.ToString() + "','" + txt_ProductID.Text + "'," + txt_amount.Text + ")");
+                                DataTable tb = help.getDataTable_excute("select sum(dbo.sell.Amount * dbo.Product.Price) AS totalPrice FROM  dbo.sell INNER JOIN dbo.Product ON dbo.Product.ProductID = dbo.sell.ProductID");
+                                if (tb.Rows.Count > 0)
+                                    txt_totalPrice.Text = tb.Rows[0][0].ToString();
+                                InitSellDtgv();
+                            }
+                            else MessageBox.Show("Số lượng trong kho nhỏ hơn số lượng nhập");
                        }
                        catch (Exception ex)
                        {
@@ -142,6 +152,9 @@ namespace sellingWooden
             InitSellDtgv();
             isPrintBill = true;
         }
+
+        
+
         private void btn_Add_Customer_Click(object sender, EventArgs e)
         {
             addCustomer addCust = new addCustomer();
@@ -149,19 +162,26 @@ namespace sellingWooden
             InitCustomerCbb();
         }
 
+       
 
         private void dtgv_sell_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            MessageBox.Show(dtgv_sell.Rows[e.RowIndex].Cells[3].Value.ToString());
             try
             {
                 DataTable tb = help.getDataTable_excute("Select * from v_sell");
                 if (tb.Rows.Count > 0)
                     txt_totalPrice.Text = tb.Rows[0][4].ToString();
                 help.Excute_query("UPDATE  BillDetail SET Amount = " + dtgv_sell.Rows[e.RowIndex].Cells[3].Value.ToString() + " Where BillID = '" + txt_BillID.Text + "' and ProductID ='" + txt_ProductID.Text + "'");
+                
+                help.Excute_query("UPDATE  sell SET Amount = " + dtgv_sell.Rows[e.RowIndex].Cells[3].Value.ToString() + " Where BillID = '" + txt_BillID.Text + "' and ProductID ='" + txt_ProductID.Text + "'");
+                DataTable tbsum = help.getDataTable_excute("select sum(dbo.sell.Amount * dbo.Product.Price) AS totalPrice FROM  dbo.sell INNER JOIN dbo.Product ON dbo.Product.ProductID = dbo.sell.ProductID");
+                if (tbsum.Rows.Count > 0)
+                    txt_totalPrice.Text = tbsum.Rows[0][0].ToString();
+                InitSellDtgv();
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Không thể sửa dữ liệu");
             }
         }
 
@@ -199,6 +219,26 @@ namespace sellingWooden
                 }
             }
             InitSellDtgv();
+        }
+        // chi duoc nhap so
+        private void txt_amount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+        private static bool IsNumber(string val)
+        {
+            if (val != "")
+                return Regex.IsMatch(val, @"^[0-9]\d*\.?[0]*$");
+            else return true;
+        }
+        private void txt_amount_TextChanged(object sender, EventArgs e)
+        {
+            if (IsNumber(txt_amount.Text) != true)
+            {
+                MessageBox.Show("Chỉ được nhập số !!", "NOTICE!");
+                txt_amount.Text = "";
+            }
         }
     }
 }

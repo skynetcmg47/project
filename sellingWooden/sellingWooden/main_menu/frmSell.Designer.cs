@@ -56,6 +56,8 @@
             // 
             // tf_Product_Type
             // 
+            this.tf_Product_Type.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.tf_Product_Type.FormattingEnabled = true;
             this.tf_Product_Type.Items.AddRange(new object[] {
             "----Tất cả----"});
@@ -72,6 +74,8 @@
             // 
             // tf_Product
             // 
+            this.tf_Product.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.tf_Product.FormattingEnabled = true;
             this.tf_Product.Location = new System.Drawing.Point(153, 245);
             this.tf_Product.Name = "tf_Product";
@@ -122,6 +126,7 @@
             this.txt_totalPrice.BorderColorMouseHover = System.Drawing.Color.Blue;
             this.txt_totalPrice.BorderThickness = 3;
             this.txt_totalPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_totalPrice.Enabled = false;
             this.txt_totalPrice.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_totalPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_totalPrice.isPassword = false;
@@ -152,6 +157,9 @@
             // 
             // dtgv_sell
             // 
+            this.dtgv_sell.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgv_sell.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgv_sell.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgv_sell.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -205,6 +213,8 @@
             this.txt_amount.Name = "txt_amount";
             this.txt_amount.Size = new System.Drawing.Size(174, 20);
             this.txt_amount.TabIndex = 63;
+            this.txt_amount.TextChanged += new System.EventHandler(this.txt_amount_TextChanged);
+            this.txt_amount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_amount_KeyPress);
             // 
             // btn_new
             // 

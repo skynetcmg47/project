@@ -129,9 +129,12 @@
             // txt_phoneNumber
             // 
             this.txt_phoneNumber.Location = new System.Drawing.Point(396, 69);
+            this.txt_phoneNumber.MaxLength = 12;
             this.txt_phoneNumber.Name = "txt_phoneNumber";
             this.txt_phoneNumber.Size = new System.Drawing.Size(127, 20);
             this.txt_phoneNumber.TabIndex = 11;
+            this.txt_phoneNumber.TextChanged += new System.EventHandler(this.txt_phoneNumber_TextChanged);
+            this.txt_phoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_phoneNumber_KeyPress);
             // 
             // label6
             // 

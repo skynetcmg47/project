@@ -66,15 +66,13 @@ namespace sellingWooden
                                       "N" + "'" + txt_Customer_Note.Text + "'";
                         help.addData("Customer", Data);
                         InitCustomerDtgv();
-                        goto OPP;
                     }
                     else
                     {
                         MessageBox.Show("Mã Khách Hàng đã tồn tại");
-                        goto OPP;
                     }
-                MessageBox.Show("Hãy nhập đầy đủ thông tin Khách Hàng");
-            OPP:;
+                else
+                     MessageBox.Show("Hãy nhập đầy đủ thông tin Khách Hàng");
             }catch(Exception ex)
             {
                 MessageBox.Show("Lỗi hệ thống, xin vui lòng khởi động lại chương trình");

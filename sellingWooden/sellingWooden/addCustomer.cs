@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace sellingWooden
 {
@@ -45,15 +46,13 @@ namespace sellingWooden
                                       "'" + txt_phoneNumber.Text + "'," +
                                       "N" + "'" + txt_Note.Text + "'";
                         help.addData("Customer", Data);
-                        goto OPP;
                     }
                     else
                     {
                         MessageBox.Show("Mã Khách Hàng đã tồn tại");
-                        goto OPP;
                     }
-                MessageBox.Show("Hãy nhập đầy đủ thông tin Khách Hàng");
-                OPP:;
+                else
+                     MessageBox.Show("Hãy nhập đầy đủ thông tin Khách Hàng");
             }
             catch (Exception ex)
             {
@@ -72,6 +71,26 @@ namespace sellingWooden
             {
                 Common common = new Common();
                 txt_customerID.Text = common.initID("Customer", "CustomerID", "KH");
+            }
+        }
+
+        private void txt_phoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+        private static bool IsNumber(string val)
+        {
+            if (val != "")
+                return Regex.IsMatch(val, @"^[0-9]\d*\.?[0]*$");
+            else return true;
+        }
+        private void txt_phoneNumber_TextChanged(object sender, EventArgs e)
+        {
+            if (IsNumber(txt_phoneNumber.Text) != true)
+            {
+                MessageBox.Show("Chỉ được nhập số !!", "NOTICE!");
+                txt_phoneNumber.Text = "";
             }
         }
     }

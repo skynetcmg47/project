@@ -91,15 +91,13 @@ namespace sellingWooden
                                      "" + txt_BillDetail_Amount.Text + "";
                         help.addData("BillDetail", Data);
                         InitBillDetailDtgv();
-                        goto OPP;
                     }
                     else
                     {
                         MessageBox.Show("Mã Hóa Đơn và Mã  Sản phẩm đã tồn tại");
-                        goto OPP;
                     }
-                MessageBox.Show("Hãy nhập đầy đủ thông tin ");
-            OPP:;
+                else
+                    MessageBox.Show("Hãy nhập đầy đủ thông tin ");
             }
             catch(Exception ex)
             {

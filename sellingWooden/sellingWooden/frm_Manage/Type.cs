@@ -54,15 +54,13 @@ namespace sellingWooden
                                   "'" + txt_Type_NOT.Text + "'";
                     help.addData("Type", Data);
                     InitTypeDtgv();
-                    goto OPP;
                 }
                 else
                 {
                     MessageBox.Show("Mã Loại đã tồn tại");
-                    goto OPP;
                 }
-            MessageBox.Show("Hãy nhập đầy đủ thông tin loại sản phẩm");
-            OPP:;
+            else
+                MessageBox.Show("Hãy nhập đầy đủ thông tin loại sản phẩm");
             InitTxtTypeID();
         }
 
